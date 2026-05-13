@@ -1,0 +1,26 @@
+# Swiftbanq Credit Solutions
+
+> Digital lending, SME financing, Asset Loans, and Treasury Services.
+
+Swiftbanq is a duly Licensed money lending institution operating under the regulatory framework of the Lagos State Money Lenders Law in Nigeria.
+
+## Core Services
+
+- **SME Financing**: Local Purchase Orders (LPO), Invoice Discounting Facility (IDF), Bridge & Contract Finance, Project Finance & Syndication.
+- **Asset Financing**: Fleet & Vehicle Financing, Office Equipment Loans, Household Equipment, Specialized Machinery.
+- **Digital Lending**: Instant Disbursement, Flexible Repayment, No Hidden Charges, Paperless Application.
+- **Treasury Services**: Term Deposits, Institutional Borrowing, Yield Maximization, Safe Vehicles.
+
+## Security & Regulation
+
+Secure by design, regulated in Nigeria. We operate strictly within the regulatory frameworks set forth by the Central Bank of Nigeria and the Lagos State Money Lenders Law. NDPR Compliant.
+
+## Sitemap & Structure
+- Homepage: /
+- About Us: /about
+- Why Us: /why-us
+- Contact Details: /contact
+
+## Contact Information
+- Address: Lagos, Nigeria
+- Website: https://swiftbanq.com
