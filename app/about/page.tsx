@@ -75,9 +75,9 @@ export default function AboutPage() {
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Our team brings together seasoned finance professionals, compliance experts, and technology-driven thinkers — all united by one purpose: helping you access the capital you need, when you need it.
               </p>
-              <a href="/contact" className="inline-flex items-center px-8 py-4 bg-brand-yellow text-brand-dark rounded-md font-bold hover:bg-brand-yellow-hover transition-colors text-base">
+              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-brand-yellow text-brand-dark rounded-md font-bold hover:bg-brand-yellow-hover transition-colors text-base">
                 Talk to us today
-              </a>
+              </Link>
             </div>
           </div>
 

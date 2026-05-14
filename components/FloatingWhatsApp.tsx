@@ -7,18 +7,18 @@ export function FloatingWhatsApp() {
     <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[99] flex items-end gap-3 group">
       {/* Tooltip text box */}
       <div className="relative bg-white px-3 py-2 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] text-[13px] font-medium text-gray-800 mb-1.5 transform origin-right transition-all duration-300 opacity-0 md:opacity-100 scale-95 md:scale-100 group-hover:scale-100 group-hover:opacity-100 whitespace-nowrap">
-        Chat with us live now
+        Chat with us on WhatsApp
         {/* Triangle pointer */}
         <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-white transform rotate-45"></div>
       </div>
       
       {/* WhatsApp Button */}
       <Link 
-        href="https://wa.me/1234567890" 
+        href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20learn%20more%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" 
         target="_blank" 
         rel="noopener noreferrer"
         className="w-[46px] h-[46px] bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:-translate-y-1 transition-transform duration-300 ease-out"
-        aria-label="Chat with us on WhatsApp"
+        aria-label="Chat with Swiftbanq on WhatsApp"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

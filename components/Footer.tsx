@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <>
       {/* Pre-footer CTA */}
-      <section className="relative bg-brand-dark py-32 md:py-40 border-b border-white/5 overflow-hidden">
+      <section aria-label="Get started with Swiftbanq" className="relative bg-brand-dark py-32 md:py-40 border-b border-white/5 overflow-hidden">
         {/* Pattern - Left */}
         <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-40" style={{ left: '-20%' }}>
           <Image src="/pattern 4.svg" alt="" fill className="object-cover object-left-top" />
@@ -23,9 +23,9 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Link href="/contact" className="px-10 py-3 rounded-full bg-brand-yellow text-brand-dark font-bold hover:bg-brand-yellow-hover transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg">
               Apply Now
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
             </Link>
-            <Link href="/contact" className="px-10 py-3 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg">
+            <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg">
               Contact Sales
             </Link>
           </div>
@@ -33,24 +33,23 @@ export function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-dark text-white pt-24 pb-12">
+      <footer className="bg-brand-dark text-white pt-24 pb-12" aria-label="Site footer">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between mb-24 gap-16">
             {/* Brand */}
             <div className="w-full lg:w-1/3">
-              <Link href="/" className="flex items-center mb-4">
-                <Image src="/SBQ_Logo.svg" alt="Swiftbanq" width={160} height={40} className="brightness-0 invert" />
+              <Link href="/" className="flex items-center mb-4" aria-label="Swiftbanq Credit Solutions — home">
+                <Image src="/SBQ_Logo.svg" alt="Swiftbanq Credit Solutions" width={160} height={40} className="brightness-0 invert" />
               </Link>
               <p className="text-gray-400 text-sm font-medium leading-relaxed mb-6">
-                Empowering financial growth through smart, accessible credit solutions.
+                Empowering financial growth through smart, accessible credit solutions for businesses and individuals across Nigeria.
               </p>
-
             </div>
 
             {/* Links Grid */}
-            <div className="w-full lg:w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
+            <nav aria-label="Footer navigation" className="w-full lg:w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
               <div>
-                <h4 className="text-gray-400 font-medium mb-8">Product</h4>
+                <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Products</h3>
                 <ul className="space-y-5">
                   <li>
                     <Link href="/services/sme-financing" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">SME Financing</Link>
@@ -68,10 +67,16 @@ export function Footer() {
               </div>
 
               <div>
-                <h4 className="text-gray-400 font-medium mb-8">Resources</h4>
+                <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Company</h3>
                 <ul className="space-y-5">
                   <li>
-                    <Link href="/about" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">About</Link>
+                    <Link href="/about" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">About Us</Link>
+                  </li>
+                  <li>
+                    <Link href="/why-us" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Why Swiftbanq</Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Contact Us</Link>
                   </li>
                   <li>
                     <Link href="/privacy-policy" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Privacy Policy</Link>
@@ -80,39 +85,33 @@ export function Footer() {
                     <Link href="/terms-and-conditions" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Terms &amp; Conditions</Link>
                   </li>
                   <li>
-                    <Link href="/terms-of-use" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Terms of Use</Link>
-                  </li>
-                  <li>
-                    <Link href="/data-protection" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Data Protection</Link>
-                  </li>
-                  <li>
                     <Link href="/complaints-policy" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Complaints Policy</Link>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-gray-400 font-medium mb-8">Get in Touch</h4>
+                <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Get in Touch</h3>
                 <ul className="space-y-5">
                   <li>
-                    <a href="tel:07086429380" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">07086429380</a>
+                    <a href="tel:+2347086429380" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">07086429380</a>
                   </li>
                   <li>
                     <a href="mailto:enquiries@swiftbanq.com.ng" className="font-medium hover:text-brand-yellow transition-colors text-[15px] break-all">enquiries@swiftbanq.com.ng</a>
                   </li>
                   <li>
-                    <p className="font-medium text-[15px] text-white leading-relaxed">
+                    <address className="font-medium text-[15px] text-white leading-relaxed not-italic">
                       6, Babatunde Jose Street,<br />
                       Off Ademola Adetokunbo V.I,<br />
-                      Lagos.
-                    </p>
+                      Lagos, Nigeria.
+                    </address>
                   </li>
                 </ul>
               </div>
-            </div>
+            </nav>
           </div>
 
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-10 gap-6">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-10 gap-6 border-t border-white/10">
             <p className="text-gray-400 text-sm font-medium">
               Copyright &copy; {new Date().getFullYear()} Swiftbanq Credit Solutions. All rights reserved.
             </p>

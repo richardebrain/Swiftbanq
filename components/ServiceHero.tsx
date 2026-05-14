@@ -44,7 +44,7 @@ export function ServiceHero({ title, description, buttonText, buttonLink, seed }
              <div className="absolute bottom-0 right-[-10%] lg:right-[-20%] w-[120%] lg:w-[140%] h-[120%] min-h-[400px] pointer-events-none">
                 <Image 
                   src={`https://picsum.photos/seed/${seed}-illustration/1200/1200`} 
-                  alt={title} 
+                  alt={`${title} — Swiftbanq Credit Solutions`}
                   fill 
                   className="object-contain object-bottom lg:object-right-bottom" 
                   referrerPolicy="no-referrer" 

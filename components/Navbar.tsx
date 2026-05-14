@@ -4,22 +4,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-
+import { ApplyModal } from '@/components/ApplyModal';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
   return (
-    <header className="bg-[#FDF8E7] w-full border-b border-transparent relative z-50">
+    <header aria-label="Main navigation" className="bg-[#FDF8E7] w-full border-b border-transparent relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-16">
+        <nav className="flex items-center justify-between h-16" aria-label="Primary">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
+            <Link href="/" aria-label="Swiftbanq Credit Solutions — home">
               <Image
                 src="/SBQ_Logo.svg"
-                alt="Swiftbanq"
+                alt="Swiftbanq Credit Solutions"
                 width={244}
                 height={54}
                 priority
@@ -28,55 +29,68 @@ export function Navbar() {
             </Link>
           </div>
 
+          {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-10">
+
             {/* Services Dropdown */}
             <div className="relative group">
-              <button 
-                className="flex items-center text-base font-medium text-gray-700 hover:text-gray-900 transition-colors focus:outline-none py-2"
+              <button
+                className="flex items-center text-base font-medium text-gray-700 hover:text-gray-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark rounded py-2"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
+                onClick={() => setIsServicesOpen((v) => !v)}
+                aria-expanded={isServicesOpen}
+                aria-haspopup="true"
+                aria-controls="services-menu"
               >
-                Services <ChevronDown className="ml-1 w-4 h-4" />
+                Services <ChevronDown className="ml-1 w-4 h-4" aria-hidden="true" />
               </button>
-              
-              <div 
+
+              <div
+                id="services-menu"
                 className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-2xl shadow-lg bg-[#FDF8E7] ring-1 ring-black ring-opacity-5 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <div className="py-2" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                  <Link href="/services/sme-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">SME Financing</Link>
-                  <Link href="/services/asset-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Asset Financing</Link>
-                  <Link href="/services/digital-lending" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Digital Lending</Link>
-                  <Link href="/services/treasury-services" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Treasury Services</Link>
-                </div>
+                <ul className="py-2" role="menu" aria-orientation="vertical">
+                  <li role="none"><Link href="/services/sme-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">SME Financing</Link></li>
+                  <li role="none"><Link href="/services/asset-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Asset Financing</Link></li>
+                  <li role="none"><Link href="/services/digital-lending" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Digital Lending</Link></li>
+                  <li role="none"><Link href="/services/treasury-services" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Treasury Services</Link></li>
+                </ul>
               </div>
             </div>
-            
+
             <Link href="/about" className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors">About Us</Link>
+            <Link href="/why-us" className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors">Why Us</Link>
 
             {/* Resources Dropdown */}
             <div className="relative group">
               <button
-                className="flex items-center text-base font-medium text-gray-700 hover:text-gray-900 transition-colors focus:outline-none py-2"
+                className="flex items-center text-base font-medium text-gray-700 hover:text-gray-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark rounded py-2"
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 onMouseLeave={() => setIsResourcesOpen(false)}
+                onClick={() => setIsResourcesOpen((v) => !v)}
+                aria-expanded={isResourcesOpen}
+                aria-haspopup="true"
+                aria-controls="resources-menu"
               >
-                Resources <ChevronDown className="ml-1 w-4 h-4" />
+                Legal <ChevronDown className="ml-1 w-4 h-4" aria-hidden="true" />
               </button>
 
               <div
+                id="resources-menu"
                 className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-2xl shadow-lg bg-[#FDF8E7] ring-1 ring-black ring-opacity-5 transition-all duration-200 ${isResourcesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 onMouseLeave={() => setIsResourcesOpen(false)}
               >
-                <div className="py-2" role="menu" aria-orientation="vertical" aria-labelledby="resources-menu">
-                  <Link href="/privacy-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Privacy Policy</Link>
-                  <Link href="/terms-and-conditions" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Terms &amp; Conditions</Link>
-                  <Link href="/terms-of-use" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Terms of Use</Link>
-                  <Link href="/data-protection" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Data Protection</Link>
-                  <Link href="/complaints-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Complaints Policy</Link>
-                </div>
+                <ul className="py-2" role="menu" aria-orientation="vertical">
+                  <li role="none"><Link href="/privacy-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Privacy Policy</Link></li>
+                  <li role="none"><Link href="/terms-and-conditions" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Terms &amp; Conditions</Link></li>
+                  <li role="none"><Link href="/terms-of-use" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Terms of Use</Link></li>
+                  <li role="none"><Link href="/data-protection" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Data Protection</Link></li>
+                  <li role="none"><Link href="/complaints-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Complaints Policy</Link></li>
+                </ul>
               </div>
             </div>
 
@@ -84,19 +98,25 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Link href="/contact" className="px-6 py-3 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-brand-yellow-hover transition-colors text-sm flex items-center gap-2">
+            <button
+              onClick={() => setIsApplyModalOpen(true)}
+              className="px-6 py-3 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-brand-yellow-hover transition-colors text-sm flex items-center gap-2"
+            >
               Apply Now
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-            </Link>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-gray-900 focus:outline-none"
+              className="text-gray-700 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark rounded p-1"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </nav>
@@ -104,34 +124,42 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#FDF8E7] px-4 pb-6 py-2 overflow-y-auto w-full absolute top-full left-0 shadow-lg border-t border-brand-dark/5">
-          <div className="space-y-2 pt-2">
-            <div className="mb-2">
-              <div className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider">Services</div>
-              <Link onClick={() => setIsOpen(false)} href="/services/sme-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">SME Financing</Link>
-              <Link onClick={() => setIsOpen(false)} href="/services/asset-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Asset Financing</Link>
-              <Link onClick={() => setIsOpen(false)} href="/services/digital-lending" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Digital Lending</Link>
-              <Link onClick={() => setIsOpen(false)} href="/services/treasury-services" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Treasury Services</Link>
+        <div id="mobile-menu" className="md:hidden bg-[#FDF8E7] px-4 pb-6 py-2 overflow-y-auto w-full absolute top-full left-0 shadow-lg border-t border-brand-dark/5">
+          <nav aria-label="Mobile navigation">
+            <div className="space-y-2 pt-2">
+              <div className="mb-2">
+                <p className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider">Services</p>
+                <Link onClick={() => setIsOpen(false)} href="/services/sme-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">SME Financing</Link>
+                <Link onClick={() => setIsOpen(false)} href="/services/asset-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Asset Financing</Link>
+                <Link onClick={() => setIsOpen(false)} href="/services/digital-lending" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Digital Lending</Link>
+                <Link onClick={() => setIsOpen(false)} href="/services/treasury-services" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Treasury Services</Link>
+              </div>
+
+              <p className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider mt-4">Company</p>
+              <Link onClick={() => setIsOpen(false)} href="/about" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">About Us</Link>
+              <Link onClick={() => setIsOpen(false)} href="/why-us" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Why Swiftbanq</Link>
+
+              <p className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider mt-4">Legal</p>
+              <Link onClick={() => setIsOpen(false)} href="/privacy-policy" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Privacy Policy</Link>
+              <Link onClick={() => setIsOpen(false)} href="/terms-and-conditions" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Terms &amp; Conditions</Link>
+              <Link onClick={() => setIsOpen(false)} href="/terms-of-use" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Terms of Use</Link>
+              <Link onClick={() => setIsOpen(false)} href="/data-protection" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Data Protection</Link>
+              <Link onClick={() => setIsOpen(false)} href="/complaints-policy" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Complaints Policy</Link>
+
+              <Link onClick={() => setIsOpen(false)} href="/contact" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Contact Us</Link>
+              <button
+                onClick={() => { setIsOpen(false); setIsApplyModalOpen(true); }}
+                className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-brand-dark bg-brand-yellow rounded-xl mt-6 w-full"
+              >
+                Apply Now
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+              </button>
             </div>
-            
-            <div className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider mt-4">Company</div>
-            <Link onClick={() => setIsOpen(false)} href="/about" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">About Us</Link>
-
-            <div className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider mt-4">Resources</div>
-            <Link onClick={() => setIsOpen(false)} href="/privacy-policy" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Privacy Policy</Link>
-            <Link onClick={() => setIsOpen(false)} href="/terms-and-conditions" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Terms &amp; Conditions</Link>
-            <Link onClick={() => setIsOpen(false)} href="/terms-of-use" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Terms of Use</Link>
-            <Link onClick={() => setIsOpen(false)} href="/data-protection" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Data Protection</Link>
-            <Link onClick={() => setIsOpen(false)} href="/complaints-policy" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Complaints Policy</Link>
-
-            <Link onClick={() => setIsOpen(false)} href="/contact" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Contact Us</Link>
-            <Link onClick={() => setIsOpen(false)} href="/contact" className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-brand-dark bg-brand-yellow rounded-xl mt-6 text-center">
-              Apply Now
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-            </Link>
-          </div>
+          </nav>
         </div>
       )}
+
+      <ApplyModal isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)} />
     </header>
   );
 }
