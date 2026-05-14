@@ -87,7 +87,7 @@ export function ApplyModal({ isOpen, onClose }: ApplyModalProps) {
             </div>
             <div className="flex-1 min-w-0">
               <p className="font-bold text-brand-dark text-base">Fill Application Form</p>
-              <p className="text-gray-500 text-sm mt-0.5">Complete our quick online form and we'll get back to you.</p>
+              <p className="text-gray-500 text-sm mt-0.5">Complete our quick online form and we&apos;ll get back to you.</p>
             </div>
             <svg className="w-5 h-5 text-gray-400 group-hover:text-brand-dark transition-colors shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />

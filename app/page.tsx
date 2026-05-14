@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Briefcase, Car, Smartphone, TrendingUp } from
 import Image from 'next/image';
 import { FAQSection } from '@/components/FAQSection';
 import { HeroMockup } from '@/components/HeroMockup';
+import { ApplyNowButton } from '@/components/ApplyNowButton';
 
 export const metadata: Metadata = {
   alternates: {
@@ -91,10 +92,7 @@ export default function Home() {
           
           <div className="flex justify-center mt-6 md:mt-10">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Link href="/contact" className="px-10 py-3 rounded-full bg-brand-yellow text-brand-dark font-bold hover:bg-brand-yellow-hover transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg">
-                Apply Now
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-              </Link>
+              <ApplyNowButton />
               <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border border-gray-300 text-brand-dark font-medium hover:bg-white transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/50 backdrop-blur-sm">
                 Contact Sales
               </Link>
@@ -180,7 +178,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.2] mb-0 max-w-3xl mx-auto">
               Services <span className="inline-flex items-center align-middle mx-1 md:mx-2 -mt-1 md:-mt-2">
                 <div className="bg-white rounded-xl md:rounded-2xl border border-[#f0e7ca] p-2 md:p-3 transform -rotate-6 flex items-center justify-center">
-                  <img src="https://cdn-icons-png.flaticon.com/128/9198/9198208.png" alt="Services icon" className="w-7 h-7 md:w-10 md:h-10" />
+                  <Image src="https://cdn-icons-png.flaticon.com/128/9198/9198208.png" alt="Services icon" width={40} height={40} unoptimized className="w-7 h-7 md:w-10 md:h-10" />
                 </div>
               </span> that give you <span className="inline-flex items-center align-middle mx-1 md:mx-2 -mt-1 md:-mt-2">
                 <div className="bg-white rounded-xl md:rounded-2xl border border-[#f0e7ca] p-2 md:p-3 transform rotate-6 flex items-center justify-center">

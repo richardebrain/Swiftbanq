@@ -13,7 +13,6 @@ function sanitise(value: unknown, maxLength: number): string {
   if (typeof value !== 'string') return '';
   return value
     .trim()
-    // eslint-disable-next-line no-control-regex
     .replace(/[\x00-\x1F\x7F]/g, '')
     .slice(0, maxLength);
 }
