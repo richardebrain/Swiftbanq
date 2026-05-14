@@ -93,7 +93,7 @@ export default function Home() {
                 Apply Now
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
               </Link>
-              <Link href="/contact" className="px-10 py-3 rounded-full border border-gray-300 text-brand-dark font-medium hover:bg-white transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/50 backdrop-blur-sm">
+              <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border border-gray-300 text-brand-dark font-medium hover:bg-white transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/50 backdrop-blur-sm">
                 Contact Sales
               </Link>
             </div>
@@ -178,7 +178,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.2] mb-0 max-w-3xl mx-auto">
               Services <span className="inline-flex items-center align-middle mx-1 md:mx-2 -mt-1 md:-mt-2">
                 <div className="bg-white rounded-xl md:rounded-2xl border border-[#f0e7ca] p-2 md:p-3 transform -rotate-6 flex items-center justify-center">
-                  <Briefcase className="w-7 h-7 md:w-10 md:h-10 text-brand-dark" />
+                  <img src="https://cdn-icons-png.flaticon.com/128/9198/9198208.png" alt="Services icon" className="w-7 h-7 md:w-10 md:h-10" />
                 </div>
               </span> that give you <span className="inline-flex items-center align-middle mx-1 md:mx-2 -mt-1 md:-mt-2">
                 <div className="bg-white rounded-xl md:rounded-2xl border border-[#f0e7ca] p-2 md:p-3 transform rotate-6 flex items-center justify-center">
@@ -193,8 +193,8 @@ export default function Home() {
 
       {/* Service 1: SME Financing */}
       <section className="py-16 md:py-24 bg-transparent overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex justify-center">
@@ -287,8 +287,8 @@ export default function Home() {
 
       {/* Service 2: Asset Financing */}
       <section className="py-16 md:py-24 bg-transparent overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
 
             {/* Right (visually): UI Card mockup */}
             <div className="w-full lg:w-1/2 flex justify-center">
@@ -384,8 +384,8 @@ export default function Home() {
 
       {/* Service 3: Personal Loan */}
       <section className="py-16 md:py-24 bg-transparent overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex justify-center">
@@ -515,8 +515,8 @@ export default function Home() {
 
       {/* Service 4: Treasury Services */}
       <section className="py-16 md:py-24 bg-transparent overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex justify-center">
