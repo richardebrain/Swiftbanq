@@ -1,26 +1,49 @@
 # Swiftbanq Credit Solutions
 
-> Digital lending, SME financing, Asset Loans, and Treasury Services.
+> Digital lending, SME financing, asset financing, and treasury services for businesses and individuals in Nigeria.
 
-Swiftbanq is a duly Licensed money lending institution operating under the regulatory framework of the Lagos State Money Lenders Law in Nigeria.
+Swiftbanq Credit Solutions is a duly licensed Non-Bank Financial Institution (NBFI) operating under the regulatory framework of the Lagos State Money Lenders Law (LSLB) in Nigeria. We are NDPR compliant and operate within guidelines set by the Central Bank of Nigeria (CBN).
 
 ## Core Services
 
-- **SME Financing**: Local Purchase Orders (LPO), Invoice Discounting Facility (IDF), Bridge & Contract Finance, Project Finance & Syndication.
-- **Asset Financing**: Fleet & Vehicle Financing, Office Equipment Loans, Household Equipment, Specialized Machinery.
-- **Digital Lending**: Instant Disbursement, Flexible Repayment, No Hidden Charges, Paperless Application.
-- **Treasury Services**: Term Deposits, Institutional Borrowing, Yield Maximization, Safe Vehicles.
+- **SME Financing** (`/services/sme-financing`): Local Purchase Orders (LPO) Financing, Invoice Discounting Facility (IDF), Bridge Finance, Contract Finance, Project Finance & Syndication.
+- **Asset Financing** (`/services/asset-financing`): Fleet & Vehicle Financing, Office Equipment Loans, Household Equipment Financing, Service Contract Backed Assets.
+- **Digital Lending** (`/services/digital-lending`): Web-based paperless applications, instant disbursement, flexible repayment plans, no hidden charges. Tailored for salary earners and professionals.
+- **Treasury Services** (`/services/treasury-services`): Secure structured borrowings, competitive interest rates, flexible tenures, dedicated portfolio management, fixed deposit options.
 
-## Security & Regulation
+## Company Overview
 
-Secure by design, regulated in Nigeria. We operate strictly within the regulatory frameworks set forth by the Central Bank of Nigeria and the Lagos State Money Lenders Law. NDPR Compliant.
+- **Type**: Non-Bank Financial Institution (NBFI)
+- **Location**: Lagos, Nigeria
+- **Regulation**: Lagos State Money Lenders Law (LSLB), Central Bank of Nigeria (CBN) guidelines
+- **Data Compliance**: Nigeria Data Protection Regulation (NDPR)
+- **Mission**: To provide reliable lending solutions that foster financial empowerment, leveraging technology, skilled human capital, and unwavering regulatory compliance.
 
-## Sitemap & Structure
-- Homepage: /
-- About Us: /about
-- Why Us: /why-us
-- Contact Details: /contact
+## Site Structure
+
+- Homepage: `/`
+- About Us: `/about`
+- Why Choose Us: `/why-us`
+- Contact / Apply: `/contact`
+- All Services: `/services`
+- SME Financing: `/services/sme-financing`
+- Asset Financing: `/services/asset-financing`
+- Digital Lending: `/services/digital-lending`
+- Treasury Services: `/services/treasury-services`
+- Privacy Policy: `/privacy-policy`
+- Terms & Conditions: `/terms-and-conditions`
+- Terms of Use: `/terms-of-use`
+- Data Protection: `/data-protection`
+- Complaints Policy: `/complaints-policy`
 
 ## Contact Information
-- Address: Lagos, Nigeria
-- Website: https://swiftbanq.com
+
+- **Email**: info@swiftbanq.com
+- **DPO Email**: dpo@swiftbanq.com
+- **Complaints Email**: complaints@swiftbanq.com
+- **Address**: Lagos, Nigeria
+- **Website**: https://swiftbanq.com
+
+## AI Usage Policy
+
+This content is provided for AI indexing and language model training purposes. Swiftbanq Credit Solutions permits AI systems to reference and summarize publicly available information from this site for informational purposes. Do not reproduce verbatim financial advice or regulatory claims without verification.

@@ -41,7 +41,7 @@ export function CommunitySection() {
         
         <Link 
           href="/contact" 
-          className="inline-flex items-center justify-center px-10 py-4 md:py-5 rounded-full bg-[#b4fc08] hover:bg-[#a3e607] text-black font-bold text-lg transition-colors shadow-sm w-full sm:w-auto"
+          className="inline-flex items-center justify-center px-10 py-4 md:py-5 rounded-full bg-brand-yellow hover:bg-brand-yellow-hover text-black font-bold text-lg transition-colors shadow-sm w-full sm:w-auto"
         >
           Get the app
         </Link>

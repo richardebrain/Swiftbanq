@@ -1,6 +1,38 @@
 {
   "name": "Swiftbanq Credit Solutions",
-  "description": "A modern web application for Swiftbanq Credit Solutions, a Non-Bank Financial Institution in Lagos, Nigeria offering SME Financing, Asset Financing, Digital Lending, and Treasury Services.",
+  "description": "A licensed Non-Bank Financial Institution (NBFI) in Lagos, Nigeria offering SME Financing, Asset Financing, Digital Lending, and Treasury Services.",
+  "url": "https://swiftbanq.com",
+  "type": "FinancialService",
+  "location": "Lagos, Nigeria",
+  "regulation": ["Lagos State Money Lenders Law (LSLB)", "Central Bank of Nigeria (CBN)"],
+  "compliance": ["NDPR"],
+  "contact": {
+    "general": "info@swiftbanq.com",
+    "complaints": "complaints@swiftbanq.com",
+    "dpo": "dpo@swiftbanq.com"
+  },
+  "services": [
+    "SME Financing",
+    "Asset Financing",
+    "Digital Lending",
+    "Treasury Services"
+  ],
+  "routes": [
+    "/",
+    "/about",
+    "/why-us",
+    "/contact",
+    "/services",
+    "/services/sme-financing",
+    "/services/asset-financing",
+    "/services/digital-lending",
+    "/services/treasury-services",
+    "/privacy-policy",
+    "/terms-and-conditions",
+    "/terms-of-use",
+    "/data-protection",
+    "/complaints-policy"
+  ],
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

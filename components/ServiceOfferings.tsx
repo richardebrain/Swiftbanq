@@ -59,7 +59,7 @@ export function ServiceOfferings({ title, offerings }: ServiceOfferingsProps) {
                                 <div className="flex flex-wrap gap-4 mt-auto">
                                     <Link 
                                         href="/contact" 
-                                        className="bg-brand-dark text-white px-6 py-3.5 rounded-xl font-bold flex items-center hover:bg-[#b4fc08] hover:text-brand-dark transition-colors group"
+                                        className="bg-brand-dark text-white px-6 py-3.5 rounded-xl font-bold flex items-center hover:bg-brand-yellow hover:text-brand-dark transition-colors group"
                                     >
                                         Check Eligibility 
                                         <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" />

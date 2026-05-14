@@ -21,7 +21,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                         <div>
                             <h2 className="text-4xl md:text-[3.5rem] font-heading font-medium text-brand-dark leading-[1.1] tracking-tight">
                                 {headingPart1}{' '}
-                                <span className="font-bold bg-[#b4fc08] px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">
+                                <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">
                                     {headingHighlight}
                                 </span>{' '}
                                 {headingPart2}
@@ -30,7 +30,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                         <div className="text-lg md:text-xl text-gray-700 font-medium leading-relaxed space-y-6">
                             <p>{description1}</p>
                             <p>{subDescription1}</p>
-                            <Link href="/contact" className="inline-flex items-center text-brand-dark font-bold hover:text-[#7ba803] mt-4 text-lg transition-colors group">
+                            <Link href="/contact" className="inline-flex items-center text-brand-dark font-bold hover:text-brand-yellow-hover mt-4 text-lg transition-colors group">
                                 Check Eligibility <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
                             </Link>
                         </div>
@@ -42,7 +42,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
             <section className="py-24 border-b border-brand-dark/10 bg-[#FDF8E7]/50 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <h2 className="text-4xl md:text-5xl font-heading font-medium text-center text-brand-dark mb-20 tracking-tight">
-                        How it <span className="font-bold text-[#b4fc08] drop-shadow-sm bg-brand-dark px-3 py-1 rounded-lg">works</span>
+                        How it <span className="font-bold text-brand-dark bg-brand-yellow px-3 py-1 rounded-xl inline-block transform -rotate-2 my-2 shadow-sm">works</span>
                     </h2>
                     
                     <div className="grid md:grid-cols-12 gap-12 lg:gap-24 items-center">
@@ -52,11 +52,11 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                                 <h3 className="text-2xl md:text-3xl font-medium text-gray-400 mb-4 pt-1">Check your eligibility</h3>
                              </div>
 
-                             <div className="relative border-l-[3px] border-[#b4fc08] ml-6 pl-10 pb-16">
-                                <div className="absolute w-12 h-12 bg-[#b4fc08] text-brand-dark rounded-full flex items-center justify-center -left-[27px] top-0 font-bold text-xl shadow-md">2</div>
+                             <div className="relative border-l-[3px] border-brand-yellow ml-6 pl-10 pb-16">
+                                <div className="absolute w-12 h-12 bg-brand-yellow text-brand-dark rounded-full flex items-center justify-center -left-[27px] top-0 font-bold text-xl shadow-md">2</div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-[#FF5A50] mb-6 pt-1">Complete an online application</h3>
                                 <p className="text-lg text-gray-700 font-medium leading-relaxed max-w-lg">
-                                    If you're eligible to apply, you'll need to complete a simple online application. Applications will be assessed to ensure that requests are appropriate and affordable.
+                                    If you&apos;re eligible to apply, you&apos;ll need to complete a simple online application. Applications will be assessed to ensure that requests are appropriate and affordable.
                                 </p>
                              </div>
                              
@@ -81,8 +81,8 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
                         <div>
-                            <h2 className="text-4xl md:text-5xl font-heading font-medium text-[#FF5A50] leading-[1.1] tracking-tight mb-8">
-                                Improve <span className="font-bold">your financial situation</span>
+                            <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark leading-[1.1] tracking-tight mb-8">
+                                <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">Improve</span> your financial situation
                             </h2>
                             <p className="text-xl text-gray-700 font-medium leading-relaxed">
                                 Working directly with you allows us to connect your borrowing capacity to your income and cash flow, meaning we can usually offer you a better structure than you would get elsewhere. This ensures you can easily achieve your goals and improve your financial situation.
@@ -96,7 +96,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                                 </p>
                              </div>
                              <div className="bg-brand-dark text-white p-8 rounded-[2rem] shadow-xl relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#b4fc08] rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-yellow rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
                                 <h3 className="text-2xl font-bold mb-4 relative z-10 text-white">More affordable and reliable</h3>
                                 <p className="text-lg text-gray-300 font-medium leading-relaxed relative z-10">
                                     We offer credit of up to ₦100,000,000 at lower repayments than those of traditional unstructured lenders.

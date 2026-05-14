@@ -1,12 +1,32 @@
 import { MetadataRoute } from 'next'
- 
+
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = 'https://swiftbanq.com';
+
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/private/'],
-    },
-    sitemap: 'https://swiftbanq.com/sitemap.xml',
+    rules: [
+      // Main crawl rules for all bots
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/_next/',
+          '/private/',
+        ],
+      },
+      // Give Googlebot a crawl-delay hint and explicit permission
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/api/', '/_next/'],
+      },
+      // Block known scrapers that add no SEO value
+      {
+        userAgent: ['SemrushBot', 'DotBot', 'AhrefsBot', 'MJ12bot'],
+        disallow: '/',
+      },
+    ],
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }

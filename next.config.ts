@@ -3,10 +3,16 @@ import type {NextConfig} from 'next';
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   typescript: {
     ignoreBuildErrors: false,
+  },
+  // Fix for multiple lockfiles warning
+  outputFileTracingRoot: __dirname,
+  // Experimental features to improve chunk loading
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
   },
   // Allow access to remote image placeholder.
   images: {
@@ -16,6 +22,12 @@ const nextConfig: NextConfig = {
         hostname: 'picsum.photos',
         port: '',
         pathname: '/**', // This allows any path under the hostname
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.magnific.com',
+        port: '',
+        pathname: '/**',
       },
     ],
   },

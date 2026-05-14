@@ -17,10 +17,8 @@ export function ServiceHero({ title, description, buttonText, buttonLink, seed }
           
           {/* Left Content */}
           <div className="w-full lg:w-[55%] flex flex-col justify-center pb-20 lg:pb-32 pr-0 lg:pr-12 relative z-20 mt-8 lg:mt-16">
-            <div className="flex items-center text-brand-dark font-bold text-sm mb-6">
-              <span className="opacity-60">Our Products</span>
-              <span className="mx-3 opacity-30 text-xs">●</span>
-              <span>{title}</span>
+            <div className="inline-flex self-start items-center px-4 py-1.5 rounded-full border border-black text-sm font-medium tracking-wide text-black uppercase mb-6">
+              Our Services
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-heading font-medium text-brand-dark leading-[1.1] mb-6 tracking-tight">
@@ -34,7 +32,7 @@ export function ServiceHero({ title, description, buttonText, buttonLink, seed }
             <div>
               <Link 
                 href={buttonLink} 
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#b4fc08] hover:bg-[#a3e607] text-brand-dark font-bold text-lg transition-colors shadow-sm w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-yellow hover:bg-brand-yellow-hover text-brand-dark font-bold text-lg transition-colors shadow-sm w-full sm:w-auto"
               >
                 {buttonText}
               </Link>
