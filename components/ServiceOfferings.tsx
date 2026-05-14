@@ -18,7 +18,7 @@ interface ServiceOfferingsProps {
 
 export function ServiceOfferings({ title, offerings }: ServiceOfferingsProps) {
     return (
-        <section className="py-24 bg-gray-50/50">
+        <section className="py-24 md:py-32 bg-gray-50/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-3xl md:text-5xl font-heading font-medium text-brand-dark mb-16 text-center tracking-tight">
                     {title}

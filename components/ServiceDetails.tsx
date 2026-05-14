@@ -15,7 +15,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
     return (
         <div className="bg-transparent">
             {/* Intro Section */}
-            <section className="py-24 border-b border-brand-dark/10">
+            <section className="py-24 md:py-32 border-b border-brand-dark/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <div>
@@ -39,7 +39,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
             </section>
 
             {/* How it works */}
-            <section className="py-24 border-b border-brand-dark/10 bg-[#FDF8E7]/50 relative overflow-hidden">
+            <section className="py-24 md:py-32 border-b border-brand-dark/10 bg-[#FDF8E7]/50 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <h2 className="text-4xl md:text-5xl font-heading font-medium text-center text-brand-dark mb-20 tracking-tight">
                         How it <span className="font-bold text-brand-dark bg-brand-yellow px-3 py-1 rounded-xl inline-block transform -rotate-2 my-2 shadow-sm">works</span>
@@ -77,7 +77,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
             </section>
 
             {/* Improve your financial situation */}
-            <section className="py-24 border-b border-brand-dark/10">
+            <section className="py-24 md:py-32 border-b border-brand-dark/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
                         <div>
@@ -108,7 +108,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
             </section>
             
             {/* Why business choose us */}
-            <section className="bg-white py-24 mb-16">
+            <section className="bg-white py-24 md:py-32 mb-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-heading font-medium text-brand-dark mb-16 tracking-tight text-center">Why businesses choose us:</h2>
                     <div className="grid md:grid-cols-3 gap-12">
