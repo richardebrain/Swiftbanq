@@ -107,7 +107,7 @@ export default function TermsOfUsePage() {
 
           <h2 className="text-2xl font-bold text-brand-dark mt-12 mb-4">7. Disclaimers</h2>
           <p>
-            This website and its content are provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
+            This website and its content are provided on an &quot;as is&quot; and &quot;as available&quot; basis without any warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
           </p>
           <p>
             Swiftbanq Credit Solutions does not warrant that:

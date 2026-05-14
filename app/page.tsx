@@ -618,7 +618,7 @@ export default function Home() {
             {/* Card 1 */}
             <div className="bg-brand-yellow rounded-[2rem] p-8 pb-10 w-full md:w-1/4 transform -rotate-[4deg] hover:rotate-0 transition-transform duration-300 shadow-xl flex flex-col justify-between z-20">
               <p className="text-brand-dark font-medium text-lg leading-snug mb-12">
-                "Swiftbanq&apos;s SME Financing helped us secure the capital we needed to fulfill a major government contract without wiping out our cash flow."
+                &quot;Swiftbanq&apos;s SME Financing helped us secure the capital we needed to fulfill a major government contract without wiping out our cash flow.&quot;
               </p>
               <div className="flex items-center gap-4 mt-auto">
                 <div>
@@ -631,7 +631,7 @@ export default function Home() {
             {/* Card 2 */}
             <div className="bg-brand-dark rounded-[2rem] p-8 pb-10 w-full md:w-1/4 transform rotate-[2deg] hover:rotate-0 transition-transform duration-300 shadow-xl flex flex-col justify-between z-10 -ml-0 md:-ml-8 mt-8 md:mt-12">
               <p className="text-white font-medium text-lg leading-snug mb-12">
-                &ldquo;Acquiring our new delivery fleet was a breeze. Their asset financing structured our payments perfectly to match our monthly revenue.&rdquo;
+                &quot;Acquiring our new delivery fleet was a breeze. Their asset financing structured our payments perfectly to match our monthly revenue.&quot;
               </p>
               <div className="flex items-center gap-4 mt-auto">
                 <div>
@@ -644,7 +644,7 @@ export default function Home() {
             {/* Card 3 */}
             <div className="bg-[#fdfcf2] rounded-[2rem] p-8 pb-10 w-full md:w-1/4 transform -rotate-[2deg] hover:rotate-0 transition-transform duration-300 shadow-xl flex flex-col justify-between z-10 -ml-0 md:-ml-8 mt-4 md:mt-24">
               <p className="text-brand-dark font-medium text-lg leading-snug mb-12">
-                &ldquo;The digital lending process is incredibly seamless. I got a loan disbursed directly to my account within minutes for a personal emergency.&rdquo;
+                &quot;The digital lending process is incredibly seamless. I got a loan disbursed directly to my account within minutes for a personal emergency.&quot;
               </p>
               <div className="flex items-center gap-4 mt-auto">
                 <div>
@@ -658,7 +658,7 @@ export default function Home() {
             {/* Card 4 */}
             <div className="bg-[#ff8c00] rounded-[2rem] p-8 pb-10 w-full md:w-1/4 transform rotate-[4deg] hover:rotate-0 transition-transform duration-300 shadow-xl flex flex-col justify-between z-20 -ml-0 md:-ml-8 mt-12 md:mt-6">
               <p className="text-brand-dark font-medium text-lg leading-snug mb-12">
-                &ldquo;With their structured treasury services, my company&apos;s idle funds are now yielding highly competitive returns safely and securely.&rdquo;
+                &quot;With their structured treasury services, my company&apos;s idle funds are now yielding highly competitive returns safely and securely.&quot;
               </p>
               <div className="flex items-center gap-4 mt-auto">
                 <div>
