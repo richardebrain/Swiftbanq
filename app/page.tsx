@@ -62,13 +62,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-16 md:pt-24 pb-0 overflow-hidden bg-transparent">
         {/* Pattern - Left */}
-        <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60" style={{ left: '-20%' }}>
+        <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60" style={{ left: '-440px' }}>
           <Image src="/pattern 3.svg" alt="" fill className="object-cover object-left-top" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-[#FDF8E7]" />
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#FDF8E7] to-transparent" />
         </div>
         {/* Pattern - Right (mirrored) */}
-        <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60 scale-x-[-1]" style={{ right: '-20%' }}>
+        <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60 scale-x-[-1]" style={{ right: '-440px' }}>
           <Image src="/pattern 3.svg" alt="" fill className="object-cover object-left-top" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-[#FDF8E7]" />
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#FDF8E7] to-transparent" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
