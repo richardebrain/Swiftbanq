@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
@@ -58,7 +58,7 @@ export default function TreasuryServicesPage() {
             {/* Right — image + floating badges */}
             <div className="w-full lg:w-[48%] relative h-[380px] sm:h-[460px] lg:h-[520px] mt-auto">
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                <Image src="/images/treasury-card.jpg" alt="Treasury investment" fill className="object-cover object-center" />
+                <Image src="/images/treasury-hero.jpg" alt="Treasury investment dashboard" fill className="object-cover object-center" />
               </div>
               <div className="absolute top-4 left-4 bg-white rounded-xl px-4 py-2 shadow-md flex items-center gap-2">
                 <span className="text-xs font-semibold text-gray-500">Capital Protected</span>
@@ -114,7 +114,7 @@ export default function TreasuryServicesPage() {
                 Lock in your capital for 30 to 365 days and earn highly competitive, guaranteed returns on every naira invested.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/treasury-card.jpg" alt="Fixed Deposits" fill className="object-cover" />
+                <Image src="/images/treasury-fixed-deposits.jpg" alt="Fixed Deposits" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['30–365 days', 'Guaranteed', 'High Yield'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -134,7 +134,7 @@ export default function TreasuryServicesPage() {
                 Flexible short-term placements from 30 days. Ideal for individuals and businesses with liquidity requirements.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/sme-team.jpg" alt="Short-term Investments" fill className="object-cover" />
+                <Image src="/images/treasury-short-term.jpg" alt="Short-term Investments" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Flexible', 'Liquid', 'Short-term'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -154,7 +154,7 @@ export default function TreasuryServicesPage() {
                 Customized treasury solutions for businesses seeking to optimise idle corporate funds with minimal risk and maximum yield.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/about-collab.jpg" alt="Corporate Treasury" fill className="object-cover" />
+                <Image src="/images/treasury-corporate.jpg" alt="Corporate Treasury" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Corporate', 'Structured', 'Optimised'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -174,7 +174,7 @@ export default function TreasuryServicesPage() {
                 Tailored investment portfolios built to extract the best possible return from your capital — active management, transparent reporting.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/why-section.jpg" alt="Yield Maximisation" fill className="object-cover" />
+                <Image src="/images/treasury-yield.jpg" alt="Yield Maximisation" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Portfolio', 'Max Returns', 'Managed'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -253,7 +253,7 @@ export default function TreasuryServicesPage() {
             </div>
           </div>
           <div className="mt-16 md:mt-24 relative w-full h-[280px] sm:h-[380px] md:h-[480px] rounded-2xl overflow-hidden">
-            <Image src="/images/about-collab.jpg" alt="Treasury investment team" fill className="object-cover object-center" />
+            <Image src="/images/treasury-team.jpg" alt="Treasury investment team" fill className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
         </div>
@@ -292,7 +292,7 @@ export default function TreasuryServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="w-full lg:w-[45%] relative h-[340px] sm:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden shrink-0">
-              <Image src="/images/treasury-card.jpg" alt="Treasury investors" fill className="object-cover" />
+              <Image src="/images/treasury-stats.jpg" alt="Treasury investors" fill className="object-cover" />
             </div>
             <div className="w-full lg:w-[55%]">
               <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-heading font-medium text-brand-dark leading-[1.15] mb-8 tracking-tight">
