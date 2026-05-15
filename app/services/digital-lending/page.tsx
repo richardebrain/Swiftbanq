@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     title: 'Digital Lending | Swiftbanq Credit Solutions',
     description: 'Instant personal loans for salary earners in Nigeria. 100% online application, same-day disbursement, transparent pricing. Apply now.',
     url: 'https://swiftbanq.com/services/digital-lending',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Digital Lending — Swiftbanq Credit Solutions' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -21,7 +26,7 @@ export default function DigitalLendingPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Services', url: '/services' },
+
           { name: 'Digital Lending' },
         ]}
       />
@@ -58,7 +63,7 @@ export default function DigitalLendingPage() {
             {/* Right — image + floating badges */}
             <div className="w-full lg:w-[48%] relative h-[380px] sm:h-[460px] lg:h-[520px] mt-auto">
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                <Image src="/images/face-2.jpg" alt="Personal loan applicant" fill className="object-cover object-top" />
+                <Image src="/images/lending-hero.jpg" alt="Personal loan applicant" fill className="object-cover object-top" />
               </div>
               <div className="absolute top-4 left-4 bg-white rounded-xl px-4 py-2 shadow-md flex items-center gap-2">
                 <span className="text-xs font-semibold text-gray-500">Same-Day Disbursement</span>
@@ -113,7 +118,7 @@ export default function DigitalLendingPage() {
                 Access up to 50% of your next salary in advance. Repaid automatically at the end of your pay cycle — zero stress.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/face-1.jpg" alt="Salary Advance" fill className="object-cover object-top" />
+                <Image src="/images/lending-salary.jpg" alt="Salary Advance" fill className="object-cover object-top" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Salary', 'Advance', 'Instant'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -133,7 +138,7 @@ export default function DigitalLendingPage() {
                 Life throws surprises. Get funds disbursed to your account within hours for medical bills, repairs, or urgent personal needs.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/face-2.jpg" alt="Emergency Loans" fill className="object-cover object-top" />
+                <Image src="/images/lending-emergency.jpg" alt="Emergency Loans" fill className="object-cover object-top" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Medical', 'Urgent', 'Fast'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -153,7 +158,7 @@ export default function DigitalLendingPage() {
                 Ensure your children&apos;s education is never interrupted. Get school fees funding fast and pay back comfortably over time.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/why-section.jpg" alt="School Fees Loan" fill className="object-cover" />
+                <Image src="/images/lending-school.jpg" alt="School Fees Loan" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Education', 'School', 'Tuition'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -173,7 +178,7 @@ export default function DigitalLendingPage() {
                 Renovate, furnish, or upgrade your home with a personal loan that fits your budget and repayment comfort zone.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/face-3.jpg" alt="Home Improvement" fill className="object-cover object-top" />
+                <Image src="/images/lending-home.jpg" alt="Home Improvement" fill className="object-cover object-top" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Renovation', 'Furniture', 'Solar'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -252,7 +257,7 @@ export default function DigitalLendingPage() {
             </div>
           </div>
           <div className="mt-16 md:mt-24 relative w-full h-[280px] sm:h-[380px] md:h-[480px] rounded-2xl overflow-hidden">
-            <Image src="/images/sme-team.jpg" alt="Digital lending team" fill className="object-cover object-center" />
+            <Image src="/images/lending-team.jpg" alt="Digital lending team" fill className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
         </div>
@@ -291,7 +296,7 @@ export default function DigitalLendingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="w-full lg:w-[45%] relative h-[340px] sm:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden shrink-0">
-              <Image src="/images/face-2.jpg" alt="Digital lending clients" fill className="object-cover object-top" />
+              <Image src="/images/lending-stats.jpg" alt="Digital lending clients" fill className="object-cover object-top" />
             </div>
             <div className="w-full lg:w-[55%]">
               <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-heading font-medium text-brand-dark leading-[1.15] mb-8 tracking-tight">

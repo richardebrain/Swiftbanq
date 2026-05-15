@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: 'Complaints Policy | Swiftbanq Credit Solutions',
     description: 'How to raise a complaint with Swiftbanq, our resolution process, timelines, and escalation rights.',
     url: 'https://swiftbanq.com/complaints-policy',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Swiftbanq Credit Solutions' }],
   },
   robots: {
     index: true,

@@ -185,7 +185,7 @@ const schemaOrganization = {
           "@type": "FinancialProduct",
           "name": "Treasury Services",
           "description": "Structured borrowings, competitive interest rates, flexible tenures, and portfolio management for investors.",
-          "url": "https://swiftbanq.com/services/treasury-services"
+          "url": "https://swiftbanq.com/treasury-services"
         }
       }
     ]

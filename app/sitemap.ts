@@ -3,11 +3,11 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://swiftbanq.com';
 
-  // Use static dates — dynamic new Date() causes the sitemap to change on
-  // every build, which signals false "freshness" to crawlers and wastes crawl budget.
-  const coreLastMod = new Date('2025-05-01');
-  const serviceLastMod = new Date('2025-05-01');
-  const legalLastMod = new Date('2025-01-01');
+  // Static dates — dynamic new Date() causes the sitemap to change on every
+  // build, signalling false freshness to crawlers and wasting crawl budget.
+  const coreLastMod    = new Date('2026-05-15');
+  const serviceLastMod = new Date('2026-05-15');
+  const legalLastMod   = new Date('2026-01-01');
 
   return [
     // ── Core pages ──────────────────────────────────────────────────────────
@@ -24,25 +24,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/why-us`,
+      url: `${baseUrl}/contact`,
       lastModified: coreLastMod,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/apply`,
       lastModified: coreLastMod,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
 
     // ── Services ─────────────────────────────────────────────────────────────
-    {
-      url: `${baseUrl}/services`,
-      lastModified: serviceLastMod,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
     {
       url: `${baseUrl}/services/sme-financing`,
       lastModified: serviceLastMod,
@@ -62,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/treasury-services`,
+      url: `${baseUrl}/treasury-services`,
       lastModified: serviceLastMod,
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -71,12 +65,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // ── Legal & compliance ───────────────────────────────────────────────────
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: legalLastMod,
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/terms-and-conditions`,
       lastModified: legalLastMod,
       changeFrequency: 'yearly',
       priority: 0.4,
@@ -92,6 +80,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: legalLastMod,
       changeFrequency: 'yearly',
       priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/cookie-policy`,
+      lastModified: legalLastMod,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
   ]
 }

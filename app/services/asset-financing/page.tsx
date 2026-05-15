@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     title: 'Asset Financing | Swiftbanq Credit Solutions',
     description: 'Finance vehicles, office equipment, household assets, and industrial machinery in Nigeria. Flexible repayment, low rates, fast approval.',
     url: 'https://swiftbanq.com/services/asset-financing',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Asset Financing — Swiftbanq Credit Solutions' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -21,7 +26,7 @@ export default function AssetFinancingPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Services', url: '/services' },
+
           { name: 'Asset Financing' },
         ]}
       />
@@ -58,7 +63,7 @@ export default function AssetFinancingPage() {
             {/* Right — image + floating badges */}
             <div className="w-full lg:w-[48%] relative h-[380px] sm:h-[460px] lg:h-[520px] mt-auto">
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                <Image src="/images/asset-card.jpg" alt="Asset financing" fill className="object-cover object-center" />
+                <Image src="/images/asset-hero.jpg" alt="Asset financing" fill className="object-cover object-center" />
               </div>
               <div className="absolute top-4 left-4 bg-white rounded-xl px-4 py-2 shadow-md flex items-center gap-2">
                 <span className="text-xs font-semibold text-gray-500">Flexible Repayment</span>
@@ -113,7 +118,7 @@ export default function AssetFinancingPage() {
                 Purchase cars, commercial vehicles, or fleet assets for your business or personal use with easy monthly repayments.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/asset-card.jpg" alt="Vehicle Financing" fill className="object-cover" />
+                <Image src="/images/asset-vehicle.jpg" alt="Vehicle Financing" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Cars', 'Fleet', 'Commercial'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -133,7 +138,7 @@ export default function AssetFinancingPage() {
                 Equip your workspace with the latest technology, servers, and furniture to boost productivity without upfront capital drain.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/sme-team.jpg" alt="Office Equipment" fill className="object-cover" />
+                <Image src="/images/asset-office.jpg" alt="Office Equipment" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Laptops', 'Servers', 'Furniture'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -153,7 +158,7 @@ export default function AssetFinancingPage() {
                 Finance major appliances, solar installations, and household assets with manageable monthly repayment plans tailored to your income.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/why-section.jpg" alt="Household Assets" fill className="object-cover" />
+                <Image src="/images/asset-household.jpg" alt="Household Assets" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Solar', 'Appliances', 'Home'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -173,7 +178,7 @@ export default function AssetFinancingPage() {
                 Specialized financing for acquiring industrial equipment — geared towards manufacturing, agriculture, and construction sectors.
               </p>
               <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image src="/images/about-collab.jpg" alt="Industrial Machinery" fill className="object-cover" />
+                <Image src="/images/asset-industrial.jpg" alt="Industrial Machinery" fill className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex gap-2">
                   {['Manufacturing', 'Agriculture', 'Construction'].map((tag) => (
                     <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
@@ -252,7 +257,7 @@ export default function AssetFinancingPage() {
             </div>
           </div>
           <div className="mt-16 md:mt-24 relative w-full h-[280px] sm:h-[380px] md:h-[480px] rounded-2xl overflow-hidden">
-            <Image src="/images/asset-card.jpg" alt="Asset financing team" fill className="object-cover object-center" />
+            <Image src="/images/asset-howto.jpg" alt="Asset financing team" fill className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
         </div>
@@ -291,7 +296,7 @@ export default function AssetFinancingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="w-full lg:w-[45%] relative h-[340px] sm:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden shrink-0">
-              <Image src="/images/sme-team.jpg" alt="Asset financing clients" fill className="object-cover" />
+              <Image src="/images/asset-stats.jpg" alt="Asset financing clients" fill className="object-cover" />
             </div>
             <div className="w-full lg:w-[55%]">
               <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-heading font-medium text-brand-dark leading-[1.15] mb-8 tracking-tight">

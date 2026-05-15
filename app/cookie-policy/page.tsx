@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: 'Cookie Policy | Swiftbanq Credit Solutions',
     description: 'How Swiftbanq uses cookies and similar technologies, and how you can manage your preferences.',
     url: 'https://swiftbanq.com/cookie-policy',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Swiftbanq Credit Solutions' }],
   },
   robots: {
     index: true,

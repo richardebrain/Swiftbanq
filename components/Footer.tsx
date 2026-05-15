@@ -61,7 +61,7 @@ export function Footer() {
                     <Link href="/services/digital-lending" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Digital Lending</Link>
                   </li>
                   <li>
-                    <Link href="/services/treasury-services" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Treasury Services</Link>
+                    <Link href="/treasury-services" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Treasury Services</Link>
                   </li>
                 </ul>
               </div>
@@ -83,9 +83,6 @@ export function Footer() {
                   </li>
                   <li>
                     <Link href="/data-protection" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Data Protection</Link>
-                  </li>
-                  <li>
-                    <Link href="/terms-and-conditions" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Terms &amp; Conditions</Link>
                   </li>
                   <li>
                     <Link href="/complaints-policy" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Complaints Policy</Link>

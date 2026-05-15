@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     title: 'SME Financing | Swiftbanq Credit Solutions',
     description: 'Fuel your business growth with LPO financing, invoice discounting, bridge finance, and project syndication. Fast approvals for Nigerian SMEs.',
     url: 'https://swiftbanq.com/services/sme-financing',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'SME Financing — Swiftbanq Credit Solutions' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -24,7 +29,7 @@ export default function SMEFinancingPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Services', url: '/services' },
+
           { name: 'SME Financing' },
         ]}
       />

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: 'Data Protection Policy | Swiftbanq Credit Solutions',
     description: 'How Swiftbanq processes and protects your data under the NDPR. Your rights, our obligations, and how to contact our DPO.',
     url: 'https://swiftbanq.com/data-protection',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Swiftbanq Credit Solutions' }],
   },
   robots: {
     index: true,

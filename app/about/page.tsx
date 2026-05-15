@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     title: 'About Us | Swiftbanq Credit Solutions',
     description: 'Learn about Swiftbanq — a licensed Non-Bank Financial Institution in Lagos, Nigeria committed to delivering swift, secure, and structured credit solutions.',
     url: 'https://swiftbanq.com/about',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'About Swiftbanq Credit Solutions' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.jpg'],
   },
 };
 

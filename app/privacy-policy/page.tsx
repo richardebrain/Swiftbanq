@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy | Swiftbanq Credit Solutions',
     description: 'How Swiftbanq collects, uses, and protects your personal data in compliance with Nigerian data protection laws.',
     url: 'https://swiftbanq.com/privacy-policy',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Swiftbanq Credit Solutions' }],
   },
   robots: {
     index: true,

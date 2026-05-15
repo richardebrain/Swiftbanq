@@ -178,7 +178,7 @@ export function ContactForm() {
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600 max-w-2xl">
-            Have questions about our financial solutions? Get in touch with our team. We're here to help you find the right financing option for your needs.
+            Have questions about our financial solutions? Get in touch with our team. We&apos;re here to help you find the right financing option for your needs.
           </p>
         </div>
 
@@ -469,7 +469,7 @@ export function ContactForm() {
           <CheckCircle className="w-5 h-5 text-green-400 shrink-0" aria-hidden="true" />
           <div>
             <p className="font-semibold text-sm">Message sent!</p>
-            <p className="text-xs text-gray-300">We'll get back to you within 24 hours.</p>
+            <p className="text-xs text-gray-300">We&apos;ll get back to you within 24 hours.</p>
           </div>
           <button
             onClick={() => setShowToast(false)}
