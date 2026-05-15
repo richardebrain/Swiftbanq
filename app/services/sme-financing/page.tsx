@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { SmeServiceCards } from '@/components/SmeServiceCards';
 import { ApplyNowButton } from '@/components/ApplyNowButton';
 
 export const metadata: Metadata = {
@@ -118,121 +119,7 @@ export default function SMEFinancingPage() {
       {/* ─── 3. SERVICES CARDS — cream bg, 2-column cards ─── */}
       <section className="bg-[#F3F4F1] pt-6 pb-16 md:pt-8 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            {/* Card 1: LPO Finance */}
-            <div className="border border-brand-dark/10 rounded-2xl p-6 flex flex-col">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-bold text-brand-dark text-2xl">LPO Finance</h3>
-                <Link href="/contact" className="w-8 h-8 rounded-full bg-brand-dark flex items-center justify-center text-white hover:bg-brand-dark/80 transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                </Link>
-              </div>
-              <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-grow">
-                Execute government and supply contracts without draining your working capital reserves.
-              </p>
-              <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image
-                  src="/images/asset-card.jpg"
-                  alt="LPO Finance"
-                  fill
-                  className="object-cover"
-                  unoptimized
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute bottom-3 left-3 flex gap-2">
-                  {['LPO', 'Supply', 'Contracts'].map((tag) => (
-                    <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2: Invoice Discounting */}
-            <div className="border border-brand-dark/10 rounded-2xl p-6 flex flex-col">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-bold text-brand-dark text-2xl">Invoice Discounting</h3>
-                <Link href="/contact" className="w-8 h-8 rounded-full bg-brand-dark flex items-center justify-center text-white hover:bg-brand-dark/80 transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                </Link>
-              </div>
-              <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-grow">
-                Unlock the cash tied up in unpaid invoices and keep your operations running smoothly.
-              </p>
-              <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image
-                  src="/invoice discounting.jpg"
-                  alt="Invoice Discounting"
-                  fill
-                  className="object-cover"
-                  unoptimized
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute bottom-3 left-3 flex gap-2">
-                  {['Invoices', 'Cash Flow', 'IDF'].map((tag) => (
-                    <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Contract & Bridge Finance */}
-            <div className="border border-brand-dark/10 rounded-2xl p-6 flex flex-col">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-bold text-brand-dark text-2xl">Contract & Bridge Finance</h3>
-                <Link href="/contact" className="w-8 h-8 rounded-full bg-brand-dark flex items-center justify-center text-white hover:bg-brand-dark/80 transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                </Link>
-              </div>
-              <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-grow">
-                Short-term funding to bridge the gap between project execution and final payment — so your contracts never stall.
-              </p>
-              <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image
-                  src="/contract financing.jpg"
-                  alt="Contract Finance"
-                  fill
-                  className="object-cover"
-                  unoptimized
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute bottom-3 left-3 flex gap-2">
-                  {['Bridge', 'Contract', 'Short-term'].map((tag) => (
-                    <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Card 4: Project Finance & Syndication */}
-            <div className="border border-brand-dark/10 rounded-2xl p-6 flex flex-col">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-bold text-brand-dark text-2xl">Project Finance & Syndication</h3>
-                <Link href="/contact" className="w-8 h-8 rounded-full bg-brand-dark flex items-center justify-center text-white hover:bg-brand-dark/80 transition-colors">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                </Link>
-              </div>
-              <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-grow">
-                Structured long-term financing for large-scale business expansion and capital-intensive projects. Built for ambitious enterprises.
-              </p>
-              <div className="rounded-xl overflow-hidden h-64 relative">
-                <Image
-                  src="/images/treasury-card.jpg"
-                  alt="Project Finance"
-                  fill
-                  className="object-cover"
-                  unoptimized
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute bottom-3 left-3 flex gap-2">
-                  {['Syndication', 'Long-term', 'Expansion'].map((tag) => (
-                    <span key={tag} className="bg-white/90 text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <SmeServiceCards />
         </div>
       </section>
 
