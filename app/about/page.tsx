@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShieldCheck, Target, Users, Landmark, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Target, Users, Landmark, Users2, Handshake, Award, Lightbulb, UserCheck, BadgeCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -22,7 +22,6 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Page Heading */}
         <div className="text-center mb-16">
-          <p className="text-sm font-bold uppercase tracking-widest text-brand-yellow mb-4">Who We Are</p>
           <h1 className="text-5xl md:text-6xl font-heading font-medium text-brand-dark tracking-tight mb-6">About Us</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             A licensed, forward-thinking financial institution committed to delivering swift, secure, and structured credit solutions across Nigeria.
@@ -30,7 +29,7 @@ export default function AboutPage() {
         </div>
 
         {/* Hero Image */}
-        <div className="relative h-[400px] md:h-[520px] w-full rounded-3xl overflow-hidden shadow-2xl mb-24">
+        <div className="relative h-[400px] md:h-[520px] w-full rounded-3xl overflow-hidden mb-24">
           <Image
             src="/swiftbanq-office.png"
             alt="Swiftbanq office"
@@ -53,78 +52,15 @@ export default function AboutPage() {
               <p>
                 We combine regulatory discipline with modern thinking to deliver credit products that are fast, fair, and structured for the real economy. Every loan we issue is a commitment to someone&apos;s ambition.
               </p>
-            </div>
-          </div>
-
-          {/* Image + CTA section */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[420px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image
-                src="https://img.magnific.com/free-photo/business-people-shaking-hands-finishing-up-meeting_1303-18609.jpg"
-                alt="Swiftbanq team"
-                fill
-                unoptimized
-                className="object-cover"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-            <div>
-              <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark leading-tight tracking-tight mb-6">
-                Built on <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">trust.</span> Driven by results.
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Our team brings together seasoned finance professionals, compliance experts, and technology-driven thinkers — all united by one purpose: helping you access the capital you need, when you need it.
-              </p>
-              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-brand-yellow text-brand-dark rounded-md font-bold hover:bg-brand-yellow-hover transition-colors text-base">
-                Talk to us today
-              </Link>
-            </div>
-          </div>
-
-
-          <div>
-            <h3 className="text-3xl font-heading font-medium text-brand-dark text-center mb-12 tracking-tight">We live by our values.</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {[
-                { icon: "⚡", title: "Speed & Precision", desc: "Fast decisions, no unnecessary delays." },
-                { icon: "🔒", title: "Trust & Compliance", desc: "Fully licensed, fully accountable." },
-                { icon: "🤝", title: "Client First", desc: "Every product is built around your needs." },
-                { icon: "📈", title: "Growth Minded", desc: "We grow when our clients grow." },
-              ].map((v, i) => (
-                <div key={i} className="flex flex-col items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-brand-yellow flex items-center justify-center text-2xl shadow-md">
-                    {v.icon}
-                  </div>
-                  <h4 className="font-bold text-brand-dark text-base">{v.title}</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-
-        <div className="mb-24">
-          <div>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex p-6 rounded-xl">
-                <div className="shrink-0 mr-4">
-                  <Landmark className="w-8 h-8 text-brand-yellow" />
-                </div>
+              <div className="grid sm:grid-cols-2 gap-6 pt-2">
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Legal Status</h3>
+                  <h3 className="font-bold text-brand-dark text-base mb-1">Legal Status</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Duly Licensed money lending institution in Lagos, Nigeria, operating strictly under the regulatory framework of the Lagos State Money Lenders Law and allied prudential guidelines.
                   </p>
                 </div>
-              </div>
-
-              <div className="flex p-6 rounded-xl">
-                <div className="shrink-0 mr-4">
-                  <BriefcaseIcon className="w-8 h-8 text-brand-yellow" />
-                </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Business Model</h3>
+                  <h3 className="font-bold text-brand-dark text-base mb-1">Business Model</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     We are a Non-Bank Financial Institution focused on offering flexible short to medium term lendings crafted for the modern economy.
                   </p>
@@ -132,6 +68,30 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          {/* Values — full width */}
+          <div>
+            <h3 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">We live by our values.</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
+              {[
+                { icon: <Users2 className="w-5 h-5 text-brand-dark" />, title: "People First", desc: "We prioritize the needs, goals, and trust of our customers in every decision we make." },
+                { icon: <Handshake className="w-5 h-5 text-brand-dark" />, title: "Integrity", desc: "We operate with honesty and transparency — no hidden fees, no false promises." },
+                { icon: <Award className="w-5 h-5 text-brand-dark" />, title: "Excellence", desc: "We strive to exceed expectations with world-class service and performance." },
+                { icon: <Lightbulb className="w-5 h-5 text-brand-dark" />, title: "Innovation", desc: "We embrace technology and fresh thinking to deliver smarter financial solutions." },
+                { icon: <UserCheck className="w-5 h-5 text-brand-dark" />, title: "Customer Centric", desc: "We design every service around your needs, goals, and experience." },
+                { icon: <BadgeCheck className="w-5 h-5 text-brand-dark" />, title: "Professionalism", desc: "We deliver with quality, clarity, and consistent standards." },
+              ].map((v, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="shrink-0 w-9 h-9 rounded-xl bg-brand-yellow flex items-center justify-center">{v.icon}</div>
+                  <div>
+                    <h4 className="font-bold text-brand-dark text-sm mb-0.5">{v.title}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
 
         {/* Mission & Goal Section */}
@@ -144,10 +104,10 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-white">Our Mission &amp; Goal</h2>
             </div>
 
-            {/* Two-column cards */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Two-column layout separated by divider */}
+            <div className="grid md:grid-cols-[1fr_1px_1fr] gap-0 mb-12">
               {/* Mission */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-start">
+              <div className="p-8 flex flex-col items-start">
                 <div className="w-14 h-14 rounded-xl bg-brand-yellow flex items-center justify-center mb-6">
                   <Users className="w-7 h-7 text-brand-dark" />
                 </div>
@@ -157,8 +117,11 @@ export default function AboutPage() {
                 </p>
               </div>
 
+              {/* Divider */}
+              <div className="hidden md:block bg-white/15 mx-4" />
+
               {/* Goal */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-start">
+              <div className="p-8 flex flex-col items-start border-t border-white/15 md:border-t-0">
                 <div className="w-14 h-14 rounded-xl bg-brand-yellow flex items-center justify-center mb-6">
                   <Target className="w-7 h-7 text-brand-dark" />
                 </div>
@@ -173,11 +136,50 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Team Section */}
+        <div className="mt-24 mb-24">
+          <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark tracking-tight mb-6">Meet the Team</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              A diverse, close-knit group of finance professionals, compliance experts, and technology thinkers — united by one purpose.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 justify-items-center">
+            {[
+              { name: "Adaeze Okonkwo", role: "Chief Executive Officer", img: "/images/team-1.jpg" },
+              { name: "Emeka Nwosu", role: "Chief Finance Officer", img: "/images/team-2.jpg" },
+              { name: "Fatima Bello", role: "Head of Compliance", img: "/images/team-3.jpg" },
+              { name: "Tunde Adeyemi", role: "Head of Technology", img: "/images/team-4.jpg" },
+              { name: "Chisom Eze", role: "Credit Risk Manager", img: "/images/team-5.jpg" },
+              { name: "Seun Afolabi", role: "Business Development", img: "/images/team-6.jpg" },
+              { name: "Ngozi Obi", role: "Customer Experience", img: "/images/team-7.jpg" },
+              { name: "Damilola Ojo", role: "Operations Lead", img: "/images/team-8.jpg" },
+            ].map((member, i) => (
+              <div key={i} className="flex flex-col items-center text-center gap-3">
+                <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">
+                  <Image
+                    src={member.img}
+                    alt={member.name}
+                    width={112}
+                    height={112}
+                    className="object-cover w-full h-full"
+                    unoptimized
+                  />
+                </div>
+                <div>
+                  <p className="font-bold text-brand-dark text-sm leading-snug">{member.name}</p>
+                  <p className="text-gray-500 text-xs mt-0.5">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Join the journey section */}
         <div className="mt-24 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative h-[420px] w-full rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative h-[420px] w-full rounded-3xl overflow-hidden">
             <Image
-              src="https://img.magnific.com/free-photo/group-people-working-out-business-plan-office_1303-15773.jpg"
+              src="/team.jpg"
               alt="Swiftbanq team collaborating"
               fill
               unoptimized
@@ -187,13 +189,14 @@ export default function AboutPage() {
           </div>
           <div>
             <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark leading-tight tracking-tight mb-6">
-              We&apos;re building something <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">meaningful.</span> Come be part of it.
+              We&apos;re building something meaningful. Come be part of it.
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
               At Swiftbanq, we believe great work happens when talented people care about the same things — speed, integrity, and real impact. If that sounds like you, we&apos;d love to connect.
             </p>
-            <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-brand-yellow text-brand-dark rounded-md font-bold hover:bg-brand-yellow-hover transition-colors text-base">
-              Get in touch <ArrowRight className="w-5 h-5 ml-2" />
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-3 bg-brand-yellow text-brand-dark rounded-full font-bold hover:bg-brand-yellow-hover transition-colors text-lg w-full sm:w-auto">
+              Get in touch
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
             </Link>
           </div>
         </div>

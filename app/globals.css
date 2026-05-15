@@ -2,8 +2,8 @@
 @import "tw-animate-css";
 
 @theme {
-  --color-brand-yellow: #fdb813;
-  --color-brand-yellow-hover: #e5a711;
+  --color-brand-yellow: #fff500;
+  --color-brand-yellow-hover: #e6dc00;
   --color-brand-dark: #1a1a1a;
   --color-brand-gray: #f5f5f5;
   --font-sans: var(--font-inter);
@@ -12,9 +12,24 @@
 
 @layer base {
   body {
-    @apply font-sans bg-white text-zinc-900;
+    @apply font-sans bg-[#F3F4F1] text-zinc-900;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading text-brand-dark;
   }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.3s ease-out both;
 }

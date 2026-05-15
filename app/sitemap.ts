@@ -82,12 +82,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
     {
-      url: `${baseUrl}/terms-of-use`,
-      lastModified: legalLastMod,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
       url: `${baseUrl}/data-protection`,
       lastModified: legalLastMod,
       changeFrequency: 'yearly',

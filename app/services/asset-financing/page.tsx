@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { ServiceHero } from '@/components/ServiceHero';
-import { ServiceDetails } from '@/components/ServiceDetails';
-import { ServiceOfferings } from '@/components/ServiceOfferings';
+import Link from 'next/link';
+import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ApplyNowButton } from '@/components/ApplyNowButton';
 
 export const metadata: Metadata = {
   title: 'Asset Financing',

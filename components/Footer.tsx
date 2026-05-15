@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { ApplyNowButton } from '@/components/ApplyNowButton';
 
 export function Footer() {
   return (
@@ -23,10 +24,7 @@ export function Footer() {
             Unlock the <span className="italic text-brand-yellow font-light">financial growth</span><br /> you&apos;ve been needing.
           </h2>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link href="/contact" className="px-10 py-3 rounded-full bg-brand-yellow text-brand-dark font-bold hover:bg-brand-yellow-hover transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg">
-              Apply Now
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-            </Link>
+            <ApplyNowButton />
             <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg">
               Contact Sales
             </Link>
@@ -75,13 +73,16 @@ export function Footer() {
                     <Link href="/about" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/why-us" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Why Swiftbanq</Link>
-                  </li>
-                  <li>
                     <Link href="/contact" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Contact Us</Link>
                   </li>
                   <li>
                     <Link href="/privacy-policy" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Privacy Policy</Link>
+                  </li>
+                  <li>
+                    <Link href="/cookie-policy" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Cookie Policy</Link>
+                  </li>
+                  <li>
+                    <Link href="/data-protection" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Data Protection</Link>
                   </li>
                   <li>
                     <Link href="/terms-and-conditions" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Terms &amp; Conditions</Link>

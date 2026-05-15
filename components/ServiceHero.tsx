@@ -11,7 +11,7 @@ interface ServiceHeroProps {
 
 export function ServiceHero({ title, description, buttonText, buttonLink, seed }: ServiceHeroProps) {
   return (
-    <section className="bg-[#FDF8E7] relative overflow-hidden border-b border-brand-dark/10 pt-8 md:pt-12">
+    <section className="bg-[#F3F4F1] relative overflow-hidden border-b border-brand-dark/10 pt-8 md:pt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row pb-0 min-h-[500px]">
           

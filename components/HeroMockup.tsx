@@ -18,7 +18,7 @@ function PersonalLoanScreen() {
 
       <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-1">Total Approved</p>
       <div className="text-5xl font-light text-gray-900 tracking-tight mb-2 flex items-start">
-        <span className="text-3xl text-gray-400 font-sans mt-1 mr-1">₦</span>2,375<span className="text-3xl text-gray-400 mt-auto mb-1">.00</span>
+        <span className="text-3xl text-gray-400 font-sans mt-1 mr-1">₦</span>500,800<span className="text-3xl text-gray-400 mt-auto mb-1">.00</span>
       </div>
       <div className="flex items-center text-xs text-gray-500 mb-8 font-medium">
         <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -29,7 +29,7 @@ function PersonalLoanScreen() {
 
       <div className="flex justify-between items-end mb-2">
         <div className="text-sm font-bold text-gray-800">
-          ₦124.00 <span className="text-gray-400 font-normal">out of ₦2,375.00 fixed</span>
+          ₦124.00 <span className="text-gray-400 font-normal">out of ₦500,800.00 fixed</span>
         </div>
         <div className="text-xs font-bold text-purple-600 bg-purple-100 px-2 py-0.5 rounded">10%</div>
       </div>
@@ -76,20 +76,20 @@ function InvestingScreen() {
       </div>
       <div className="flex items-center text-xs text-green-600 mb-8 font-bold">
         <TrendingUp className="w-3 h-3 mr-1" />
-        +18% avg. historical return
+        +20% avg. historical return
       </div>
 
       {/* Investment breakdown */}
       <div className="space-y-3 mb-8">
         {[
-          { label: 'Fixed Income', pct: 45, color: 'bg-brand-yellow' },
-          { label: 'Treasury Bills', pct: 30, color: 'bg-gray-900' },
-          { label: 'Money Market', pct: 25, color: 'bg-green-400' },
+          { label: 'Fixed Income', pct: 45, rate: '22%', color: 'bg-brand-yellow' },
+          { label: 'Treasury Bills', pct: 30, rate: '17%', color: 'bg-gray-900' },
+          { label: 'Money Market', pct: 25, rate: '20%', color: 'bg-green-400' },
         ].map((item) => (
           <div key={item.label}>
             <div className="flex justify-between text-xs font-medium text-gray-600 mb-1">
               <span>{item.label}</span>
-              <span>{item.pct}%</span>
+              <span>{item.rate} p.a.</span>
             </div>
             <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
               <div className={`h-full ${item.color} rounded-full`} style={{ width: `${item.pct}%` }}></div>
@@ -130,7 +130,7 @@ function BusinessLoanScreen() {
 
       <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-1">Credit Facility</p>
       <div className="text-5xl font-light text-gray-900 tracking-tight mb-2 flex items-start">
-        <span className="text-3xl text-gray-400 font-sans mt-1 mr-1">₦</span>800M<span className="text-3xl text-gray-400 mt-auto mb-1"></span>
+        <span className="text-3xl text-gray-400 font-sans mt-1 mr-1">₦</span>100M<span className="text-3xl text-gray-400 mt-auto mb-1"></span>
       </div>
       <div className="flex items-center text-xs text-gray-500 mb-6 font-medium">
         <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

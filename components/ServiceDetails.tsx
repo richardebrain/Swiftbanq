@@ -39,7 +39,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
             </section>
 
             {/* How it works */}
-            <section className="py-24 md:py-32 border-b border-brand-dark/10 bg-[#FDF8E7]/50 relative overflow-hidden">
+            <section className="py-24 md:py-32 border-b border-brand-dark/10 bg-[#F3F4F1]/50 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <h2 className="text-4xl md:text-5xl font-heading font-medium text-center text-brand-dark mb-20 tracking-tight">
                         How it <span className="font-bold text-brand-dark bg-brand-yellow px-3 py-1 rounded-xl inline-block transform -rotate-2 my-2 shadow-sm">works</span>
@@ -89,7 +89,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                             </p>
                         </div>
                         <div className="space-y-12">
-                             <div className="bg-[#FDF8E7]/50 p-8 rounded-[2rem] border border-brand-dark/5 shadow-sm">
+                             <div className="bg-[#F3F4F1]/50 p-8 rounded-[2rem] border border-brand-dark/5 shadow-sm">
                                 <h3 className="text-2xl font-bold text-brand-dark mb-4">Higher acceptance rate</h3>
                                 <p className="text-lg text-gray-700 font-medium leading-relaxed">
                                     Our robust assessment means things are more secure both for you and for us, so we have a higher acceptance rate than most traditional lenders. See our criteria for details.
@@ -112,7 +112,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-heading font-medium text-brand-dark mb-16 tracking-tight text-center">Why businesses choose us:</h2>
                     <div className="grid md:grid-cols-3 gap-12">
-                        <div className="bg-[#FDF8E7]/30 p-8 rounded-[2.5rem] border border-brand-dark/5 hover:-translate-y-2 transition-transform duration-300">
+                        <div className="bg-[#F3F4F1]/30 p-8 rounded-[2.5rem] border border-brand-dark/5 hover:-translate-y-2 transition-transform duration-300">
                              <div className="w-16 h-16 bg-white rounded-[1.5rem] flex items-center justify-center shadow-sm mb-6 border border-brand-dark/5">
                                 <ThumbsUp className="w-8 h-8 text-[#FF5A50]" strokeWidth={1.5} />
                              </div>
@@ -121,7 +121,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                                  Enjoy market-leading rates that are fair, transparent, and designed to support sustainable growth and repayment.
                              </p>
                         </div>
-                        <div className="bg-[#FDF8E7]/30 p-8 rounded-[2.5rem] border border-brand-dark/5 hover:-translate-y-2 transition-transform duration-300">
+                        <div className="bg-[#F3F4F1]/30 p-8 rounded-[2.5rem] border border-brand-dark/5 hover:-translate-y-2 transition-transform duration-300">
                              <div className="w-16 h-16 bg-white rounded-[1.5rem] flex items-center justify-center shadow-sm mb-6 border border-brand-dark/5">
                                 <FileText className="w-8 h-8 text-[#FF5A50]" strokeWidth={1.5} />
                              </div>
@@ -130,7 +130,7 @@ export function ServiceDetails({ headingPart1, headingHighlight, headingPart2, d
                                  We keep it simple. Apply and get approved with minimal documentation — no red tape, no hassle.
                              </p>
                         </div>
-                        <div className="bg-[#FDF8E7]/30 p-8 rounded-[2.5rem] border border-brand-dark/5 hover:-translate-y-2 transition-transform duration-300 text-brand-dark">
+                        <div className="bg-[#F3F4F1]/30 p-8 rounded-[2.5rem] border border-brand-dark/5 hover:-translate-y-2 transition-transform duration-300 text-brand-dark">
                              <div className="w-16 h-16 bg-white rounded-[1.5rem] flex items-center justify-center mb-6 border border-brand-dark/5">
                                 <Clock className="w-8 h-8 text-[#FF5A50]" strokeWidth={1.5} />
                              </div>
