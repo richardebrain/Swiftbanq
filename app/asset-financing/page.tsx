@@ -7,11 +7,11 @@ import { ApplyNowButton } from '@/components/ApplyNowButton';
 export const metadata: Metadata = {
   title: 'Asset Financing',
   description: 'Asset Financing in Nigeria — vehicle loans, office equipment financing, household assets, and industrial machinery. Acquire what you need today and repay in flexible instalments with Swiftbanq.',
-  alternates: { canonical: 'https://swiftbanq.com/services/asset-financing' },
+  alternates: { canonical: 'https://swiftbanq.com/asset-financing' },
   openGraph: {
     title: 'Asset Financing | Swiftbanq Credit Solutions',
     description: 'Finance vehicles, office equipment, household assets, and industrial machinery in Nigeria. Flexible repayment, low rates, fast approval.',
-    url: 'https://swiftbanq.com/services/asset-financing',
+    url: 'https://swiftbanq.com/asset-financing',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Asset Financing — Swiftbanq Credit Solutions' }],
   },
   twitter: {
@@ -38,11 +38,11 @@ export default function AssetFinancingPage() {
 
             {/* Left */}
             <div className="w-full lg:w-[52%] flex flex-col justify-center pt-8 pb-16 lg:pb-28">
-              <span className="inline-flex self-start text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">
+              <span className="inline-flex self-start text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3 px-4 py-1.5 rounded-full border border-gray-300 bg-white/60 backdrop-blur-sm">
                 Asset Financing Service
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-[4.2rem] font-heading font-medium text-brand-dark leading-[1.1] mb-6 tracking-tight">
-                Own more assets,<br />pay less upfront
+                Own more assets, pay less upfront
               </h1>
               <p className="text-base text-gray-600 font-medium mb-10 max-w-sm leading-relaxed">
                 Acquire vehicles, equipment, and machinery your business needs today — and spread the cost over manageable monthly instalments.
@@ -300,7 +300,7 @@ export default function AssetFinancingPage() {
             </div>
             <div className="w-full lg:w-[55%]">
               <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-heading font-medium text-brand-dark leading-[1.15] mb-8 tracking-tight">
-                Helping Nigerians<br />own what they need
+                Helping Nigerians own what they need
               </h2>
               <div className="flex items-start gap-4 mb-10">
                 <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">

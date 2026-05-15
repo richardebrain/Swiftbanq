@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/asset-financing`,
+      url: `${baseUrl}/asset-financing`,
       lastModified: serviceLastMod,
       changeFrequency: 'monthly',
       priority: 0.9,

@@ -54,7 +54,7 @@ export function Navbar() {
               >
                 <ul className="py-2" role="menu" aria-orientation="vertical">
                   <li role="none"><Link href="/services/sme-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">SME Financing</Link></li>
-                  <li role="none"><Link href="/services/asset-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Asset Financing</Link></li>
+                  <li role="none"><Link href="/asset-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Asset Financing</Link></li>
                   <li role="none"><Link href="/services/digital-lending" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Digital Lending</Link></li>
                   <li role="none"><Link href="/treasury-services" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Treasury Services</Link></li>
                 </ul>
@@ -128,7 +128,7 @@ export function Navbar() {
               <div className="mb-2">
                 <p className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider">Services</p>
                 <Link onClick={() => setIsOpen(false)} href="/services/sme-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">SME Financing</Link>
-                <Link onClick={() => setIsOpen(false)} href="/services/asset-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Asset Financing</Link>
+                <Link onClick={() => setIsOpen(false)} href="/asset-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Asset Financing</Link>
                 <Link onClick={() => setIsOpen(false)} href="/services/digital-lending" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Digital Lending</Link>
                 <Link onClick={() => setIsOpen(false)} href="/treasury-services" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Treasury Services</Link>
               </div>

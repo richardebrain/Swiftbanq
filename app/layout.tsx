@@ -173,7 +173,7 @@ const schemaOrganization = {
           "@type": "FinancialProduct",
           "name": "Asset Financing",
           "description": "Fleet & Vehicle Financing, Office Equipment Loans, Household Equipment, Specialized Machinery for businesses and individuals.",
-          "url": "https://swiftbanq.com/services/asset-financing"
+          "url": "https://swiftbanq.com/asset-financing"
         }
       },
       {

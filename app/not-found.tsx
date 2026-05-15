@@ -37,7 +37,7 @@ export default function NotFound() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
             { href: '/services/sme-financing', label: 'SME Financing' },
-            { href: '/services/asset-financing', label: 'Asset Financing' },
+            { href: '/asset-financing', label: 'Asset Financing' },
             { href: '/services/digital-lending', label: 'Digital Lending' },
             { href: '/treasury-services', label: 'Treasury Services' },
           ].map(({ href, label }) => (

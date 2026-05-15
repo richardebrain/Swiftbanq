@@ -21,7 +21,7 @@ export function Footer() {
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-medium text-white tracking-tight mb-12 leading-[1.1]">
-            Unlock the <span className="italic text-brand-yellow font-light">financial growth</span><br /> you&apos;ve been needing.
+            Unlock the <span className="italic text-brand-yellow font-light">financial growth</span> you&apos;ve been needing.
           </h2>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <ApplyNowButton />
@@ -55,7 +55,7 @@ export function Footer() {
                     <Link href="/services/sme-financing" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">SME Financing</Link>
                   </li>
                   <li>
-                    <Link href="/services/asset-financing" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Asset Financing</Link>
+                    <Link href="/asset-financing" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Asset Financing</Link>
                   </li>
                   <li>
                     <Link href="/services/digital-lending" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Digital Lending</Link>
