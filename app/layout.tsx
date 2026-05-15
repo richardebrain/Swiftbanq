@@ -41,6 +41,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://swiftbanq.com',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_NG',
