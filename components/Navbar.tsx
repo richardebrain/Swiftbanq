@@ -104,11 +104,7 @@ export function Navbar() {
           <nav aria-label="Mobile navigation">
             <div className="space-y-2 pt-2">
               <div className="mb-2">
-                <p className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider">Services</p>
-                <Link onClick={() => setIsOpen(false)} href="/services/sme-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">SME Financing</Link>
-                <Link onClick={() => setIsOpen(false)} href="/asset-financing" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Asset Financing</Link>
-                <Link onClick={() => setIsOpen(false)} href="/services/digital-lending" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Digital Lending</Link>
-                <Link onClick={() => setIsOpen(false)} href="/treasury-services" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Treasury Services</Link>
+                <Link onClick={() => setIsOpen(false)} href="/#services" className="block px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider hover:text-[#103623] transition-colors">Services</Link>
               </div>
 
               <p className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider mt-4">Company</p>

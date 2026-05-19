@@ -6,8 +6,8 @@ export function FloatingWhatsApp() {
   return (
     <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[99] flex items-end gap-3 group">
       {/* Tooltip text box */}
-      <div className="relative bg-white px-3 py-2 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] text-[13px] font-medium text-gray-800 mb-1.5 transform origin-right transition-all duration-300 opacity-0 md:opacity-100 scale-95 md:scale-100 group-hover:scale-100 group-hover:opacity-100 whitespace-nowrap">
-        Chat with us on WhatsApp
+      <div className="relative bg-white px-3 py-2 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.08)] text-[13px] font-medium text-gray-800 mb-1.5 transform origin-right transition-all duration-300 opacity-100 scale-100 group-hover:scale-100 group-hover:opacity-100 whitespace-nowrap">
+        Live Chat Our Support
         {/* Triangle pointer */}
         <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-white transform rotate-45"></div>
       </div>

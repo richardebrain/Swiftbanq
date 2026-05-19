@@ -77,7 +77,7 @@ export default function AboutPage() {
           {/* Values — full width */}
           <div>
             <h3 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">We live by our values.</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
               {[
                 { icon: <Users2 className="w-5 h-5 text-brand-dark" />, title: "People First", desc: "We prioritize the needs, goals, and trust of our customers in every decision we make." },
                 { icon: <Handshake className="w-5 h-5 text-brand-dark" />, title: "Integrity", desc: "We operate with honesty and transparency — no hidden fees, no false promises." },
@@ -100,19 +100,19 @@ export default function AboutPage() {
         </div>
 
         {/* Mission & Goal Section */}
-        <div className="bg-brand-dark rounded-3xl p-10 md:p-16 text-white relative overflow-hidden">
+        <div className="bg-brand-dark rounded-3xl p-6 sm:p-10 md:p-16 text-white relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-brand-dark to-brand-dark opacity-50"></div>
           <div className="relative z-10">
             {/* Section header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <p className="text-sm font-bold uppercase tracking-widest text-brand-yellow mb-3">What drives us</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Our Mission &amp; Goal</h2>
             </div>
 
             {/* Two-column layout separated by divider */}
-            <div className="grid md:grid-cols-[1fr_1px_1fr] gap-0 mb-12">
+            <div className="grid md:grid-cols-[1fr_1px_1fr] gap-0">
               {/* Mission */}
-              <div className="p-8 flex flex-col items-start">
+              <div className="flex flex-col items-start pb-8 md:pb-0 md:pr-10">
                 <div className="w-14 h-14 rounded-xl bg-brand-yellow flex items-center justify-center mb-6">
                   <Users className="w-7 h-7 text-brand-dark" />
                 </div>
@@ -123,10 +123,10 @@ export default function AboutPage() {
               </div>
 
               {/* Divider */}
-              <div className="hidden md:block bg-white/15 mx-4" />
+              <div className="hidden md:block bg-white/15 mx-8" />
 
               {/* Goal */}
-              <div className="p-8 flex flex-col items-start border-t border-white/15 md:border-t-0">
+              <div className="flex flex-col items-start pt-8 md:pt-0 md:pl-10 border-t border-white/15 md:border-t-0">
                 <div className="w-14 h-14 rounded-xl bg-brand-yellow flex items-center justify-center mb-6">
                   <Target className="w-7 h-7 text-brand-dark" />
                 </div>
@@ -149,25 +149,23 @@ export default function AboutPage() {
               A diverse, close-knit group of finance professionals, compliance experts, and technology thinkers — united by one purpose.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-items-center">
             {[
-              { name: "Adaeze Okonkwo", role: "Chief Executive Officer", img: "/images/team-1.jpg" },
-              { name: "Emeka Nwosu", role: "Chief Finance Officer", img: "/images/team-2.jpg" },
-              { name: "Fatima Bello", role: "Head of Compliance", img: "/images/team-3.jpg" },
-              { name: "Tunde Adeyemi", role: "Head of Technology", img: "/images/team-4.jpg" },
-              { name: "Chisom Eze", role: "Credit Risk Manager", img: "/images/team-5.jpg" },
-              { name: "Seun Afolabi", role: "Business Development", img: "/images/team-6.jpg" },
-              { name: "Ngozi Obi", role: "Customer Experience", img: "/images/team-7.jpg" },
-              { name: "Damilola Ojo", role: "Operations Lead", img: "/images/team-8.jpg" },
+              { name: "Wole Ajomale", role: "Managing Director", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Fmd.png&w=640&q=75" },
+              { name: "Olufemi Onabiyi", role: "Head, Business Development", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Ffemi-new-crop.jpeg&w=640&q=75" },
+              { name: "Tayo Ogunjobi", role: "General Manager, Operations & Risk Management", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Fgm-new.jpeg&w=640&q=75" },
+              { name: "Ayodeji Adebayo", role: "Chief Financial Officer", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Fayodeji-new.jpeg&w=640&q=75" },
+              { name: "Olawale Babsalaam", role: "Head, Human Resources", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Folawale-babsalaam-new.jpeg&w=640&q=75" },
+              { name: "Bakrin Babalola", role: "Head, Digital Lending", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Fbakrin-2.jpeg&w=640&q=75" },
             ].map((member, i) => (
               <div key={i} className="flex flex-col items-center text-center gap-3">
-                <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">
+                <div className="w-44 h-44 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">
                   <Image
                     src={member.img}
                     alt={member.name}
-                    width={112}
-                    height={112}
-                    className="object-cover w-full h-full"
+                    width={176}
+                    height={176}
+                    className="object-cover object-top w-full h-full"
                     unoptimized
                   />
                 </div>

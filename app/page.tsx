@@ -95,7 +95,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <ApplyNowButton />
               <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border border-gray-300 text-brand-dark font-medium hover:bg-white transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/50 backdrop-blur-sm">
-                Contact Sales
+                Contact Support
               </Link>
             </div>
           </div>
@@ -199,7 +199,7 @@ export default function Home() {
       {/* Service 1: SME Financing */}
       <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
+          <div className="flex flex-col-reverse lg:flex-row items-stretch gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
@@ -272,7 +272,7 @@ export default function Home() {
       {/* Service 2: Asset Financing */}
       <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex flex-col lg:flex-row-reverse items-stretch gap-12 lg:gap-20">
+          <div className="flex flex-col-reverse lg:flex-row-reverse items-stretch gap-12 lg:gap-20">
 
             {/* Right (visually): UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
@@ -346,7 +346,7 @@ export default function Home() {
       {/* Service 3: Personal Loan */}
       <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
+          <div className="flex flex-col-reverse lg:flex-row items-stretch gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
@@ -437,7 +437,7 @@ export default function Home() {
       {/* Service 4: Treasury Services */}
       <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex flex-col lg:flex-row-reverse items-stretch gap-12 lg:gap-20">
+          <div className="flex flex-col-reverse lg:flex-row-reverse items-stretch gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
@@ -544,17 +544,17 @@ export default function Home() {
           </div>
 
           {/* Card stack */}
-          <div className="relative h-[400px] lg:h-[460px]">
-            {/* Back card 2 — cream */}
-            <div className="absolute inset-y-6 right-[-2%] w-[70%] bg-[#f5f3e8] rounded-[2.5rem] transform rotate-[1.5deg] z-0" />
-            {/* Back card 1 — dark */}
-            <div className="absolute inset-y-3 right-[1%] w-[68%] bg-brand-yellow rounded-[2.5rem] transform -rotate-[0.5deg] z-[1]" />
+          {/* Mobile: simple column card. Desktop: stacked card effect */}
+          <div className="relative h-auto lg:h-[460px]">
+            {/* Decorative back cards — hidden on mobile */}
+            <div className="hidden lg:block absolute inset-y-6 right-[-2%] w-[70%] bg-[#f5f3e8] rounded-[2.5rem] transform rotate-[1.5deg] z-0" />
+            <div className="hidden lg:block absolute inset-y-3 right-[1%] w-[68%] bg-brand-yellow rounded-[2.5rem] transform -rotate-[0.5deg] z-[1]" />
 
-            {/* Front card — dark */}
-            <div className="absolute inset-0 right-[5%] bg-brand-dark rounded-[2.5rem] overflow-hidden flex z-[2]">
+            {/* Front card */}
+            <div className="relative lg:absolute lg:inset-0 lg:right-[5%] bg-brand-dark rounded-[2.5rem] overflow-hidden flex flex-col sm:flex-row z-[2]">
 
-              {/* Left: CEO image */}
-              <div className="w-[38%] relative shrink-0">
+              {/* Image */}
+              <div className="w-full sm:w-[38%] relative shrink-0 h-64 sm:h-auto">
                 <Image
                   src="/images/ceo.jpg"
                   alt="Adewale Okon — Founder & CEO, Swiftbanq"
@@ -565,9 +565,9 @@ export default function Home() {
                 />
               </div>
 
-              {/* Right: Name + title + quote */}
+              {/* Name + title + quote */}
               <div className="flex-1 p-8 lg:p-12 flex flex-col justify-center">
-                <h3 className="text-4xl lg:text-[3.5rem] font-heading font-bold text-white leading-[1.05] mb-1">
+                <h3 className="text-3xl lg:text-[3.5rem] font-heading font-bold text-white leading-[1.05] mb-1">
                   Adewale Okon
                 </h3>
                 <p className="text-white/60 font-semibold text-base mb-6">CEO of Swiftbanq</p>
