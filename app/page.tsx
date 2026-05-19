@@ -75,17 +75,17 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#F3F4F1] to-transparent" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-12 max-w-6xl mx-auto">
-            Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-2 md:-mt-4 relative">
-              <div className="flex -space-x-3 md:-space-x-4">
-                <Image src="/images/face-1.jpg" alt="Face 1" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-14 h-14 md:w-20 md:h-20 object-cover" />
-                <Image src="/images/face-2.jpg" alt="Face 2" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-14 h-14 md:w-20 md:h-20 object-cover relative z-10" />
-                <Image src="/images/face-3.jpg" alt="Face 3" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-14 h-14 md:w-20 md:h-20 object-cover relative z-20" />
+          <h1 className="text-[2rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.4] sm:leading-[1.25] md:leading-[1.15] lg:leading-[1.1] mb-12 max-w-6xl mx-auto">
+            Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-1 md:-mt-4 relative">
+              <div className="flex -space-x-2 md:-space-x-4">
+                <Image src="/images/face-1.jpg" alt="Face 1" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
+                <Image src="/images/face-2.jpg" alt="Face 2" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
+                <Image src="/images/face-3.jpg" alt="Face 3" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
               </div>
             </span> and Invest <br className="hidden lg:block" />
-            Wisely <span className="inline-flex items-center align-middle mx-2 md:mx-4 -mt-2 md:-mt-4">
-               <div className="bg-white rounded-xl md:rounded-2xl shadow-sm border border-[#f0e7ca] p-2 md:p-3 transform rotate-6 flex items-center justify-center">
-                 <TrendingUp className="w-8 h-8 md:w-12 md:h-12 text-brand-dark" />
+            Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4">
+               <div className="bg-white rounded-lg md:rounded-2xl shadow-sm border border-[#f0e7ca] p-1.5 sm:p-2 md:p-3 transform rotate-6 flex items-center justify-center">
+                 <TrendingUp className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 text-brand-dark" />
                </div>
             </span> with Us.
           </h1>
@@ -148,19 +148,31 @@ export default function Home() {
               <p className="text-2xl md:text-4xl lg:text-[3rem] font-heading font-medium leading-[1.2] text-black mb-12 tracking-tight">
                 You&apos;re building a future that requires immediate, flexible capital. <span className="font-normal">That&apos;s why we created Swiftbanq – because ambitious visionaries require smart, fast, and accessible borrowing and investment solutions.</span>
               </p>
+            </div>
+          </div>
 
-              <div className="w-full mt-8 rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/why-section.jpg"
-                  alt="Businesswoman on phone call with documents"
-                  width={1480}
-                  height={800}
-                  unoptimized
-                  referrerPolicy="no-referrer"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-
+          {/* Full-width images row */}
+          <div className="w-full mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://plus.unsplash.com/premium_photo-1707155465527-c5a2935b21cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8MHx8fDA%3D"
+                alt="Black people business meeting"
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
+              <Image
+                src="/images/why-section.jpg"
+                alt="Businesswoman on phone call with documents"
+                width={1480}
+                height={800}
+                unoptimized
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -191,10 +203,14 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-center">
               <div className="w-full lg:max-w-[420px] pt-12 flex flex-col flex-1">
-                <div className="bg-brand-yellow/20 rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col">
+                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col overflow-hidden">
+                  {/* Background image */}
+                  <Image src="/images/sme-team.jpg" alt="" fill unoptimized className="object-cover object-center absolute inset-0 z-0" />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 z-[1] bg-brand-yellow/70 rounded-[2.5rem]" />
 
                   {/* Profile card */}
-                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12">
+                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12 relative z-[2]">
                     <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
                       <Image src="/images/sme-card.jpg" alt="SME" width={56} height={56} className="object-cover w-full h-full" />
                     </div>
@@ -212,7 +228,7 @@ export default function Home() {
                   </div>
 
                   {/* Slider */}
-                  <div className="mb-5 px-1">
+                  <div className="mb-5 px-1 relative z-[2]">
                     <div className="relative h-3 bg-brand-dark rounded-full">
                       <div className="absolute left-0 top-0 h-3 w-[70%] bg-brand-yellow rounded-full"></div>
                       <div className="absolute top-1/2 left-[70%] -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white border-[3px] border-brand-yellow/60 rounded-full shadow-lg"></div>
@@ -220,7 +236,7 @@ export default function Home() {
                   </div>
 
                   {/* Loan term */}
-                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
+                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6 relative z-[2]">
                     <span className="text-sm font-semibold text-gray-500">Repayment</span>
                     <div className="flex items-center gap-1">
                       {[3, 6, 12].map((m) => (
@@ -230,7 +246,7 @@ export default function Home() {
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 relative z-[2]">
                     {[
                       { label: "LPO Finance", icon: "📋" },
                       { label: "Invoice Discounting", icon: "🧾" },
@@ -251,7 +267,7 @@ export default function Home() {
 
             {/* Right: Text */}
             <div className="w-full lg:w-1/2 order-first lg:order-last">
-              <h3 className="text-5xl md:text-6xl lg:text-[4.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
                 SME financing <span className="text-brand-dark font-light">with fast approvals</span>
               </h3>
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
@@ -285,10 +301,14 @@ export default function Home() {
             {/* Right (visually): UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-center">
               <div className="w-full max-w-[420px] pt-12 flex flex-col flex-1">
-                <div className="bg-brand-yellow/20 rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col">
+                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col overflow-hidden">
+                  {/* Background image */}
+                  <Image src="/images/asset-hero.jpg" alt="" fill unoptimized className="object-cover object-center absolute inset-0 z-0" />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 z-[1] bg-brand-yellow/70 rounded-[2.5rem]" />
 
                   {/* Profile card */}
-                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12">
+                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12 relative z-[2]">
                     <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
                       <Image src="/images/asset-card.jpg" alt="Asset" width={56} height={56} className="object-cover w-full h-full" />
                     </div>
@@ -306,7 +326,7 @@ export default function Home() {
                   </div>
 
                   {/* Slider */}
-                  <div className="mb-5 px-1">
+                  <div className="mb-5 px-1 relative z-[2]">
                     <div className="relative h-3 bg-brand-dark rounded-full">
                       <div className="absolute left-0 top-0 h-3 w-[45%] bg-brand-yellow rounded-full"></div>
                       <div className="absolute top-1/2 left-[45%] -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white border-[3px] border-brand-yellow/60 rounded-full shadow-lg"></div>
@@ -314,7 +334,7 @@ export default function Home() {
                   </div>
 
                   {/* Loan term */}
-                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
+                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6 relative z-[2]">
                     <span className="text-sm font-semibold text-gray-500">Repayment</span>
                     <div className="flex items-center gap-1">
                       {[12, 24, 36].map((m) => (
@@ -324,7 +344,7 @@ export default function Home() {
                   </div>
 
                   {/* Tags */}
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-2 relative z-[2]">
                     {[
                       { label: "Vehicle Financing", active: true },
                       { label: "Office Equipment", icon: "🖥️" },
@@ -346,10 +366,8 @@ export default function Home() {
 
             {/* Left: Text */}
             <div className="w-full lg:w-1/2">
-              <h3 className="text-5xl md:text-6xl lg:text-[4.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
-                Asset financing<br />
-                <span className="text-brand-dark font-light">own more &</span><br />
-                pay less upfront
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
+                Asset financing <span className="text-brand-dark font-light">own more &</span> pay less upfront
               </h3>
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
                 Acquire the asset and equipment you need for your business, and repay installmentally.
@@ -384,10 +402,14 @@ export default function Home() {
               <div className="w-full max-w-[420px] pt-12 flex flex-col flex-1">
 
                 {/* Outer cream rounded container */}
-                <div className="bg-brand-yellow/20 rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col">
+                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col overflow-hidden">
+                  {/* Background image */}
+                  <Image src="/images/lending-hero.jpg" alt="" fill unoptimized className="object-cover object-center absolute inset-0 z-0" />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 z-[1] bg-brand-yellow/70 rounded-[2.5rem]" />
 
                   {/* Floating profile card */}
-                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12">
+                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12 relative z-[2]">
                     <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
                       <Image
                         src="/images/face-2.jpg"
@@ -413,7 +435,7 @@ export default function Home() {
                   </div>
 
                   {/* Standalone slider */}
-                  <div className="mb-5 px-1">
+                  <div className="mb-5 px-1 relative z-[2]">
                     <div className="relative h-3 bg-brand-dark rounded-full">
                       <div className="absolute left-0 top-0 h-3 w-[55%] bg-brand-yellow rounded-full"></div>
                       <div className="absolute top-1/2 left-[55%] -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white border-[3px] border-brand-yellow/60 rounded-full shadow-lg"></div>
@@ -421,7 +443,7 @@ export default function Home() {
                   </div>
 
                   {/* Loan term selector — directly below slider */}
-                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
+                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6 relative z-[2]">
                     <span className="text-sm font-semibold text-gray-500">Loan term</span>
                     <div className="flex items-center gap-1">
                       {[6, 12, 18].map((m) => (
@@ -440,7 +462,7 @@ export default function Home() {
                   </div>
 
                   {/* Purpose tags */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 relative z-[2]">
                     {[
                       { label: "Home improvement", icon: "🏠" },
                       { label: "Medical/Dental", icon: "🏥" },
@@ -470,10 +492,8 @@ export default function Home() {
 
             {/* Right: Text content */}
             <div className="w-full lg:w-1/2">
-              <h3 className="text-5xl md:text-6xl lg:text-[4.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
-                Personal loans<br />
-                <span className="text-brand-dark font-light">up to ₦5M &</span><br />
-                low rates
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
+                Personal loans <span className="text-brand-dark font-light">up to ₦5M &</span> low rates
               </h3>
 
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
@@ -569,7 +589,7 @@ export default function Home() {
 
             {/* Right: Text */}
             <div className="w-full lg:w-1/2">
-              <h3 className="text-5xl md:text-6xl lg:text-[4.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
                 Treasury services <span className="text-brand-dark font-light">with high returns</span>
               </h3>
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
@@ -602,8 +622,7 @@ export default function Home() {
           {/* Top: headline + description */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-start mb-16 lg:mb-20">
             <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.1] w-full lg:w-1/2">
-              A message from<br />
-              <span className="font-light italic">our CEO</span>
+              A message from <span className="font-light italic">our CEO</span>
             </h2>
             <p className="text-xl text-gray-500 leading-relaxed font-medium w-full lg:w-1/2 lg:pt-4">
               We combine bold vision with disciplined execution to bring financial services that are fast, fair, and built for ambitious Nigerians.
@@ -615,10 +634,10 @@ export default function Home() {
             {/* Back card 2 — cream */}
             <div className="absolute inset-y-6 right-[-2%] w-[70%] bg-[#f5f3e8] rounded-[2.5rem] transform rotate-[1.5deg] z-0" />
             {/* Back card 1 — dark */}
-            <div className="absolute inset-y-3 right-[1%] w-[68%] bg-brand-dark rounded-[2.5rem] transform -rotate-[0.5deg] z-[1]" />
+            <div className="absolute inset-y-3 right-[1%] w-[68%] bg-brand-yellow rounded-[2.5rem] transform -rotate-[0.5deg] z-[1]" />
 
-            {/* Front card — yellow */}
-            <div className="absolute inset-0 right-[5%] bg-brand-yellow rounded-[2.5rem] overflow-hidden flex z-[2]">
+            {/* Front card — dark */}
+            <div className="absolute inset-0 right-[5%] bg-brand-dark rounded-[2.5rem] overflow-hidden flex z-[2]">
 
               {/* Left: CEO image */}
               <div className="w-[38%] relative shrink-0">
@@ -634,11 +653,11 @@ export default function Home() {
 
               {/* Right: Name + title + quote */}
               <div className="flex-1 p-8 lg:p-12 flex flex-col justify-center">
-                <h3 className="text-4xl lg:text-[3.5rem] font-heading font-bold text-brand-dark leading-[1.05] mb-1">
+                <h3 className="text-4xl lg:text-[3.5rem] font-heading font-bold text-white leading-[1.05] mb-1">
                   Adewale Okon
                 </h3>
-                <p className="text-brand-dark/60 font-semibold text-base mb-6">CEO of Swiftbanq</p>
-                <p className="text-brand-dark font-medium text-lg leading-relaxed">
+                <p className="text-white/60 font-semibold text-base mb-6">CEO of Swiftbanq</p>
+                <p className="text-white font-medium text-lg leading-relaxed">
                   &ldquo;We built Swiftbanq because we believe financial empowerment shouldn&apos;t be reserved for the privileged few. Every business owner, every professional deserves capital that works as fast as their ambitions.&rdquo;
                 </p>
               </div>
@@ -714,66 +733,7 @@ export default function Home() {
 
       <FAQSection />
 
-      {/* Security & Compliance Section */}
-      <section className="py-24 bg-transparent border-t border-brand-dark/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <div className="flex mb-6">
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-black text-sm font-medium tracking-wide text-black uppercase">
-                Security
-              </div>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-heading font-medium tracking-tight text-black">
-              Privacy-first, <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">NDPR</span> compliant.<br />
-              <span className="text-black">Your funds, fully protected.</span>
-            </h2>
-          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 border-t border-brand-dark/10">
-            {/* Col 1 */}
-            <div className="col-span-2 md:col-span-1 border-b md:border-b-0 md:border-r border-brand-dark/10 p-8 lg:p-12 pl-0 flex flex-col">
-              <p className="text-gray-500 text-xl font-medium leading-relaxed mb-12 max-w-sm">
-                Swiftbanq applies privacy-first, NDPR-compliant standards to protect your data and safeguards your funds under strict regulatory supervision.
-              </p>
-
-            </div>
-
-            {/* Col 2 */}
-            <div className="border-b md:border-b-0 md:border-r border-brand-dark/10 p-8 lg:p-12 relative overflow-hidden group">
-               <div className="text-xs font-bold tracking-wider text-brand-dark uppercase mb-16">FULLY LICENSED BY CBN</div>
-               <div className="flex justify-center items-center h-48 relative">
-                 {/* Decorative Icon */}
-                 <div className="w-32 h-32 rounded-full border border-gray-300 flex items-center justify-center relative z-10 bg-[#F3F4F1] group-hover:scale-105 transition-transform duration-500">
-                   <div className="w-24 h-24 rounded-full border border-gray-200 flex items-center justify-center bg-white shadow-sm">
-                     <Image src="/cbn 2.webp" alt="CBN & LSLB License" width={60} height={60} />
-                   </div>
-                 </div>
-                 {/* Orbit rings */}
-                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-gray-200 rounded-full"></div>
-                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-gray-100 rounded-full"></div>
-               </div>
-            </div>
-
-            {/* Col 3 */}
-            <div className="p-8 lg:p-12 relative overflow-hidden group">
-               <div className="text-xs font-bold tracking-wider text-brand-dark uppercase mb-16">NDPR Compliant</div>
-               <div className="flex justify-center items-center h-48 relative">
-                 <div className="relative z-10 flex items-center justify-center w-24 h-24 bg-white rounded-2xl shadow-md transform group-hover:-translate-y-2 transition-transform duration-500">
-                    <Image src="/images/license.svg" alt="CBN & LSLB License" width={60} height={60} />
-                 </div>
-                 {/* Star circle */}
-                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40">
-                   {[...Array(8)].map((_, i) => (
-                     <div key={i} className="absolute w-full h-full" style={{ transform: `rotate(${i * 45}deg)` }}>
-                       <div className="w-2 h-2 rounded-full bg-gray-300 absolute -top-1 left-1/2 transform -translate-x-1/2"></div>
-                     </div>
-                   ))}
-                 </div>
-               </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
     </>
   );

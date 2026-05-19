@@ -41,7 +41,7 @@ export default function TreasuryServicesPage() {
                 Treasury Services
               </span>
               <h1 className="text-5xl md:text-6xl lg:text-[4.2rem] font-heading font-medium text-brand-dark leading-[1.1] mb-6 tracking-tight">
-                Invest your money,<br />earn up to 20% p.a.
+                Invest your money, earn up to 20% p.a.
               </h1>
               <p className="text-base text-gray-600 font-medium mb-10 max-w-sm leading-relaxed">
                 Stop letting your idle funds lose value. Invest with Swiftbanq and earn highly competitive returns — safely, securely, and with dedicated support.
@@ -300,7 +300,7 @@ export default function TreasuryServicesPage() {
             </div>
             <div className="w-full lg:w-[55%]">
               <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-heading font-medium text-brand-dark leading-[1.15] mb-8 tracking-tight">
-                Putting your money<br />to work for you
+                Putting your money to work for you
               </h2>
               <div className="flex items-start gap-4 mb-10">
                 <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">

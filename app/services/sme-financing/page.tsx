@@ -41,12 +41,12 @@ export default function SMEFinancingPage() {
 
             {/* Left */}
             <div className="w-full lg:w-[52%] flex flex-col justify-center pt-8 pb-16 lg:pb-28">
-              <span className="inline-flex self-start text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">
+              <span className="inline-flex self-start text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3 px-4 py-1.5 rounded-full border border-gray-300 bg-white/60 backdrop-blur-sm">
                 SME Financing Service
               </span>
 
               <h1 className="text-5xl md:text-6xl lg:text-[4.2rem] font-heading font-medium text-brand-dark leading-[1.1] mb-6 tracking-tight">
-                Lending facility for<br />growing Buisness
+                Lending Facility for Growing Business
               </h1>
 
               <p className="text-base text-gray-600 font-medium mb-10 max-w-sm leading-relaxed">
@@ -323,7 +323,7 @@ export default function SMEFinancingPage() {
             {/* Right: Headline + specialist card + stats */}
             <div className="w-full lg:w-[55%]">
               <h2 className="text-4xl md:text-5xl lg:text-[3.2rem] font-heading font-medium text-brand-dark leading-[1.15] mb-8 tracking-tight">
-                Empowering businesses<br />to scale to the fullest
+                Empowering businesses to scale to the fullest
               </h2>
 
               {/* Specialist card */}

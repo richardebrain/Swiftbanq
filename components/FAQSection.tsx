@@ -35,7 +35,7 @@ export function FAQSection() {
         <div className="flex flex-col md:flex-row gap-12 lg:gap-24">
           <div className="w-full md:w-1/3">
             <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-heading font-medium leading-[1.1] text-brand-dark tracking-tight">
-              Frequently<br />Asked Questions
+              Frequently Asked Questions
             </h2>
           </div>
           
