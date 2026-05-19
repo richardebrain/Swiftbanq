@@ -151,12 +151,12 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-items-center">
             {[
-              { name: "Wole Ajomale", role: "Managing Director", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Fmd.png&w=640&q=75" },
-              { name: "Olufemi Onabiyi", role: "Head, Business Development", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Ffemi-new-crop.jpeg&w=640&q=75" },
-              { name: "Tayo Ogunjobi", role: "General Manager, Operations & Risk Management", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Fgm-new.jpeg&w=640&q=75" },
-              { name: "Ayodeji Adebayo", role: "Chief Financial Officer", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Fayodeji-new.jpeg&w=640&q=75" },
-              { name: "Olawale Babsalaam", role: "Head, Human Resources", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Folawale-babsalaam-new.jpeg&w=640&q=75" },
-              { name: "Bakrin Babalola", role: "Head, Digital Lending", img: "https://fundit.com.ng/_next/image?url=%2Fleadership%2Fbakrin-2.jpeg&w=640&q=75" },
+              { name: "Wole Ajomale", role: "Managing Director", img: "/images/team-md.jpg" },
+              { name: "Olufemi Onabiyi", role: "Head, Business Development", img: "/images/team-femi.jpg" },
+              { name: "Tayo Ogunjobi", role: "General Manager, Operations & Risk Management", img: "/images/team-gm.jpg" },
+              { name: "Ayodeji Adebayo", role: "Chief Financial Officer", img: "/images/team-ayodeji.jpg" },
+              { name: "Olawale Babsalaam", role: "Head, Human Resources", img: "/images/team-olawale.jpg" },
+              { name: "Bakrin Babalola", role: "Head, Digital Lending", img: "/images/team-bakrin.jpg" },
             ].map((member, i) => (
               <div key={i} className="flex flex-col items-center text-center gap-3">
                 <div className="w-44 h-44 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">

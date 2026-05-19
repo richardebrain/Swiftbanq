@@ -157,10 +157,9 @@ export default function Home() {
             <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://plus.unsplash.com/premium_photo-1707155465527-c5a2935b21cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZW9wbGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8MHx8fDA%3D"
+                src="/images/home-meeting.jpg"
                 alt="Black people business meeting"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
                 loading="lazy"
               />
             </div>
@@ -352,7 +351,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://img.magnific.com/premium-photo/happy-bonding-portrait-black-family-bed-playing-quality-time-comfort-smile-love-african-children-with-parents-bedroom-happiness-relaxation-stress-relief_590464-159127.jpg?uid=R45719163&semt=ais_incoming&w=740&q=80" alt="" className="object-cover object-center absolute inset-0 w-full h-full" referrerPolicy="no-referrer" />
+              <img src="/images/home-family.jpg" alt="" className="object-cover object-center absolute inset-0 w-full h-full" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
@@ -443,7 +442,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://img.magnific.com/free-photo/black-men-cafe-have-business_1157-33158.jpg?uid=R45719163&semt=ais_hybrid&w=740&q=80" alt="" className="object-cover object-center absolute inset-0 w-full h-full" referrerPolicy="no-referrer" />
+              <img src="/images/home-business-men.jpg" alt="" className="object-cover object-center absolute inset-0 w-full h-full" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
