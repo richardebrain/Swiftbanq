@@ -32,7 +32,7 @@ export default function DigitalLendingPage() {
       />
 
       {/* ─── 1. HERO ─── */}
-      <section className="bg-[#F3F4F1] relative overflow-hidden pt-10 md:pt-16">
+      <section className="bg-brand-cream relative overflow-hidden pt-10 md:pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16 pb-0">
 
@@ -84,7 +84,7 @@ export default function DigitalLendingPage() {
       </section>
 
       {/* ─── 2. MISSION STATEMENT ─── */}
-      <section className="bg-[#F3F4F1] py-16 md:py-24">
+      <section className="bg-brand-cream py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-3xl md:text-4xl lg:text-[2.6rem] font-heading font-medium text-brand-dark leading-[1.35] tracking-tight">
             Our mission is to give every{' '}
@@ -103,7 +103,7 @@ export default function DigitalLendingPage() {
       </section>
 
       {/* ─── 3. SERVICES CARDS ─── */}
-      <section className="bg-[#F3F4F1] pt-6 pb-16 md:pt-8 md:pb-24">
+      <section className="bg-brand-cream pt-6 pb-16 md:pt-8 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -264,7 +264,7 @@ export default function DigitalLendingPage() {
       </section>
 
       {/* ─── 6. FAQ ─── */}
-      <section className="bg-[#F3F4F1] py-16 md:py-24">
+      <section className="bg-brand-cream py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl md:text-6xl font-heading font-medium text-brand-dark text-center leading-tight tracking-tight mb-12">
             Common questions about Digital Lending
@@ -292,7 +292,7 @@ export default function DigitalLendingPage() {
       </section>
 
       {/* ─── 7. STATS ─── */}
-      <section className="bg-[#F3F4F1] py-16 md:py-24">
+      <section className="bg-brand-cream py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="w-full lg:w-[45%] relative h-[340px] sm:h-[420px] lg:h-[480px] rounded-2xl overflow-hidden shrink-0">

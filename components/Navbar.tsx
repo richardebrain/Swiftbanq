@@ -12,7 +12,27 @@ export function Navbar() {
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
   return (
-    <header aria-label="Main navigation" className="bg-[#F3F4F1] w-full border-b border-transparent relative z-50">
+    <header aria-label="Main navigation" className="bg-brand-cream w-full border-b border-transparent relative z-50">
+      <a
+        href="#main-content"
+        style={{
+          position: 'absolute',
+          top: '-9999px',
+          left: '1rem',
+          zIndex: 100,
+          background: 'white',
+          color: '#1a1a1a',
+          fontWeight: 700,
+          padding: '0.5rem 1rem',
+          borderRadius: '0.5rem',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+          textDecoration: 'none',
+        }}
+        onFocus={e => { e.currentTarget.style.top = '1rem'; }}
+        onBlur={e => { e.currentTarget.style.top = '-9999px'; }}
+      >
+        Skip to main content
+      </a>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-16" aria-label="Primary">
           <div className="flex items-center">
@@ -57,7 +77,7 @@ export function Navbar() {
 
               <div
                 id="resources-menu"
-                className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-2xl shadow-lg bg-[#F3F4F1] ring-1 ring-black ring-opacity-5 transition-all duration-200 ${isResourcesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-2xl shadow-lg bg-brand-cream ring-1 ring-black ring-opacity-5 transition-all duration-200 ${isResourcesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 onMouseLeave={() => setIsResourcesOpen(false)}
               >
@@ -100,7 +120,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div id="mobile-menu" className="md:hidden bg-[#F3F4F1] px-4 pb-6 py-2 overflow-y-auto w-full absolute top-full left-0 shadow-lg border-t border-brand-dark/5">
+        <div id="mobile-menu" className="md:hidden bg-brand-cream px-4 pb-6 py-2 overflow-y-auto w-full absolute top-full left-0 shadow-lg border-t border-brand-dark/5">
           <nav aria-label="Mobile navigation">
             <div className="space-y-2 pt-2">
               <div className="mb-2">

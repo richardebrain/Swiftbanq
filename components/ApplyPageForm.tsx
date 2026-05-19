@@ -34,7 +34,7 @@ export function ApplyPageForm() {
 
   const isBusiness = form.service === 'sme' || form.service === 'asset';
 
-  function set(field: string, value: string) {
+  function set(field: keyof typeof form, value: string) {
     setForm(prev => ({ ...prev, [field]: value }));
   }
 

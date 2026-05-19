@@ -215,9 +215,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }}
         />
       </head>
-      <body suppressHydrationWarning className="min-h-screen flex flex-col bg-[#F3F4F1]">
+      <body suppressHydrationWarning className="min-h-screen flex flex-col bg-brand-cream">
         <Navbar />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           {children}
         </main>
         <Footer />

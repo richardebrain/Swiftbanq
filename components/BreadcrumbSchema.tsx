@@ -4,7 +4,7 @@
  * The last item should have no url (it's the current page).
  */
 
-type BreadcrumbItem = {
+export type BreadcrumbItem = {
   name: string;
   url?: string;
 };

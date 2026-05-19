@@ -66,22 +66,22 @@ export default function Home() {
         {/* Pattern - Left */}
         <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60" style={{ left: '-440px' }}>
           <Image src="/pattern 3.svg" alt="" fill className="object-cover object-left-top" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-[#F3F4F1]" />
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#F3F4F1] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-brand-cream" />
+          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-brand-cream to-transparent" />
         </div>
         {/* Pattern - Right (mirrored) */}
         <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60 scale-x-[-1]" style={{ right: '-440px' }}>
           <Image src="/pattern 3.svg" alt="" fill className="object-cover object-left-top" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-[#F3F4F1]" />
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#F3F4F1] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-brand-cream" />
+          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-brand-cream to-transparent" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
           <h1 className="text-[2rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.4] sm:leading-[1.25] md:leading-[1.15] lg:leading-[1.1] mb-12 max-w-6xl mx-auto">
             Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-1 md:-mt-4 relative">
               <div className="flex -space-x-2 md:-space-x-4">
-                <Image src="/images/face-1.jpg" alt="Face 1" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
-                <Image src="/images/face-2.jpg" alt="Face 2" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
-                <Image src="/images/face-3.jpg" alt="Face 3" width={80} height={80} className="rounded-full border-[3px] border-[#F3F4F1] w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
+                <Image src="/images/face-1.jpg" alt="Face 1" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
+                <Image src="/images/face-2.jpg" alt="Face 2" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
+                <Image src="/images/face-3.jpg" alt="Face 3" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
               </div>
             </span> and Invest <br className="hidden lg:block" />
             Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4">
