@@ -8,7 +8,6 @@ import { ApplyModal } from '@/components/ApplyModal';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
@@ -32,34 +31,13 @@ export function Navbar() {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-10">
 
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center text-base font-medium text-gray-700 hover:text-gray-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark rounded py-2"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-                onClick={() => setIsServicesOpen((v) => !v)}
-                aria-expanded={isServicesOpen}
-                aria-haspopup="true"
-                aria-controls="services-menu"
-              >
-                Services <ChevronDown className="ml-1 w-4 h-4" aria-hidden="true" />
-              </button>
-
-              <div
-                id="services-menu"
-                className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 rounded-2xl shadow-lg bg-[#F3F4F1] ring-1 ring-black ring-opacity-5 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
-                <ul className="py-2" role="menu" aria-orientation="vertical">
-                  <li role="none"><Link href="/services/sme-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">SME Financing</Link></li>
-                  <li role="none"><Link href="/asset-financing" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Asset Financing</Link></li>
-                  <li role="none"><Link href="/services/digital-lending" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Digital Lending</Link></li>
-                  <li role="none"><Link href="/treasury-services" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Treasury Services</Link></li>
-                </ul>
-              </div>
-            </div>
+            {/* Services Link */}
+            <Link
+              href="/#services"
+              className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
+            >
+              Services
+            </Link>
 
             <Link href="/about" className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors">About Us</Link>
 

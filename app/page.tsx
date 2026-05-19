@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Services Header */}
-      <section className="pt-12 pb-4 md:pt-16 md:pb-6 bg-transparent">
+      <section id="services" className="pt-12 pb-4 md:pt-16 md:pb-6 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <div className="flex justify-center mb-6">
@@ -261,7 +261,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 
@@ -277,7 +277,7 @@ export default function Home() {
             {/* Right (visually): UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/images/asset-hero.jpg" alt="" fill unoptimized className="object-cover object-center" />
+              <Image src="/image 4.jpg" alt="" fill unoptimized className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
@@ -335,7 +335,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 
@@ -351,36 +351,11 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/images/lending-hero.jpg" alt="" fill unoptimized className="object-cover object-center" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://img.magnific.com/premium-photo/happy-bonding-portrait-black-family-bed-playing-quality-time-comfort-smile-love-african-children-with-parents-bedroom-happiness-relaxation-stress-relief_590464-159127.jpg?uid=R45719163&semt=ais_incoming&w=740&q=80" alt="" className="object-cover object-center absolute inset-0 w-full h-full" referrerPolicy="no-referrer" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
-
-                  {/* Floating profile card */}
-                  <div className="bg-white/80 rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12">
-                    <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
-                      <Image
-                        src="/images/face-2.jpg"
-                        alt="Borrower"
-                        width={56}
-                        height={56}
-                        unoptimized
-                        className="object-cover w-full h-full"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className="font-bold text-brand-dark text-base">For Amaka</span>
-                        <span className="text-gray-400 font-medium text-base">·</span>
-                        <span className="font-bold text-brand-dark text-base">₦500,000</span>
-                        <span className="ml-auto w-6 h-6 rounded-full bg-brand-yellow flex items-center justify-center shrink-0">
-                          <svg className="w-3.5 h-3.5 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                      </div>
-                      <div className="text-gray-400 text-sm font-medium">Personal loan</div>
-                    </div>
-                  </div>
 
                   {/* Loan term selector */}
                   <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
@@ -449,7 +424,7 @@ export default function Home() {
 
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">
                   Learn More
                 </Link>
               </div>
@@ -467,13 +442,14 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/images/treasury-hero.jpg" alt="" fill unoptimized className="object-cover object-center" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://img.magnific.com/free-photo/black-men-cafe-have-business_1157-33158.jpg?uid=R45719163&semt=ais_hybrid&w=740&q=80" alt="" className="object-cover object-center absolute inset-0 w-full h-full" referrerPolicy="no-referrer" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
 
                   {/* Profile card */}
-                  <div className="bg-white/80 rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12">
+                  <div className="bg-white/80 rounded-2xl px-5 py-4 flex items-center gap-4 mb-1 -mt-12">
 
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
@@ -497,27 +473,28 @@ export default function Home() {
                   </div>
 
                   {/* Growth chart */}
-                  <div className="relative h-28 mb-4 overflow-hidden">
-                    <svg viewBox="0 0 320 112" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                      <defs>
-                        <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="#fff500" stopOpacity="0.35"/>
-                          <stop offset="100%" stopColor="#fff500" stopOpacity="0"/>
-                        </linearGradient>
-                      </defs>
-                      <path d="M0 90 C40 88, 60 75, 90 70 S140 60, 160 52 S220 30, 260 20 S300 14, 320 10" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                      <path d="M0 90 C40 88, 60 75, 90 70 S140 60, 160 52 S220 30, 260 20 S300 14, 320 10 L320 112 L0 112 Z" fill="url(#chartFill)"/>
-                      {/* Dot at peak */}
-                      <circle cx="320" cy="10" r="5" fill="#1a1a1a"/>
-                      <circle cx="320" cy="10" r="3" fill="#fff500"/>
-                    </svg>
-                  </div>
-
-                  {/* Time period tabs */}
-                  <div className="flex items-center gap-2">
-                    {['3mo', '6mo', '12mo'].map((t) => (
-                      <span key={t} className={`px-4 py-2 rounded-full text-sm font-bold border transition-colors cursor-pointer ${t === '3mo' ? 'bg-brand-dark text-white border-brand-dark' : 'bg-white border-gray-200 text-gray-500'}`}>{t}</span>
-                    ))}
+                  <div className="flex items-center gap-3">
+                    {/* Time period tabs */}
+                    <div className="flex flex-col gap-1 shrink-0">
+                      {['3mo', '6mo', '12mo'].map((t) => (
+                        <span key={t} className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors cursor-pointer ${t === '3mo' ? 'bg-brand-dark text-white border-brand-dark' : 'bg-white border-gray-200 text-gray-500'}`}>{t}</span>
+                      ))}
+                    </div>
+                    <div className="relative h-16 flex-1 overflow-hidden">
+                      <svg viewBox="0 0 320 112" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                        <defs>
+                          <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stopColor="#fff500" stopOpacity="0.35"/>
+                            <stop offset="100%" stopColor="#fff500" stopOpacity="0"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M0 112 C40 108, 60 90, 90 82 S140 65, 160 52 S220 28, 260 12 S300 4, 320 0" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                        <path d="M0 112 C40 108, 60 90, 90 82 S140 65, 160 52 S220 28, 260 12 S300 4, 320 0 L320 112 L0 112 Z" fill="url(#chartFill)"/>
+                        {/* Dot at peak */}
+                        <circle cx="320" cy="0" r="5" fill="#1a1a1a"/>
+                        <circle cx="320" cy="0" r="3" fill="#fff500"/>
+                      </svg>
+                    </div>
                   </div>
 
                 </div>
@@ -544,7 +521,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 

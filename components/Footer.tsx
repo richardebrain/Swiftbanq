@@ -52,16 +52,16 @@ export function Footer() {
                 <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Products</h3>
                 <ul className="space-y-5">
                   <li>
-                    <Link href="/services/sme-financing" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">SME Financing</Link>
+                    <span className="font-medium text-[15px] cursor-default">SME Financing</span>
                   </li>
                   <li>
-                    <Link href="/asset-financing" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Asset Financing</Link>
+                    <span className="font-medium text-[15px] cursor-default">Asset Financing</span>
                   </li>
                   <li>
-                    <Link href="/services/digital-lending" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Digital Lending</Link>
+                    <span className="font-medium text-[15px] cursor-default">Digital Lending</span>
                   </li>
                   <li>
-                    <Link href="/treasury-services" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Treasury Services</Link>
+                    <span className="font-medium text-[15px] cursor-default">Treasury Services</span>
                   </li>
                 </ul>
               </div>
