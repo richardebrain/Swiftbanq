@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FAQSection } from '@/components/FAQSection';
 import { HeroMockup } from '@/components/HeroMockup';
 import { ApplyNowButton } from '@/components/ApplyNowButton';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
 
 export const metadata: Metadata = {
   alternates: {
@@ -129,7 +130,7 @@ export default function Home() {
       </section>
 
       {/* Why Swiftbanq Section */}
-      <section className="pt-24 pb-8 md:pt-32 md:pb-10 bg-transparent">
+      <section className="py-12 md:py-16 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
             {/* Left side label */}
@@ -179,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Services Header */}
-      <section className="pt-8 pb-4 md:pt-10 md:pb-6 bg-transparent">
+      <section className="pt-12 pb-4 md:pt-16 md:pb-6 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <div className="flex justify-center mb-6">
@@ -196,47 +197,22 @@ export default function Home() {
       </section>
 
       {/* Service 1: SME Financing */}
-      <section className="py-16 md:py-24 bg-transparent overflow-hidden">
+      <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
-            <div className="w-full lg:w-1/2 flex flex-col items-center">
-              <div className="w-full lg:max-w-[420px] pt-12 flex flex-col flex-1">
-                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col overflow-hidden">
-                  {/* Background image */}
-                  <Image src="/images/sme-team.jpg" alt="" fill unoptimized className="object-cover object-center absolute inset-0 z-0" />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 z-[1] bg-brand-yellow/70 rounded-[2.5rem]" />
+            <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
+              {/* Section background image */}
+              <Image src="/invoice discounting.jpg" alt="" fill className="object-cover object-center" />
+              {/* Mock card overlaying the image */}
+              <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
+                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
 
-                  {/* Profile card */}
-                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12 relative z-[2]">
-                    <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
-                      <Image src="/images/sme-card.jpg" alt="SME" width={56} height={56} className="object-cover w-full h-full" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className="font-bold text-brand-dark text-base">TechPro Ltd</span>
-                        <span className="text-gray-400 font-medium text-base">·</span>
-                        <span className="font-bold text-brand-dark text-base">₦5,000,000</span>
-                        <span className="ml-auto w-6 h-6 rounded-full bg-brand-yellow flex items-center justify-center shrink-0">
-                          <svg className="w-3.5 h-3.5 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                      </div>
-                      <div className="text-gray-400 text-sm font-medium">SME financing</div>
-                    </div>
-                  </div>
 
-                  {/* Slider */}
-                  <div className="mb-5 px-1 relative z-[2]">
-                    <div className="relative h-3 bg-brand-dark rounded-full">
-                      <div className="absolute left-0 top-0 h-3 w-[70%] bg-brand-yellow rounded-full"></div>
-                      <div className="absolute top-1/2 left-[70%] -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white border-[3px] border-brand-yellow/60 rounded-full shadow-lg"></div>
-                    </div>
-                  </div>
 
                   {/* Loan term */}
-                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6 relative z-[2]">
+                  <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
                     <span className="text-sm font-semibold text-gray-500">Repayment</span>
                     <div className="flex items-center gap-1">
                       {[3, 6, 12].map((m) => (
@@ -246,14 +222,14 @@ export default function Home() {
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 relative z-[2]">
+                  <div className="grid grid-cols-2 gap-2">
                     {[
                       { label: "LPO Finance", icon: "📋" },
                       { label: "Invoice Discounting", icon: "🧾" },
                       { label: "Contract Finance", active: true },
                       { label: "Syndication", icon: "🤝" },
                     ].map((tag) => (
-                      <span key={tag.label} className={`flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
+                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
                         {tag.active && <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
                         {!tag.active && tag.icon && <span>{tag.icon}</span>}
                         {tag.label}
@@ -266,7 +242,7 @@ export default function Home() {
             </div>
 
             {/* Right: Text */}
-            <div className="w-full lg:w-1/2 order-first lg:order-last">
+            <div className="w-full lg:w-1/2">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
                 SME financing <span className="text-brand-dark font-light">with fast approvals</span>
               </h3>
@@ -294,47 +270,22 @@ export default function Home() {
       </section>
 
       {/* Service 2: Asset Financing */}
-      <section className="py-16 md:py-24 bg-transparent overflow-hidden">
+      <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row-reverse items-stretch gap-12 lg:gap-20">
 
             {/* Right (visually): UI Card mockup */}
-            <div className="w-full lg:w-1/2 flex flex-col items-center">
-              <div className="w-full max-w-[420px] pt-12 flex flex-col flex-1">
-                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col overflow-hidden">
-                  {/* Background image */}
-                  <Image src="/images/asset-hero.jpg" alt="" fill unoptimized className="object-cover object-center absolute inset-0 z-0" />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 z-[1] bg-brand-yellow/70 rounded-[2.5rem]" />
+            <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
+              {/* Section background image */}
+              <Image src="/images/asset-hero.jpg" alt="" fill unoptimized className="object-cover object-center" />
+              {/* Mock card overlaying the image */}
+              <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
+                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
 
-                  {/* Profile card */}
-                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12 relative z-[2]">
-                    <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
-                      <Image src="/images/asset-card.jpg" alt="Asset" width={56} height={56} className="object-cover w-full h-full" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className="font-bold text-brand-dark text-base">For Emeka</span>
-                        <span className="text-gray-400 font-medium text-base">·</span>
-                        <span className="font-bold text-brand-dark text-base">₦2,500,000</span>
-                        <span className="ml-auto w-6 h-6 rounded-full bg-brand-yellow flex items-center justify-center shrink-0">
-                          <svg className="w-3.5 h-3.5 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                      </div>
-                      <div className="text-gray-400 text-sm font-medium">Asset financing</div>
-                    </div>
-                  </div>
 
-                  {/* Slider */}
-                  <div className="mb-5 px-1 relative z-[2]">
-                    <div className="relative h-3 bg-brand-dark rounded-full">
-                      <div className="absolute left-0 top-0 h-3 w-[45%] bg-brand-yellow rounded-full"></div>
-                      <div className="absolute top-1/2 left-[45%] -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white border-[3px] border-brand-yellow/60 rounded-full shadow-lg"></div>
-                    </div>
-                  </div>
 
                   {/* Loan term */}
-                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6 relative z-[2]">
+                  <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
                     <span className="text-sm font-semibold text-gray-500">Repayment</span>
                     <div className="flex items-center gap-1">
                       {[12, 24, 36].map((m) => (
@@ -344,7 +295,7 @@ export default function Home() {
                   </div>
 
                   {/* Tags */}
-                  <div className="grid grid-cols-2 gap-2 relative z-[2]">
+                  <div className="grid grid-cols-2 gap-2">
                     {[
                       { label: "Vehicle Financing", active: true },
                       { label: "Office Equipment", icon: "🖥️" },
@@ -352,7 +303,7 @@ export default function Home() {
                       { label: "Industrial Machinery", icon: "⚙️" },
                       { label: "Laptop", icon: "💻" },
                     ].map((tag) => (
-                      <span key={tag.label} className={`flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
+                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
                         {tag.active && <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
                         {!tag.active && tag.icon && <span>{tag.icon}</span>}
                         {tag.label}
@@ -393,23 +344,20 @@ export default function Home() {
       </section>
 
       {/* Service 3: Personal Loan */}
-      <section className="py-16 md:py-24 bg-transparent overflow-hidden">
+      <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
-            <div className="w-full lg:w-1/2 flex flex-col items-center">
-              <div className="w-full max-w-[420px] pt-12 flex flex-col flex-1">
-
-                {/* Outer cream rounded container */}
-                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col overflow-hidden">
-                  {/* Background image */}
-                  <Image src="/images/lending-hero.jpg" alt="" fill unoptimized className="object-cover object-center absolute inset-0 z-0" />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 z-[1] bg-brand-yellow/70 rounded-[2.5rem]" />
+            <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
+              {/* Section background image */}
+              <Image src="/images/lending-hero.jpg" alt="" fill unoptimized className="object-cover object-center" />
+              {/* Mock card overlaying the image */}
+              <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
+                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
 
                   {/* Floating profile card */}
-                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12 relative z-[2]">
+                  <div className="bg-white/80 rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12">
                     <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
                       <Image
                         src="/images/face-2.jpg"
@@ -434,25 +382,15 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Standalone slider */}
-                  <div className="mb-5 px-1 relative z-[2]">
-                    <div className="relative h-3 bg-brand-dark rounded-full">
-                      <div className="absolute left-0 top-0 h-3 w-[55%] bg-brand-yellow rounded-full"></div>
-                      <div className="absolute top-1/2 left-[55%] -translate-y-1/2 -translate-x-1/2 w-6 h-6 bg-white border-[3px] border-brand-yellow/60 rounded-full shadow-lg"></div>
-                    </div>
-                  </div>
-
-                  {/* Loan term selector — directly below slider */}
-                  <div className="bg-white/70 rounded-2xl px-5 py-3 flex items-center justify-between mb-6 relative z-[2]">
-                    <span className="text-sm font-semibold text-gray-500">Loan term</span>
+                  {/* Loan term selector */}
+                  <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
+                    <span className="text-sm font-semibold text-gray-500">Short term</span>
                     <div className="flex items-center gap-1">
-                      {[6, 12, 18].map((m) => (
+                      {[3, 6, 9].map((m) => (
                         <span
                           key={m}
                           className={`px-3 py-1.5 rounded-full text-sm font-bold transition-colors ${
-                            m === 12
-                              ? "bg-brand-yellow text-brand-dark"
-                              : "text-gray-400"
+                            m === 6 ? "bg-brand-yellow text-brand-dark" : "text-gray-400"
                           }`}
                         >
                           {m}mo
@@ -462,7 +400,7 @@ export default function Home() {
                   </div>
 
                   {/* Purpose tags */}
-                  <div className="flex flex-wrap gap-2 relative z-[2]">
+                  <div className="grid grid-cols-2 gap-2">
                     {[
                       { label: "Home improvement", icon: "🏠" },
                       { label: "Medical/Dental", icon: "🏥" },
@@ -471,10 +409,8 @@ export default function Home() {
                     ].map((tag) => (
                       <span
                         key={tag.label}
-                        className={`flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold border transition-colors ${
-                          tag.active
-                            ? "bg-white border-gray-800 text-brand-dark"
-                            : "bg-white border-gray-200 text-gray-500"
+                        className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${
+                          tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"
                         }`}
                       >
                         {tag.active && (
@@ -524,20 +460,21 @@ export default function Home() {
       </section>
 
       {/* Service 4: Treasury Services */}
-      <section className="py-16 md:py-24 bg-transparent overflow-hidden">
+      <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col lg:flex-row-reverse items-stretch gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
-            <div className="w-full lg:w-1/2 flex flex-col items-center">
-              <div className="w-full max-w-[420px] pt-12 flex flex-col flex-1">
-                <div className="bg-brand-yellow/20 rounded-[2.5rem] pt-4 px-8 pb-8 relative flex-1 flex flex-col">
+            <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
+              {/* Section background image */}
+              <Image src="/images/treasury-hero.jpg" alt="" fill unoptimized className="object-cover object-center" />
+              {/* Mock card overlaying the image */}
+              <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
+                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
 
                   {/* Profile card */}
-                  <div className="bg-white rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12">
-                    <div className="w-14 h-14 rounded-full overflow-hidden shrink-0">
-                      <Image src="/images/treasury-card.jpg" alt="Treasury" width={56} height={56} className="object-cover w-full h-full" />
-                    </div>
+                  <div className="bg-white/80 rounded-2xl px-5 py-4 flex items-center gap-4 mb-6 -mt-12">
+
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
                         <span className="font-bold text-brand-dark text-base">Fatima D.</span>
@@ -616,7 +553,7 @@ export default function Home() {
       </section>
 
       {/* CEO Message Section */}
-      <section className="py-24 md:py-32 bg-transparent overflow-hidden">
+      <section className="py-12 md:py-16 bg-transparent overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Top: headline + description */}
@@ -669,67 +606,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 md:py-16 bg-transparent overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl md:text-6xl lg:text-[5rem] font-heading font-medium text-brand-dark mb-24 tracking-tight text-center max-w-4xl mx-auto leading-tight">
-            Hear what our clients are saying
-          </h2>
-          
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch relative px-0 lg:px-10">
-            {/* Card 1 */}
-            <div className="bg-brand-yellow rounded-[2rem] p-8 pb-10 w-full md:w-1/4 transform -rotate-[4deg] hover:rotate-0 transition-transform duration-300 shadow-xl flex flex-col justify-between z-20">
-              <p className="text-brand-dark font-medium text-lg leading-snug mb-12">
-                &quot;Swiftbanq&apos;s SME Financing helped us secure the capital we needed to fulfill a major government contract without wiping out our cash flow.&quot;
-              </p>
-              <div className="flex items-center gap-4 mt-auto">
-                <div>
-                  <div className="font-bold text-brand-dark text-lg">Chinedu K.</div>
-                  <div className="text-brand-dark/70 text-sm">Contractor</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-brand-dark rounded-[2rem] p-8 pb-10 w-full md:w-1/4 transform rotate-[2deg] hover:rotate-0 transition-transform duration-300 shadow-xl flex flex-col justify-between z-10 -ml-0 md:-ml-8 mt-8 md:mt-12">
-              <p className="text-white font-medium text-lg leading-snug mb-12">
-                &quot;Acquiring our new delivery fleet was a breeze. Their asset financing structured our payments perfectly to match our monthly revenue.&quot;
-              </p>
-              <div className="flex items-center gap-4 mt-auto">
-                <div>
-                  <div className="font-bold text-white text-lg">Nkechi</div>
-                  <div className="text-white/70 text-sm">Logistics Manager</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-[#fdfcf2] rounded-[2rem] p-8 pb-10 w-full md:w-1/4 transform -rotate-[2deg] hover:rotate-0 transition-transform duration-300 shadow-xl flex flex-col justify-between z-10 -ml-0 md:-ml-8 mt-4 md:mt-24">
-              <p className="text-brand-dark font-medium text-lg leading-snug mb-12">
-                &quot;The digital lending process is incredibly seamless. I got a loan disbursed directly to my account within minutes for a personal emergency.&quot;
-              </p>
-              <div className="flex items-center gap-4 mt-auto">
-                <div>
-                  <div className="font-bold text-brand-dark text-lg">Adebayo O.</div>
-                  <div className="text-brand-dark/70 text-sm">Salary Earner</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="bg-[#ff8c00] rounded-[2rem] p-8 pb-10 w-full md:w-1/4 transform rotate-[4deg] hover:rotate-0 transition-transform duration-300 shadow-xl flex flex-col justify-between z-20 -ml-0 md:-ml-8 mt-12 md:mt-6">
-              <p className="text-brand-dark font-medium text-lg leading-snug mb-12">
-                &quot;With their structured treasury services, my company&apos;s idle funds are now yielding highly competitive returns safely and securely.&quot;
-              </p>
-              <div className="flex items-center gap-4 mt-auto">
-                <div>
-                  <div className="font-bold text-brand-dark text-lg">Fatima K.</div>
-                  <div className="text-brand-dark/70 text-sm">Financial Director</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
 
       <FAQSection />
 
