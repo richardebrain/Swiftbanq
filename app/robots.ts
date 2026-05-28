@@ -26,6 +26,11 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: ['SemrushBot', 'DotBot', 'AhrefsBot', 'MJ12bot'],
         disallow: '/',
       },
+      // Block AI Crawlers from scraping data for model training
+      {
+        userAgent: ['GPTBot', 'ChatGPT-User', 'ClaudeBot', 'Anthropic-ai', 'Google-Extended', 'PerplexityBot', 'Omgilibot', 'FacebookBot'],
+        disallow: '/',
+      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   }

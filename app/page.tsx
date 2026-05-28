@@ -65,13 +65,13 @@ export default function Home() {
       <section className="relative pt-16 md:pt-24 pb-0 overflow-hidden bg-transparent">
         {/* Pattern - Left */}
         <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60" style={{ left: '-440px' }}>
-          <Image src="/pattern 3.svg" alt="" fill className="object-cover object-left-top" />
+          <Image src="/pattern 3.svg" alt="Swiftbanq Credit Solutions Design Pattern" fill className="object-cover object-left-top" />
           <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-brand-cream" />
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-brand-cream to-transparent" />
         </div>
         {/* Pattern - Right (mirrored) */}
         <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60 scale-x-[-1]" style={{ right: '-440px' }}>
-          <Image src="/pattern 3.svg" alt="" fill className="object-cover object-left-top" />
+          <Image src="/pattern 3.svg" alt="Swiftbanq Digital Lending Background" fill className="object-cover object-left-top" />
           <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-brand-cream" />
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-brand-cream to-transparent" />
         </div>
@@ -79,9 +79,9 @@ export default function Home() {
           <h1 className="text-[2rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.4] sm:leading-[1.25] md:leading-[1.15] lg:leading-[1.1] mb-12 max-w-6xl mx-auto">
             Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-1 md:-mt-4 relative">
               <div className="flex -space-x-2 md:-space-x-4">
-                <Image src="/images/face-1.jpg" alt="Face 1" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
-                <Image src="/images/face-2.jpg" alt="Face 2" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
-                <Image src="/images/face-3.jpg" alt="Face 3" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
+                <Image src="/images/face-1.jpg" alt="Satisfied Swiftbanq Credit Solutions customer" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
+                <Image src="/images/face-2.jpg" alt="Nigerian business owner using Swiftbanq SME Financing" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
+                <Image src="/images/face-3.jpg" alt="Professional benefiting from Swiftbanq Treasury Services" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
               </div>
             </span> and Invest <br className="hidden lg:block" />
             Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4">
@@ -106,22 +106,22 @@ export default function Home() {
           
           {/* Card 1: Extreme Left */}
           <div className="absolute right-[calc(50%+18rem)] lg:right-[calc(50%+22rem)] top-10 lg:top-16 w-[300px] lg:w-[400px] h-[350px] lg:h-[450px] transform -rotate-[6deg] overflow-hidden z-0 border-none hidden md:block">
-            <Image src="/images/hero-card-1.jpg" alt="Family" fill className="object-cover" />
+            <Image src="/images/hero-card-1.jpg" alt="Family benefiting from Swiftbanq Digital Lending" fill className="object-cover" />
           </div>
 
           {/* Card 2: Inner Left */}
           <div className="absolute right-[calc(50%+4rem)] lg:right-[calc(50%+2rem)] top-32 lg:top-40 w-[240px] lg:w-[280px] h-[280px] lg:h-[350px] transform rotate-[8deg] overflow-hidden z-10 hidden md:block border-none">
-            <Image src="/invoice discounting.jpg" alt="User" fill className="object-cover" />
+            <Image src="/invoice discounting.jpg" alt="Business owner using Swiftbanq SME Financing" fill className="object-cover" />
           </div>
 
           {/* Card 3: Inner Right */}
           <div className="absolute left-[calc(50%+2rem)] lg:left-[calc(50%+8rem)] top-16 lg:top-20 w-[280px] lg:w-[320px] h-[320px] lg:h-[400px] transform -rotate-[4deg] overflow-hidden z-0 hidden md:block border-none">
-            <Image src="/images/ceo.jpg" alt="Professional" fill className="object-cover" />
+            <Image src="/images/ceo.jpg" alt="Professional utilizing Swiftbanq Treasury Services" fill className="object-cover" />
           </div>
 
           {/* Card 4: Extreme Right */}
           <div className="absolute left-[calc(50%+20rem)] lg:left-[calc(50%+26rem)] top-40 lg:top-48 w-[350px] lg:w-[450px] h-[300px] lg:h-[400px] transform rotate-[6deg] overflow-hidden z-10 hidden md:block border-none">
-            <Image src="/images/hero-card-4.jpg" alt="Woman on phone" fill className="object-cover" />
+            <Image src="/images/hero-card-4.jpg" alt="Woman accessing Swiftbanq Asset Financing" fill className="object-cover" />
           </div>
 
           {/* Center Mockup App Card — tabbed */}
@@ -158,7 +158,7 @@ export default function Home() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/swiftbanq-office-2.jpg"
-                alt="Black people business meeting"
+                alt="Business meeting discussing Swiftbanq SME Financing solutions"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -166,7 +166,7 @@ export default function Home() {
             <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
               <Image
                 src="/swiftbanq-office-3.jpg"
-                alt="Businesswoman on phone call with documents"
+                alt="Businesswoman managing Treasury Services at Swiftbanq Credit Solutions"
                 width={1480}
                 height={800}
                 unoptimized
@@ -203,7 +203,7 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/swiftbanq-office-4.jpg" alt="" fill className="object-cover object-center" />
+              <Image src="/swiftbanq-office-4.jpg" alt="Swiftbanq SME Financing solutions for Nigerian businesses" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -276,7 +276,7 @@ export default function Home() {
             {/* Right (visually): UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/image-45.jpg" alt="" fill className="object-cover object-center" />
+              <Image src="/image-45.jpg" alt="Swiftbanq Vehicle and Asset Financing options in Nigeria" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -349,7 +349,7 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/image-3.jpg" alt="Industrial Equipment" fill className="object-cover object-center" />
+              <Image src="/image-3.jpg" alt="Industrial Equipment financing by Swiftbanq Credit Solutions" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -421,7 +421,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/home-family.jpg" alt="" className="object-cover object-center absolute inset-0 w-full h-full" />
+              <img src="/images/home-family.jpg" alt="Family home secured with Swiftbanq Digital Lending" className="object-cover object-center absolute inset-0 w-full h-full" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -512,7 +512,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/home-business-men.jpg" alt="" className="object-cover object-center absolute inset-0 w-full h-full" />
+              <img src="/images/home-business-men.jpg" alt="Business professionals evaluating Swiftbanq Treasury Services" className="object-cover object-center absolute inset-0 w-full h-full" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">

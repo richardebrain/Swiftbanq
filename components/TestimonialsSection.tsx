@@ -60,7 +60,7 @@ export function TestimonialsSection() {
           {/* Background image */}
           <Image
             src="/swiftbanq-office.jpg"
-            alt="Swiftbanq office"
+            alt="Swiftbanq Credit Solutions satisfied customer background"
             fill
             className="object-cover"
             priority

@@ -9,13 +9,13 @@ export function Footer() {
       <section aria-label="Get started with Swiftbanq" className="relative bg-brand-dark py-32 md:py-40 border-b border-white/5 overflow-hidden">
         {/* Pattern - Left */}
         <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-40" style={{ left: '-440px' }}>
-          <Image src="/pattern 4.svg" alt="" fill className="object-cover object-left-top" />
+          <Image src="/pattern 4.svg" alt="Swiftbanq Credit Solutions Design Elements" fill className="object-cover object-left-top" />
           <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-[#1a1a1a]" />
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#1a1a1a] to-transparent" />
         </div>
         {/* Pattern - Right (mirrored) */}
         <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-40 scale-x-[-1]" style={{ right: '-440px' }}>
-          <Image src="/pattern 4.svg" alt="" fill className="object-cover object-left-top" />
+          <Image src="/pattern 4.svg" alt="Swiftbanq Credit Solutions Footer Pattern" fill className="object-cover object-left-top" />
           <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-[#1a1a1a]" />
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#1a1a1a] to-transparent" />
         </div>

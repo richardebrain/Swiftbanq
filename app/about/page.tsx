@@ -37,7 +37,7 @@ export default function AboutPage() {
         <div className="relative h-[400px] md:h-[520px] w-full rounded-3xl overflow-hidden mb-24">
           <Image
             src="/swiftbanq-office.jpg"
-            alt="Swiftbanq office"
+            alt="Swiftbanq Credit Solutions Office Headquarters in Lagos"
             fill
             className="object-cover"
           />
@@ -219,7 +219,7 @@ export default function AboutPage() {
           <div className="relative h-[420px] w-full rounded-3xl overflow-hidden">
             <Image
               src="/team.jpg"
-              alt="Swiftbanq team collaborating"
+              alt="Swiftbanq Credit Solutions team collaborating on Digital Lending"
               fill
               unoptimized
               className="object-cover"

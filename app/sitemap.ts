@@ -5,9 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Static dates — dynamic new Date() causes the sitemap to change on every
   // build, signalling false freshness to crawlers and wasting crawl budget.
-  const coreLastMod    = new Date('2026-05-15');
-  const serviceLastMod = new Date('2026-05-15');
-  const legalLastMod   = new Date('2026-01-01');
+  const coreLastMod    = new Date('2026-05-28');
+  const serviceLastMod = new Date('2026-05-28');
+  const legalLastMod   = new Date('2026-05-28');
 
   return [
     // ── Core pages ──────────────────────────────────────────────────────────

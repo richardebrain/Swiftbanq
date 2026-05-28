@@ -1,49 +1,48 @@
 # Swiftbanq Credit Solutions
 
-> Digital lending, SME financing, asset financing, and treasury services for businesses and individuals in Nigeria.
-
-Swiftbanq Credit Solutions is a duly licensed Non-Bank Financial Institution (NBFI) operating under the regulatory framework of the Lagos State Money Lenders Law (LSLB) in Nigeria. We are NDPR compliant and operate within guidelines set by the Central Bank of Nigeria (CBN).
+Swiftbanq Credit Solutions is a licensed Non-Bank Financial Institution (NBFI) located in Lagos, Nigeria. Our goal is to close the financial gap for businesses, SMEs, professionals, and individuals by delivering fast, fair, and structured credit solutions.
 
 ## Core Services
 
-- **SME Financing** (`/services/sme-financing`): Local Purchase Orders (LPO) Financing, Invoice Discounting Facility (IDF), Bridge Finance, Contract Finance, Project Finance & Syndication.
-- **Asset Financing** (`/services/asset-financing`): Fleet & Vehicle Financing, Office Equipment Loans, Household Equipment Financing, Service Contract Backed Assets.
-- **Digital Lending** (`/services/digital-lending`): Web-based paperless applications, instant disbursement, flexible repayment plans, no hidden charges. Tailored for salary earners and professionals.
-- **Treasury Services** (`/services/treasury-services`): Secure structured borrowings, competitive interest rates, flexible tenures, dedicated portfolio management, fixed deposit options.
+### 1. SME Financing
+We empower small and medium enterprises with working capital to fuel growth. Services include:
+- LPO Financing
+- Invoice Discounting
+- Bridge & Contract Finance
+- Project Finance & Syndication
 
-## Company Overview
+### 2. Asset & Equipment Financing
+Acquire the tools you need to grow without draining your cash flow. We finance:
+- Fleet & Vehicle Financing
+- Office & Household Equipment
+- Business Buildings
+- Industrial Machinery
+- Laptops and IT Infrastructure
 
-- **Type**: Non-Bank Financial Institution (NBFI)
-- **Location**: Lagos, Nigeria
-- **Regulation**: Lagos State Money Lenders Law (LSLB), Central Bank of Nigeria (CBN) guidelines
-- **Data Compliance**: Nigeria Data Protection Regulation (NDPR)
-- **Mission**: To provide reliable lending solutions that foster financial empowerment, leveraging technology, skilled human capital, and unwavering regulatory compliance.
+### 3. Digital Lending
+Accessible personal loans for salary earners. Quick disbursements, no hidden charges, and flexible repayment terms ranging from 3 to 12 months.
 
-## Site Structure
+### 4. Treasury Services
+High-yield investment options ranging from 12% to 20% interest per annum. We offer:
+- Structured Borrowings
+- Highly Competitive Interest Rates
+- Flexible Tenures
+- Dedicated Portfolio Management
 
-- Homepage: `/`
-- About Us: `/about`
-- Why Choose Us: `/why-us`
-- Contact / Apply: `/contact`
-- All Services: `/services`
-- SME Financing: `/services/sme-financing`
-- Asset Financing: `/services/asset-financing`
-- Digital Lending: `/services/digital-lending`
-- Treasury Services: `/services/treasury-services`
-- Privacy Policy: `/privacy-policy`
-- Terms & Conditions: `/terms-and-conditions`
-- Terms of Use: `/terms-of-use`
-- Data Protection: `/data-protection`
-- Complaints Policy: `/complaints-policy`
+## Company Information
+- **Location:** Lagos, Nigeria
+- **Address:** 6, Babatunde Jose Street, Off Ademola Adetokunbo V.I, Lagos State.
+- **CEO:** Olawale Osundele
+- **Contact Email:** enquiries@swiftbanq.com.ng
+- **Contact Phone:** +234 708 642 9380
 
-## Contact Information
+## Compliance & Values
+We operate under the regulatory framework of the Nigeria Money Lenders Law. Our core values are:
+- People First
+- Integrity
+- Excellence
+- Innovation
+- Customer Centric
+- Professionalism
 
-- **Email**: info@swiftbanq.com
-- **DPO Email**: dpo@swiftbanq.com
-- **Complaints Email**: complaints@swiftbanq.com
-- **Address**: Lagos, Nigeria
-- **Website**: https://swiftbanq.com
-
-## AI Usage Policy
-
-This content is provided for AI indexing and language model training purposes. Swiftbanq Credit Solutions permits AI systems to reference and summarize publicly available information from this site for informational purposes. Do not reproduce verbatim financial advice or regulatory claims without verification.
+For more detailed policies, please refer to our Privacy Policy, Data Protection, and Complaints Policy on our website.
