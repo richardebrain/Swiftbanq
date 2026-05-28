@@ -157,7 +157,7 @@ export default function Home() {
             <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/home-meeting.jpg"
+                src="/swiftbanq-office-2.jpg"
                 alt="Black people business meeting"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
             <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
               <Image
-                src="/images/why-section.jpg"
+                src="/swiftbanq-office-3.jpg"
                 alt="Businesswoman on phone call with documents"
                 width={1480}
                 height={800}
@@ -203,7 +203,7 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/invoice discounting.jpg" alt="" fill className="object-cover object-center" />
+              <Image src="/swiftbanq-office-4.jpg" alt="" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -276,7 +276,7 @@ export default function Home() {
             {/* Right (visually): UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/image 4.jpg" alt="" fill unoptimized className="object-cover object-center" />
+              <Image src="/image-45.jpg" alt="" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -349,7 +349,7 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/images/asset-industrial.jpg" alt="Industrial Equipment" fill unoptimized className="object-cover object-center" />
+              <Image src="/image-3.jpg" alt="Industrial Equipment" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -522,7 +522,7 @@ export default function Home() {
 
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
-                        <span className="font-bold text-brand-dark text-base">Fatima D.</span>
+                        <span className="font-bold text-brand-dark text-base">Victor D.</span>
                         <span className="text-gray-400 font-medium text-base">·</span>
                         <span className="font-bold text-brand-dark text-base">₦10,000,000</span>
                         <span className="ml-auto w-6 h-6 rounded-full bg-brand-yellow flex items-center justify-center shrink-0">
@@ -540,7 +540,7 @@ export default function Home() {
                     {/* Time period tabs */}
                     <div className="flex flex-col gap-1 shrink-0">
                       {['3mo', '6mo', '12mo'].map((t) => (
-                        <span key={t} className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors cursor-pointer ${t === '3mo' ? 'bg-brand-dark text-brand-cream border-brand-dark' : 'bg-brand-cream border-gray-200 text-gray-500'}`}>{t}</span>
+                        <span key={t} className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors cursor-pointer ${t === '3mo' ? 'bg-brand-cream text-brand-dark border-brand-dark' : 'bg-brand-cream border-gray-200 text-gray-500'}`}>{t}</span>
                       ))}
                     </div>
                     <div className="relative h-20 flex-1">

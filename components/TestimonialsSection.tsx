@@ -59,7 +59,7 @@ export function TestimonialsSection() {
 
           {/* Background image */}
           <Image
-            src="/swiftbanq-office.webp"
+            src="/swiftbanq-office.jpg"
             alt="Swiftbanq office"
             fill
             className="object-cover"

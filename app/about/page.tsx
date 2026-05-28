@@ -36,7 +36,7 @@ export default function AboutPage() {
         {/* Hero Image */}
         <div className="relative h-[400px] md:h-[520px] w-full rounded-3xl overflow-hidden mb-24">
           <Image
-            src="/swiftbanq-office.webp"
+            src="/swiftbanq-office.jpg"
             alt="Swiftbanq office"
             fill
             className="object-cover"
@@ -48,7 +48,7 @@ export default function AboutPage() {
           {/* Big statement + body copy */}
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark leading-tight tracking-tight">
-              We exist to <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">close</span> the financial gap for businesses and individuals across Nigeria.
+              We exist to <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2">close</span> the financial gap for businesses and individuals across Nigeria.
             </h2>
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
@@ -218,7 +218,7 @@ export default function AboutPage() {
         <div className="mt-24 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative h-[420px] w-full rounded-3xl overflow-hidden">
             <Image
-              src="/team.png"
+              src="/team.jpg"
               alt="Swiftbanq team collaborating"
               fill
               unoptimized
