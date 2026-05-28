@@ -36,7 +36,7 @@ export default function AboutPage() {
         {/* Hero Image */}
         <div className="relative h-[400px] md:h-[520px] w-full rounded-3xl overflow-hidden mb-24">
           <Image
-            src="/swiftbanq-office.png"
+            src="/swiftbanq-office.webp"
             alt="Swiftbanq office"
             fill
             className="object-cover"
@@ -188,9 +188,9 @@ export default function AboutPage() {
 
         {/* Values — full width */}
         <div className="mb-24">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark tracking-tight mb-6">We live by our values.</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
               Our core principles guide every interaction and decision we make, ensuring we always deliver our best.
             </p>
           </div>
