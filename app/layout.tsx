@@ -44,8 +44,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.svg', sizes: 'any' },
     ],
-    shortcut: '/favicon.svg',
+    shortcut: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
   },
   openGraph: {
     type: 'website',
@@ -130,13 +132,13 @@ const schemaOrganization = {
     "name": "Nigeria"
   },
   "telephone": "+2347086429380",
-  "email": "enquiries@swiftbanq.com.ng",
+  "email": "enquiries@swiftbanq.com",
   "contactPoint": [
     {
       "@type": "ContactPoint",
       "contactType": "customer support",
       "telephone": "+2347086429380",
-      "email": "enquiries@swiftbanq.com.ng",
+      "email": "enquiries@swiftbanq.com",
       "availableLanguage": "English",
       "areaServed": "NG",
       "hoursAvailable": {
@@ -164,7 +166,7 @@ const schemaOrganization = {
           "@type": "FinancialProduct",
           "name": "SME Financing",
           "description": "LPO Financing, Invoice Discounting, Bridge & Contract Finance, Project Finance & Syndication for small and medium enterprises in Nigeria.",
-          "url": "https://swiftbanq.com/services/sme-financing"
+          "url": "https://swiftbanq.com/#services"
         }
       },
       {
@@ -173,7 +175,7 @@ const schemaOrganization = {
           "@type": "FinancialProduct",
           "name": "Asset Financing",
           "description": "Fleet & Vehicle Financing, Office Equipment Loans, Household Equipment, Specialized Machinery for businesses and individuals.",
-          "url": "https://swiftbanq.com/asset-financing"
+          "url": "https://swiftbanq.com/#services"
         }
       },
       {
@@ -182,7 +184,7 @@ const schemaOrganization = {
           "@type": "FinancialProduct",
           "name": "Digital Lending",
           "description": "Instant disbursement personal loans for salary earners with flexible repayment and no hidden charges.",
-          "url": "https://swiftbanq.com/services/digital-lending"
+          "url": "https://swiftbanq.com/#services"
         }
       },
       {
@@ -191,7 +193,7 @@ const schemaOrganization = {
           "@type": "FinancialProduct",
           "name": "Treasury Services",
           "description": "Structured borrowings, competitive interest rates, flexible tenures, and portfolio management for investors.",
-          "url": "https://swiftbanq.com/treasury-services"
+          "url": "https://swiftbanq.com/#services"
         }
       }
     ]

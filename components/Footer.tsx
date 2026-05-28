@@ -57,6 +57,9 @@ export function Footer() {
                     <span className="font-medium text-[15px] cursor-default">Asset Financing</span>
                   </li>
                   <li>
+                    <span className="font-medium text-[15px] cursor-default">Equipment Financing</span>
+                  </li>
+                  <li>
                     <span className="font-medium text-[15px] cursor-default">Digital Lending</span>
                   </li>
                   <li>
@@ -96,7 +99,7 @@ export function Footer() {
                     <a href="tel:+2347086429380" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">07086429380</a>
                   </li>
                   <li>
-                    <a href="mailto:enquiries@swiftbanq.com.ng" className="font-medium hover:text-brand-yellow transition-colors text-[15px] break-all">enquiries@swiftbanq.com.ng</a>
+                    <a href="mailto:enquiries@swiftbanq.com" className="font-medium hover:text-brand-yellow transition-colors text-[15px] break-all">enquiries@swiftbanq.com</a>
                   </li>
                   <li>
                     <address className="font-medium text-[15px] text-white leading-relaxed not-italic">

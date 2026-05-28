@@ -15,7 +15,7 @@ export function ApplyNowButton({ variant = 'yellow', className, children }: Appl
   const defaultClass =
     variant === 'dark'
       ? 'inline-flex items-center gap-2 px-8 py-3.5 bg-brand-dark text-white font-bold rounded-full hover:bg-brand-dark/80 transition-colors text-base'
-      : 'px-10 py-3 rounded-full bg-brand-yellow text-brand-dark font-bold hover:bg-brand-yellow-hover transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg';
+      : 'px-10 py-3 rounded-full bg-brand-yellow text-brand-dark font-bold hover:bg-brand-yellow/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg';
 
   return (
     <>

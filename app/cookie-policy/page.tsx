@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <div className="w-full bg-black">
+    <div className="w-full bg-transparent">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-heading font-medium tracking-tight mb-8">Cookie Policy</h1>
 
@@ -187,7 +187,7 @@ export default function CookiePolicyPage() {
             If you have any questions about our use of cookies or this Cookie Policy, please contact us:
           </p>
           <ul className="list-none pl-0 space-y-1">
-            <li><strong>Email:</strong> enquiries@swiftbanq.com.ng</li>
+            <li><strong>Email:</strong> enquiries@swiftbanq.com</li>
             <li><strong>Address:</strong> 6, Babatunde Jose Street, Off Ademola Adetokunbo V.I, Lagos, Nigeria.</li>
             <li><strong>Business Hours:</strong> Monday – Friday, 8:00am – 5:00pm WAT</li>
           </ul>

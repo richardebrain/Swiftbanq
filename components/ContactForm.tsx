@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2, X } from 'lucide-react';
 
 type FormState = {
@@ -8,10 +8,9 @@ type FormState = {
   lastName: string;
   email: string;
   phone: string;
-  inquiryType: string;
-  description: string;
   organization: string;
   message: string;
+  inquiryType: string[];
 };
 
 type FormErrors = Partial<Record<keyof FormState, string>>;
@@ -21,10 +20,10 @@ const initialForm: FormState = {
   lastName: '',
   email: '',
   phone: '',
-  inquiryType: '',
   description: '',
   organization: '',
   message: '',
+  inquiryType: [],
 };
 
 function validateForm(form: FormState): FormErrors {
@@ -44,8 +43,8 @@ function validateForm(form: FormState): FormErrors {
     errors.email = 'Please enter a valid email address.';
   }
 
-  if (!form.inquiryType || form.inquiryType === 'Choose one option...') {
-    errors.inquiryType = 'Please select an inquiry purpose.';
+  if (!form.inquiryType || form.inquiryType.length === 0) {
+    errors.inquiryType = 'Please select at least one inquiry purpose.';
   }
 
   if (!form.description || form.description === 'Choose one option...') {
@@ -93,13 +92,13 @@ export function ContactForm() {
   const [touched, setTouched] = useState<Partial<Record<keyof FormState, boolean>>>({});
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [submitErrorMsg, setSubmitErrorMsg] = useState('');
-  const [showToast, setShowToast] = useState(false);
+  const successRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!showToast) return;
-    const timer = setTimeout(() => setShowToast(false), 4000);
-    return () => clearTimeout(timer);
-  }, [showToast]);
+    if (status === 'success' && successRef.current) {
+      successRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [status]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -164,7 +163,6 @@ export function ContactForm() {
       setForm(initialForm);
       setErrors({});
       setTouched({});
-      setShowToast(true);
     } catch {
       setSubmitErrorMsg('Network error. Please check your connection and try again.');
       setStatus('error');
@@ -178,7 +176,7 @@ export function ContactForm() {
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600 max-w-2xl">
-            Have questions about our financial solutions? Get in touch with our team. We&apos;re here to help you find the right financing option for your needs.
+            Have questions about our financial solutions? Get in touch with our team any services enquiry you have needs for.
           </p>
         </div>
 
@@ -203,8 +201,8 @@ export function ContactForm() {
               <Mail className="w-6 h-6 text-gray-900" />
             </div>
             <div>
-              <a href="mailto:enquiries@swiftbanq.com.ng" className="text-gray-900 font-medium hover:text-brand-yellow transition-colors">
-                enquiries@swiftbanq.com.ng
+              <a href="mailto:enquiries@swiftbanq.com" className="text-gray-900 font-medium hover:text-brand-yellow transition-colors">
+                enquiries@swiftbanq.com
               </a>
               <p className="text-gray-600 text-sm">We respond within 24 hours</p>
             </div>
@@ -230,7 +228,7 @@ export function ContactForm() {
             <div className="w-full max-w-2xl">
               {/* Success State */}
               {status === 'success' ? (
-                <div className="flex flex-col items-center justify-center text-center py-16 space-y-4">
+                <div ref={successRef} className="flex flex-col items-center justify-center text-center py-16 space-y-4">
                   <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
                     <CheckCircle className="w-10 h-10 text-green-600" />
                   </div>
@@ -240,7 +238,7 @@ export function ContactForm() {
                   </p>
                   <button
                     onClick={() => setStatus('idle')}
-                    className="mt-4 px-6 py-3 bg-brand-yellow text-brand-dark rounded-lg font-bold hover:bg-yellow-500 transition-colors"
+                    className="mt-4 px-6 py-3 bg-brand-yellow text-brand-dark rounded-lg font-bold hover:bg-brand-yellow/90 transition-colors"
                   >
                     Send Another Message
                   </button>
@@ -342,30 +340,59 @@ export function ContactForm() {
                     </div>
                   </div>
 
-                  {/* Inquiry Purpose */}
+                  {/* Inquiry Purpose - Multi Select Cards */}
                   <div>
-                    <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-900 mb-2">
+                    <label className="block text-sm font-medium text-gray-900 mb-2">
                       Inquiry Purpose <span className="text-red-500" aria-hidden="true">*</span>
                     </label>
-                    <select
-                      id="inquiryType"
-                      name="inquiryType"
-                      value={form.inquiryType}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      aria-required="true"
-                      aria-invalid={!!errors.inquiryType}
-                      aria-describedby={errors.inquiryType ? 'inquiryType-error' : undefined}
-                      className={selectClass(!!errors.inquiryType)}
-                    >
-                      <option value="">Choose one option...</option>
-                      <option value="SME Financing">SME Financing</option>
-                      <option value="Asset Financing">Asset Financing</option>
-                      <option value="Digital Lending">Digital Lending</option>
-                      <option value="Treasury Services">Treasury Services</option>
-                      <option value="General Inquiry">General Inquiry</option>
-                    </select>
-                    <FieldError id="inquiryType-error" message={errors.inquiryType} />
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      {[
+                        "SME Financing",
+                        "Asset Financing",
+                        "Digital Lending",
+                        "Treasury Services",
+                        "Equipment Financing",
+                        "General Inquiry"
+                      ].map((option) => (
+                        <button
+                          key={option}
+                          type="button"
+                          onClick={() => {
+                            const current = form.inquiryType;
+                            const updated = current.includes(option)
+                              ? current.filter((item) => item !== option)
+                              : [...current, option];
+                            setForm({ ...form, inquiryType: updated });
+                            setTouched((prev) => ({ ...prev, inquiryType: true }));
+                            
+                            // Re-validate specifically for inquiryType if touched
+                            if (touched.inquiryType) {
+                              const newErrors = validateForm({ ...form, inquiryType: updated });
+                              setErrors((prev) => ({ ...prev, inquiryType: newErrors.inquiryType }));
+                            }
+                          }}
+                          className={`flex items-center justify-start text-left p-3 px-4 rounded-lg border transition-colors ${
+                            form.inquiryType.includes(option)
+                              ? 'bg-brand-yellow/10 border-brand-yellow text-brand-dark font-medium ring-1 ring-brand-yellow'
+                              : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
+                          } ${!!errors.inquiryType ? 'border-red-500' : ''}`}
+                        >
+                          <div className={`w-4 h-4 mr-2.5 shrink-0 rounded-full border flex items-center justify-center transition-colors ${
+                            form.inquiryType.includes(option) 
+                              ? 'bg-brand-yellow border-brand-yellow text-brand-dark' 
+                              : 'bg-white border-gray-300'
+                          }`}>
+                            {form.inquiryType.includes(option) && (
+                              <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7" />
+                              </svg>
+                            )}
+                          </div>
+                          <span className="text-sm">{option}</span>
+                        </button>
+                      ))}
+                    </div>
+                    <FieldError id="inquiryType-error" message={errors.inquiryType as string} />
                   </div>
 
                   {/* Description */}
@@ -458,28 +485,6 @@ export function ContactForm() {
           </div>
         </div>
       </div>
-
-      {/* Toast notification */}
-      {showToast && (
-        <div
-          role="status"
-          aria-live="polite"
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-gray-900 text-white px-5 py-4 rounded-xl shadow-lg animate-fade-in-up"
-        >
-          <CheckCircle className="w-5 h-5 text-green-400 shrink-0" aria-hidden="true" />
-          <div>
-            <p className="font-semibold text-sm">Message sent!</p>
-            <p className="text-xs text-gray-300">We&apos;ll get back to you within 24 hours.</p>
-          </div>
-          <button
-            onClick={() => setShowToast(false)}
-            aria-label="Dismiss notification"
-            className="ml-2 text-gray-400 hover:text-white transition-colors"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-      )}
     </div>
   );
 }

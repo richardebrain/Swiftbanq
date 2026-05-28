@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShieldCheck, Target, Users, Landmark, Users2, Handshake, Award, Lightbulb, UserCheck, BadgeCheck } from 'lucide-react';
@@ -57,11 +57,11 @@ export default function AboutPage() {
               <p>
                 We combine regulatory discipline with modern thinking to deliver credit products that are fast, fair, and structured for the real economy. Every loan we issue is a commitment to someone&apos;s ambition.
               </p>
-              <div className="grid sm:grid-cols-2 gap-6 pt-2">
+              <div className="flex flex-col gap-6 pt-2">
                 <div>
                   <h3 className="font-bold text-brand-dark text-base mb-1">Legal Status</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Duly Licensed money lending institution in Lagos, Nigeria, operating strictly under the regulatory framework of the Lagos State Money Lenders Law and allied prudential guidelines.
+                    Duly Licensed money lending institution in Lagos, Nigeria, operating strictly under the regulatory framework of the Nigeria Money Lenders Law and allied prudential guidelines.
                   </p>
                 </div>
                 <div>
@@ -74,40 +74,13 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Values — full width */}
-          <div>
-            <h3 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">We live by our values.</h3>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
-              {[
-                { icon: <Users2 className="w-5 h-5 text-brand-dark" />, title: "People First", desc: "We prioritize the needs, goals, and trust of our customers in every decision we make." },
-                { icon: <Handshake className="w-5 h-5 text-brand-dark" />, title: "Integrity", desc: "We operate with honesty and transparency — no hidden fees, no false promises." },
-                { icon: <Award className="w-5 h-5 text-brand-dark" />, title: "Excellence", desc: "We strive to exceed expectations with world-class service and performance." },
-                { icon: <Lightbulb className="w-5 h-5 text-brand-dark" />, title: "Innovation", desc: "We embrace technology and fresh thinking to deliver smarter financial solutions." },
-                { icon: <UserCheck className="w-5 h-5 text-brand-dark" />, title: "Customer Centric", desc: "We design every service around your needs, goals, and experience." },
-                { icon: <BadgeCheck className="w-5 h-5 text-brand-dark" />, title: "Professionalism", desc: "We deliver with quality, clarity, and consistent standards." },
-              ].map((v, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="shrink-0 w-9 h-9 rounded-xl bg-brand-yellow flex items-center justify-center">{v.icon}</div>
-                  <div>
-                    <h4 className="font-bold text-brand-dark text-sm mb-0.5">{v.title}</h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
         </div>
 
         {/* Mission & Goal Section */}
         <div className="bg-brand-dark rounded-3xl p-6 sm:p-10 md:p-16 text-white relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-brand-dark to-brand-dark opacity-50"></div>
           <div className="relative z-10">
-            {/* Section header */}
-            <div className="text-center mb-10">
-              <p className="text-sm font-bold uppercase tracking-widest text-brand-yellow mb-3">What drives us</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Our Mission &amp; Goal</h2>
-            </div>
+            {/* Section header removed as requested */}
 
             {/* Two-column layout separated by divider */}
             <div className="grid md:grid-cols-[1fr_1px_1fr] gap-0">
@@ -142,36 +115,99 @@ export default function AboutPage() {
         </div>
 
         {/* Team Section */}
-        <div className="mt-24 mb-24">
-          <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark tracking-tight mb-6">Meet the Team</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <div className="mt-24 mb-24 flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+          <div className="lg:w-1/3 lg:sticky lg:top-32">
+            <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark tracking-tight mb-6">Meet the Leaderships</h2>
+            <p className="text-xl text-gray-600 leading-relaxed">
               A diverse, close-knit group of finance professionals, compliance experts, and technology thinkers — united by one purpose.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-items-center">
+
+          <div className="lg:w-2/3 flex flex-col gap-20">
+            {/* Board of Directors */}
+            <div>
+              <h3 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">Our Board of Directors</h3>
+              <div className="flex flex-wrap gap-6 sm:gap-10">
+                {[
+                  { name: "Olawale Osundele", role: "Chief Executive Officer", img: "/images/ceo.jpeg" },
+                  { name: "Wole Ajomale", role: "Managing Director", img: "/images/team-md.jpg" },
+                  { name: "Bolaji Shenjobi", role: "Executive Director", img: "/images/team-bolaji.webp" },
+                ].map((member, i) => (
+                  <div key={i} className="flex flex-col items-center text-center gap-3 w-44">
+                    <div className="w-44 h-44 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">
+                      <Image
+                        src={member.img}
+                        alt={member.name}
+                        width={176}
+                        height={176}
+                        className="object-cover object-top w-full h-full"
+                        unoptimized
+                      />
+                    </div>
+                    <div>
+                      <p className="font-bold text-brand-dark text-sm leading-snug">{member.name}</p>
+                      <p className="text-gray-500 text-xs mt-0.5">{member.role}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Management Team */}
+            <div>
+              <h3 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">Management Team</h3>
+              <div className="flex flex-wrap gap-6 sm:gap-10">
+                {[
+                  { name: "Olufemi Onabiyi", role: "Head, Business Development", img: "/images/team-femi.jpg" },
+                  { name: "Tayo Ogunjobi", role: "General Manager, Operations & Risk Management", img: "/images/team-gm.jpg" },
+                  { name: "Ayodeji Adebayo", role: "Chief Financial Officer", img: "/images/team-ayodeji.jpg" },
+                  { name: "Olawale Babsalaam", role: "Head, Human Resources", img: "/images/team-olawale.jpg" },
+                  { name: "Bakrin Babalola", role: "Head, Digital Lending", img: "/images/team-bakrin.jpg" },
+                ].map((member, i) => (
+                  <div key={i} className="flex flex-col items-center text-center gap-3 w-44">
+                    <div className="w-44 h-44 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">
+                      <Image
+                        src={member.img}
+                        alt={member.name}
+                        width={176}
+                        height={176}
+                        className="object-cover object-top w-full h-full"
+                        unoptimized
+                      />
+                    </div>
+                    <div>
+                      <p className="font-bold text-brand-dark text-sm leading-snug">{member.name}</p>
+                      <p className="text-gray-500 text-xs mt-0.5">{member.role}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Values — full width */}
+        <div className="mb-24">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark tracking-tight mb-6">We live by our values.</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Our core principles guide every interaction and decision we make, ensuring we always deliver our best.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 w-full">
             {[
-              { name: "Wole Ajomale", role: "Managing Director", img: "/images/team-md.jpg" },
-              { name: "Olufemi Onabiyi", role: "Head, Business Development", img: "/images/team-femi.jpg" },
-              { name: "Tayo Ogunjobi", role: "General Manager, Operations & Risk Management", img: "/images/team-gm.jpg" },
-              { name: "Ayodeji Adebayo", role: "Chief Financial Officer", img: "/images/team-ayodeji.jpg" },
-              { name: "Olawale Babsalaam", role: "Head, Human Resources", img: "/images/team-olawale.jpg" },
-              { name: "Bakrin Babalola", role: "Head, Digital Lending", img: "/images/team-bakrin.jpg" },
-            ].map((member, i) => (
-              <div key={i} className="flex flex-col items-center text-center gap-3">
-                <div className="w-44 h-44 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    width={176}
-                    height={176}
-                    className="object-cover object-top w-full h-full"
-                    unoptimized
-                  />
-                </div>
+              { icon: <Users2 className="w-5 h-5 text-brand-dark" />, title: "People First", desc: "We prioritize the needs, goals, and trust of our customers in every decision we make." },
+              { icon: <Handshake className="w-5 h-5 text-brand-dark" />, title: "Integrity", desc: "We operate with honesty and transparency — no hidden fees, no false promises." },
+              { icon: <Award className="w-5 h-5 text-brand-dark" />, title: "Excellence", desc: "We strive to exceed expectations with world-class service and performance." },
+              { icon: <Lightbulb className="w-5 h-5 text-brand-dark" />, title: "Innovation", desc: "We embrace technology and fresh thinking to deliver smarter financial solutions." },
+              { icon: <UserCheck className="w-5 h-5 text-brand-dark" />, title: "Customer Centric", desc: "We design every service around your needs, goals, and experience." },
+              { icon: <BadgeCheck className="w-5 h-5 text-brand-dark" />, title: "Professionalism", desc: "We deliver with quality, clarity, and consistent standards." },
+            ].map((v, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <div className="shrink-0 w-9 h-9 rounded-xl bg-brand-yellow flex items-center justify-center">{v.icon}</div>
                 <div>
-                  <p className="font-bold text-brand-dark text-sm leading-snug">{member.name}</p>
-                  <p className="text-gray-500 text-xs mt-0.5">{member.role}</p>
+                  <h4 className="font-bold text-brand-dark text-sm mb-0.5">{v.title}</h4>
+                  <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
                 </div>
               </div>
             ))}
@@ -182,7 +218,7 @@ export default function AboutPage() {
         <div className="mt-24 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative h-[420px] w-full rounded-3xl overflow-hidden">
             <Image
-              src="/team.jpg"
+              src="/team.png"
               alt="Swiftbanq team collaborating"
               fill
               unoptimized
@@ -197,7 +233,7 @@ export default function AboutPage() {
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
               At Swiftbanq, we believe great work happens when talented people care about the same things — speed, integrity, and real impact. If that sounds like you, we&apos;d love to connect.
             </p>
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-3 bg-brand-yellow text-brand-dark rounded-full font-bold hover:bg-brand-yellow-hover transition-colors text-lg w-full sm:w-auto">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-10 py-3 bg-brand-yellow text-brand-dark rounded-full font-bold hover:bg-brand-yellow/90 transition-colors text-lg w-full sm:w-auto">
               Get in touch
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
             </Link>

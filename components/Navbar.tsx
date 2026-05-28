@@ -82,10 +82,10 @@ export function Navbar() {
                 onMouseLeave={() => setIsResourcesOpen(false)}
               >
                 <ul className="py-2" role="menu" aria-orientation="vertical">
-                  <li role="none"><Link href="/privacy-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Privacy Policy</Link></li>
-                  <li role="none"><Link href="/cookie-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Cookie Policy</Link></li>
-                  <li role="none"><Link href="/data-protection" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Data Protection</Link></li>
-                  <li role="none"><Link href="/complaints-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-[#f0e9d2] hover:text-brand-dark" role="menuitem">Complaints Policy</Link></li>
+                  <li role="none"><Link href="/privacy-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-brand-dark/5 hover:text-brand-dark" role="menuitem">Privacy Policy</Link></li>
+                  <li role="none"><Link href="/cookie-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-brand-dark/5 hover:text-brand-dark" role="menuitem">Cookie Policy</Link></li>
+                  <li role="none"><Link href="/data-protection" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-brand-dark/5 hover:text-brand-dark" role="menuitem">Data Protection</Link></li>
+                  <li role="none"><Link href="/complaints-policy" className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-brand-dark/5 hover:text-brand-dark" role="menuitem">Complaints Policy</Link></li>
                 </ul>
               </div>
             </div>
@@ -96,7 +96,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center">
             <button
               onClick={() => setIsApplyModalOpen(true)}
-              className="px-6 py-3 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-brand-yellow-hover transition-colors text-sm flex items-center gap-2"
+              className="px-6 py-3 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-brand-yellow/90 transition-colors text-sm flex items-center gap-2"
             >
               Apply Now
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
@@ -122,20 +122,13 @@ export function Navbar() {
       {isOpen && (
         <div id="mobile-menu" className="md:hidden bg-brand-cream px-4 pb-6 py-2 overflow-y-auto w-full absolute top-full left-0 shadow-lg border-t border-brand-dark/5">
           <nav aria-label="Mobile navigation">
-            <div className="space-y-2 pt-2">
-              <div className="mb-2">
-                <Link onClick={() => setIsOpen(false)} href="/#services" className="block px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider hover:text-[#103623] transition-colors">Services</Link>
-              </div>
-
-              <p className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider mt-4">Company</p>
+            <div className="space-y-1 pt-2">
+              <Link onClick={() => setIsOpen(false)} href="/#services" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Services</Link>
               <Link onClick={() => setIsOpen(false)} href="/about" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">About Us</Link>
-
-              <p className="px-4 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider mt-4">Legal</p>
-              <Link onClick={() => setIsOpen(false)} href="/privacy-policy" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Privacy Policy</Link>
-              <Link onClick={() => setIsOpen(false)} href="/cookie-policy" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Cookie Policy</Link>
-              <Link onClick={() => setIsOpen(false)} href="/data-protection" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Data Protection</Link>
-              <Link onClick={() => setIsOpen(false)} href="/complaints-policy" className="block px-6 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Complaints Policy</Link>
-
+              <Link onClick={() => setIsOpen(false)} href="/privacy-policy" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Privacy Policy</Link>
+              <Link onClick={() => setIsOpen(false)} href="/cookie-policy" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Cookie Policy</Link>
+              <Link onClick={() => setIsOpen(false)} href="/data-protection" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Data Protection</Link>
+              <Link onClick={() => setIsOpen(false)} href="/complaints-policy" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Complaints Policy</Link>
               <Link onClick={() => setIsOpen(false)} href="/contact" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Contact Us</Link>
               <button
                 onClick={() => { setIsOpen(false); setIsApplyModalOpen(true); }}

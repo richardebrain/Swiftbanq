@@ -36,31 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
 
-    // ── Services ─────────────────────────────────────────────────────────────
-    {
-      url: `${baseUrl}/services/sme-financing`,
-      lastModified: serviceLastMod,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/asset-financing`,
-      lastModified: serviceLastMod,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/digital-lending`,
-      lastModified: serviceLastMod,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/treasury-services`,
-      lastModified: serviceLastMod,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
 
     // ── Legal & compliance ───────────────────────────────────────────────────
     {

@@ -72,19 +72,16 @@ export function TestimonialsSection() {
           {/* Testimonial card — centered, clear of bottom edge */}
           <div className="absolute inset-0 flex items-center justify-center px-6 pb-4">
             <div
-              className="rounded-3xl shadow-2xl p-8 md:p-12 w-full max-w-lg"
+              className="rounded-3xl shadow-2xl p-8 md:p-12 w-full max-w-lg bg-brand-cream"
               style={{
-                backgroundColor: '#1a1a1a',
                 marginLeft: 'clamp(0px, 20%, 200px)',
               }}
             >
               {/* Quote mark + stars */}
               <div className="flex items-start justify-between mb-6">
                 <span
-                  className="font-serif leading-none select-none"
-                  style={{ fontSize: '5rem', lineHeight: 1, color: '#1a1a1a',
-                    WebkitTextStroke: '2px #fff500',
-                  }}
+                  className="font-serif leading-none select-none text-black"
+                  style={{ fontSize: '5rem', lineHeight: 1 }}
                   aria-hidden="true"
                 >
                   &ldquo;
@@ -94,7 +91,7 @@ export function TestimonialsSection() {
                     <svg
                       key={i}
                       className="w-7 h-7"
-                      style={{ fill: '#fff500' }}
+                      style={{ fill: '#FEF418' }}
                       viewBox="0 0 20 20"
                       aria-hidden="true"
                     >
@@ -105,14 +102,14 @@ export function TestimonialsSection() {
               </div>
 
               {/* Quote text */}
-              <p className="text-white text-xl md:text-2xl leading-relaxed mb-10 font-medium">
+              <p className="text-brand-dark text-xl md:text-2xl leading-relaxed mb-10 font-medium">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
               {/* Author */}
               <div>
-                <div className="font-bold italic text-white text-lg">{t.name}</div>
-                <div className="text-white/60 text-base">{t.role}</div>
+                <div className="font-bold italic text-brand-dark text-lg">{t.name}</div>
+                <div className="text-brand-dark/60 text-base">{t.role}</div>
               </div>
             </div>
           </div>

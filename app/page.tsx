@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Briefcase, Car, Smartphone, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
@@ -85,7 +85,7 @@ export default function Home() {
               </div>
             </span> and Invest <br className="hidden lg:block" />
             Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4">
-               <div className="bg-white rounded-lg md:rounded-2xl shadow-sm border border-[#f0e7ca] p-1.5 sm:p-2 md:p-3 transform rotate-6 flex items-center justify-center">
+               <div className="bg-white rounded-lg md:rounded-2xl shadow-sm border border-brand-yellow/30 p-1.5 sm:p-2 md:p-3 transform rotate-6 flex items-center justify-center">
                  <TrendingUp className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 text-brand-dark" />
                </div>
             </span> with Us.
@@ -143,7 +143,7 @@ export default function Home() {
             {/* Right side content */}
             <div className="w-full lg:w-3/4">
               <p className="text-3xl md:text-5xl lg:text-[3.5rem] font-heading font-medium leading-[1.2] text-black mb-12 tracking-tight">
-                Not everyone gets the financial support they need. But <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">you will.</span>
+                Not everyone gets the financial support they need. But <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">with us you will.</span>
               </p>
               
               <p className="text-2xl md:text-4xl lg:text-[3rem] font-heading font-medium leading-[1.2] text-black mb-12 tracking-tight">
@@ -206,16 +206,16 @@ export default function Home() {
               <Image src="/invoice discounting.jpg" alt="" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
-                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
+                <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
 
 
 
                   {/* Loan term */}
                   <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
-                    <span className="text-sm font-semibold text-gray-500">Repayment</span>
+                    <span className="text-sm font-semibold text-brand-dark">Repayment</span>
                     <div className="flex items-center gap-1">
                       {[3, 6, 12].map((m) => (
-                        <span key={m} className={`px-3 py-1.5 rounded-full text-sm font-bold transition-colors ${m === 6 ? "bg-brand-yellow text-brand-dark" : "text-gray-400"}`}>{m}mo</span>
+                        <span key={m} className={`px-3 py-1.5 rounded-full text-sm font-bold transition-colors ${m === 6 ? "bg-brand-dark text-brand-cream" : "text-gray-400"}`}>{m}mo</span>
                       ))}
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export default function Home() {
                       { label: "Contract Finance", active: true },
                       { label: "Syndication", icon: "🤝" },
                     ].map((tag) => (
-                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
+                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-brand-cream border-gray-800 text-brand-dark" : "bg-brand-cream border-gray-200 text-gray-500"}`}>
                         {tag.active && <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
                         {!tag.active && tag.icon && <span>{tag.icon}</span>}
                         {tag.label}
@@ -260,7 +260,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 
@@ -279,16 +279,16 @@ export default function Home() {
               <Image src="/image 4.jpg" alt="" fill unoptimized className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
-                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
+                <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
 
 
 
                   {/* Loan term */}
                   <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
-                    <span className="text-sm font-semibold text-gray-500">Repayment</span>
+                    <span className="text-sm font-semibold text-brand-dark">Repayment</span>
                     <div className="flex items-center gap-1">
                       {[12, 24, 36].map((m) => (
-                        <span key={m} className={`px-3 py-1.5 rounded-full text-sm font-bold transition-colors ${m === 24 ? "bg-brand-yellow text-brand-dark" : "text-gray-400"}`}>{m}mo</span>
+                        <span key={m} className={`px-3 py-1.5 rounded-full text-sm font-bold transition-colors ${m === 24 ? "bg-brand-dark text-brand-cream" : "text-gray-400"}`}>{m}mo</span>
                       ))}
                     </div>
                   </div>
@@ -299,10 +299,9 @@ export default function Home() {
                       { label: "Vehicle Financing", active: true },
                       { label: "Office Equipment", icon: "🖥️" },
                       { label: "Business Building", icon: "🏠" },
-                      { label: "Industrial Machinery", icon: "⚙️" },
                       { label: "Laptop", icon: "💻" },
                     ].map((tag) => (
-                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
+                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-brand-cream border-gray-800 text-brand-dark" : "bg-brand-cream border-gray-200 text-gray-500"}`}>
                         {tag.active && <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
                         {!tag.active && tag.icon && <span>{tag.icon}</span>}
                         {tag.label}
@@ -334,7 +333,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 
@@ -342,7 +341,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Service 3: Personal Loan */}
+      {/* Service 3: Equipment Financing */}
       <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col-reverse lg:flex-row items-stretch gap-12 lg:gap-20">
@@ -350,21 +349,92 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
+              <Image src="/images/asset-industrial.jpg" alt="Industrial Equipment" fill unoptimized className="object-cover object-center" />
+              {/* Mock card overlaying the image */}
+              <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
+                <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
+
+                  {/* Loan term */}
+                  <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
+                    <span className="text-sm font-semibold text-brand-dark">Business Term</span>
+                    <div className="flex items-center gap-1">
+                      {[12, 24, 36].map((m) => (
+                        <span key={m} className={`px-3 py-1.5 rounded-full text-sm font-bold transition-colors ${m === 24 ? "bg-brand-dark text-brand-cream" : "text-gray-400"}`}>{m}mo</span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="grid grid-cols-2 gap-2">
+                    {[
+                      { label: "Industrial Machinery", active: true },
+                      { label: "Power Generators", icon: "⚡" },
+                      { label: "IT Infrastructure", icon: "💻" },
+                      { label: "Medical Devices", icon: "🩺" },
+                    ].map((tag) => (
+                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-brand-cream border-gray-800 text-brand-dark" : "bg-brand-cream border-gray-200 text-gray-500"}`}>
+                        {tag.active && <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
+                        {!tag.active && tag.icon && <span>{tag.icon}</span>}
+                        {tag.label}
+                      </span>
+                    ))}
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Text */}
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
+                Equipment financing <span className="text-brand-dark font-light">to scale your business</span>
+              </h3>
+              <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
+                Get the machinery, tools, and technology your business needs to grow, without draining your working capital.
+              </p>
+              <div className="flex items-center gap-6 mb-10">
+                <div className="flex items-center gap-2 text-gray-600 font-medium">
+                  <svg className="w-4 h-4 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
+                  No heavy collateral
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 font-medium">
+                  <svg className="w-4 h-4 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
+                  Custom payment schedules
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <ApplyNowButton variant="dark" />
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Service 4: Personal Loan */}
+      <section className="py-6 md:py-8 bg-transparent overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="flex flex-col-reverse lg:flex-row-reverse items-stretch gap-12 lg:gap-20">
+
+            {/* Right: UI Card mockup */}
+            <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
+              {/* Section background image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/home-family.jpg" alt="" className="object-cover object-center absolute inset-0 w-full h-full" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
-                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
+                <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
 
                   {/* Loan term selector */}
                   <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-6">
-                    <span className="text-sm font-semibold text-gray-500">Short term</span>
+                    <span className="text-sm font-semibold text-brand-dark">Short term</span>
                     <div className="flex items-center gap-1">
                       {[3, 6, 9].map((m) => (
                         <span
                           key={m}
                           className={`px-3 py-1.5 rounded-full text-sm font-bold transition-colors ${
-                            m === 6 ? "bg-brand-yellow text-brand-dark" : "text-gray-400"
+                            m === 6 ? "bg-brand-dark text-brand-cream" : "text-gray-400"
                           }`}
                         >
                           {m}mo
@@ -384,7 +454,7 @@ export default function Home() {
                       <span
                         key={tag.label}
                         className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${
-                          tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"
+                          tag.active ? "bg-brand-cream border-gray-800 text-brand-dark" : "bg-brand-cream border-gray-200 text-gray-500"
                         }`}
                       >
                         {tag.active && (
@@ -400,7 +470,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Text content */}
+            {/* Left: Text content */}
             <div className="w-full lg:w-1/2">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
                 Personal loans <span className="text-brand-dark font-light">up to ₦5M &</span> low rates
@@ -423,7 +493,7 @@ export default function Home() {
 
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">
                   Learn More
                 </Link>
               </div>
@@ -433,10 +503,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Service 4: Treasury Services */}
+      {/* Service 5: Treasury Services */}
       <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex flex-col-reverse lg:flex-row-reverse items-stretch gap-12 lg:gap-20">
+          <div className="flex flex-col-reverse lg:flex-row items-stretch gap-12 lg:gap-20">
 
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
@@ -445,10 +515,10 @@ export default function Home() {
               <img src="/images/home-business-men.jpg" alt="" className="object-cover object-center absolute inset-0 w-full h-full" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
-                <div className="rounded-[2.5rem] pt-4 px-8 pb-8 flex flex-col bg-brand-yellow">
+                <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
 
                   {/* Profile card */}
-                  <div className="bg-white/80 rounded-2xl px-5 py-4 flex items-center gap-4 mb-1 -mt-12">
+                  <div className="bg-white/80 rounded-2xl px-5 py-4 flex items-center gap-4 mb-5 -mt-12">
 
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
@@ -463,35 +533,47 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Auto Invest toggle */}
-                  <div className="bg-white/80 rounded-2xl px-5 py-3 flex items-center justify-between mb-5">
-                    <span className="text-sm font-semibold text-brand-dark">Auto Invest is on</span>
-                    <div className="w-11 h-6 bg-green-500 rounded-full relative flex items-center px-0.5">
-                      <div className="w-5 h-5 bg-white rounded-full shadow ml-auto"></div>
-                    </div>
-                  </div>
+                  {/* Auto Invest toggle is hidden */}
 
                   {/* Growth chart */}
                   <div className="flex items-center gap-3">
                     {/* Time period tabs */}
                     <div className="flex flex-col gap-1 shrink-0">
                       {['3mo', '6mo', '12mo'].map((t) => (
-                        <span key={t} className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors cursor-pointer ${t === '3mo' ? 'bg-brand-dark text-white border-brand-dark' : 'bg-white border-gray-200 text-gray-500'}`}>{t}</span>
+                        <span key={t} className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors cursor-pointer ${t === '3mo' ? 'bg-brand-dark text-brand-cream border-brand-dark' : 'bg-brand-cream border-gray-200 text-gray-500'}`}>{t}</span>
                       ))}
                     </div>
-                    <div className="relative h-16 flex-1 overflow-hidden">
-                      <svg viewBox="0 0 320 112" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                    <div className="relative h-20 flex-1">
+                      <svg viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                         <defs>
-                          <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#fff500" stopOpacity="0.35"/>
-                            <stop offset="100%" stopColor="#fff500" stopOpacity="0"/>
+                          <linearGradient id="treasuryChartFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stopColor="#FEF418" stopOpacity="0.4"/>
+                            <stop offset="100%" stopColor="#FEF418" stopOpacity="0"/>
                           </linearGradient>
                         </defs>
-                        <path d="M0 112 C40 108, 60 90, 90 82 S140 65, 160 52 S220 28, 260 12 S300 4, 320 0" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                        <path d="M0 112 C40 108, 60 90, 90 82 S140 65, 160 52 S220 28, 260 12 S300 4, 320 0 L320 112 L0 112 Z" fill="url(#chartFill)"/>
-                        {/* Dot at peak */}
-                        <circle cx="320" cy="0" r="5" fill="#1a1a1a"/>
-                        <circle cx="320" cy="0" r="3" fill="#fff500"/>
+                        
+                        {/* Grid Lines */}
+                        <line x1="0" y1="20" x2="320" y2="20" stroke="#1a1a1a" strokeOpacity="0.08" strokeDasharray="3 3" />
+                        <line x1="0" y1="50" x2="320" y2="50" stroke="#1a1a1a" strokeOpacity="0.08" strokeDasharray="3 3" />
+                        <line x1="0" y1="80" x2="320" y2="80" stroke="#1a1a1a" strokeOpacity="0.08" strokeDasharray="3 3" />
+                        
+                        {/* Grid Labels Removed */ }
+
+                        {/* Chart Path Area Fill */}
+                        <path d="M0 90 Q 60 70, 110 75 T 220 40 T 300 20 L300 100 L0 100 Z" fill="url(#treasuryChartFill)"/>
+                        
+                        {/* Chart Path Stroke */}
+                        <path d="M0 90 Q 60 70, 110 75 T 220 40 T 300 20" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                        
+                        {/* Peak Indicator Dot */}
+                        <circle cx="300" cy="20" r="5" fill="#1a1a1a"/>
+                        <circle cx="300" cy="20" r="3.5" fill="#FEF418"/>
+                        
+                        {/* Tooltip Badge at Peak */}
+                        <g transform="translate(240, 5)">
+                          <rect width="48" height="16" rx="8" fill="#1a1a1a"/>
+                          <text x="24" y="11" fill="#FEF418" fontSize="8" fontWeight="bold" textAnchor="middle">+20%</text>
+                        </g>
                       </svg>
                     </div>
                   </div>
@@ -520,7 +602,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow-hover transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 
@@ -532,14 +614,11 @@ export default function Home() {
       <section className="py-12 md:py-16 bg-transparent overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Top: headline + description */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-start mb-16 lg:mb-20">
-            <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.1] w-full lg:w-1/2">
+          {/* Top: headline */}
+          <div className="mb-16 lg:mb-20 text-center flex justify-center">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-medium text-brand-dark tracking-tight leading-tight">
               A message from <span className="font-light italic">our CEO</span>
             </h2>
-            <p className="text-xl text-gray-500 leading-relaxed font-medium w-full lg:w-1/2 lg:pt-4">
-              We combine bold vision with disciplined execution to bring financial services that are fast, fair, and built for ambitious Nigerians.
-            </p>
           </div>
 
           {/* Card stack */}
@@ -555,8 +634,8 @@ export default function Home() {
               {/* Image */}
               <div className="w-full sm:w-[38%] relative shrink-0 h-64 sm:h-auto">
                 <Image
-                  src="/images/ceo.jpg"
-                  alt="Adewale Okon — Founder & CEO, Swiftbanq"
+                  src="/images/ceo.jpeg"
+                  alt="Olawale Osundele — Founder & CEO, Swiftbanq"
                   fill
                   unoptimized
                   className="object-cover object-top"
@@ -567,11 +646,11 @@ export default function Home() {
               {/* Name + title + quote */}
               <div className="flex-1 p-8 lg:p-12 flex flex-col justify-center">
                 <h3 className="text-3xl lg:text-[3.5rem] font-heading font-bold text-white leading-[1.05] mb-1">
-                  Adewale Okon
+                  Olawale Osundele
                 </h3>
                 <p className="text-white/60 font-semibold text-base mb-6">CEO of Swiftbanq</p>
                 <p className="text-white font-medium text-lg leading-relaxed">
-                  &ldquo;We built Swiftbanq because we believe financial empowerment shouldn&apos;t be reserved for the privileged few. Every business owner, every professional deserves capital that works as fast as their ambitions.&rdquo;
+                  &ldquo;At SWIFTBANQ, we are accelerating access to capital with bold solutions that empower businesses and individuals to thrive. Our commitment is clear - fast, transparent and responsible lending that fuels opportunity. The market is evolving and so we are. Together, we will unlock new horizons in finance and growth.&rdquo;
                 </p>
               </div>
 

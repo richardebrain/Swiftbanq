@@ -5,6 +5,7 @@ const ALLOWED_INQUIRY_TYPES = [
   'Asset Financing',
   'Digital Lending',
   'Treasury Services',
+  'Equipment Financing',
   'General Inquiry',
 ];
 
@@ -17,6 +18,14 @@ function sanitise(value: unknown, maxLength: number): string {
     .slice(0, maxLength);
 }
 
+// Sanitise an array of strings
+function sanitiseArray(value: unknown, maxLength: number): string[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map(item => sanitise(item, maxLength))
+    .filter(item => item !== '');
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -25,7 +34,9 @@ export async function POST(req: NextRequest) {
     const lastName    = sanitise(body.lastName,    100);
     const email       = sanitise(body.email,       254); // RFC 5321 max
     const phone       = sanitise(body.phone,        30);
-    const inquiryType = sanitise(body.inquiryType, 100);
+    const inquiryType = sanitiseArray(body.inquiryType, 100);
+    const description = sanitise(body.description, 100);
+    const organization= sanitise(body.organization, 100);
     const message     = sanitise(body.message,    2000);
 
     // Required field validation
@@ -53,10 +64,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Inquiry type must be one of the allowed values
-    const resolvedInquiryType = ALLOWED_INQUIRY_TYPES.includes(inquiryType)
-      ? inquiryType
-      : 'General Inquiry';
+    // Filter to allowed inquiry types, default to General Inquiry if empty
+    const resolvedInquiryType = inquiryType.filter(type => ALLOWED_INQUIRY_TYPES.includes(type));
+    if (resolvedInquiryType.length === 0) resolvedInquiryType.push('General Inquiry');
 
     // Log the submission (replace with email/DB logic as needed)
     console.log('Contact form submission:', {

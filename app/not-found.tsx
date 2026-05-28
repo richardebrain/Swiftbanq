@@ -23,7 +23,7 @@ export default function NotFound() {
         <div className="flex flex-wrap justify-center gap-4 mb-16">
           <Link
             href="/"
-            className="px-8 py-3 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-brand-yellow/80 transition-colors text-base"
+            className="px-8 py-3 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-brand-yellow/90 transition-colors text-base"
           >
             Back to Home
           </Link>
@@ -34,22 +34,7 @@ export default function NotFound() {
             Contact Us
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {[
-            { href: '/services/sme-financing', label: 'SME Financing' },
-            { href: '/asset-financing', label: 'Asset Financing' },
-            { href: '/services/digital-lending', label: 'Digital Lending' },
-            { href: '/treasury-services', label: 'Treasury Services' },
-          ].map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className="p-4 rounded-2xl border border-brand-dark/10 hover:border-brand-yellow hover:bg-brand-yellow/10 transition-colors font-semibold text-brand-dark text-sm text-center"
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
+
       </div>
     </div>
   );

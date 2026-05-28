@@ -9,6 +9,7 @@ const SERVICES = [
   { value: 'asset', label: 'Asset Financing', desc: 'Vehicles, equipment, machinery & more' },
   { value: 'personal', label: 'Personal Loan', desc: 'For salary earners and professionals' },
   { value: 'treasury', label: 'Treasury Services', desc: 'Invest and earn 12%–20% per annum' },
+  { value: 'equipment', label: 'Equipment Financing', desc: 'Office equipment, laptops, machinery & more' },
 ];
 
 const AMOUNTS = [
@@ -32,7 +33,7 @@ export function ApplyPageForm() {
     message: '',
   });
 
-  const isBusiness = form.service === 'sme' || form.service === 'asset';
+  const isBusiness = form.service === 'sme' || form.service === 'asset' || form.service === 'equipment';
 
   function set(field: keyof typeof form, value: string) {
     setForm(prev => ({ ...prev, [field]: value }));
@@ -57,7 +58,7 @@ export function ApplyPageForm() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/"
-              className="px-8 py-3 rounded-full bg-brand-yellow text-brand-dark font-bold hover:bg-brand-yellow-hover transition-colors"
+              className="px-8 py-3 rounded-full bg-brand-yellow text-brand-dark font-bold hover:bg-brand-yellow/90 transition-colors"
             >
               Back to Home
             </Link>
@@ -134,8 +135,23 @@ export function ApplyPageForm() {
                           : 'border-gray-200 hover:border-gray-300 bg-white'
                       }`}
                     >
-                      <div className="font-bold text-brand-dark text-sm mb-1">{s.label}</div>
-                      <div className="text-gray-400 text-xs leading-snug">{s.desc}</div>
+                      <div className="flex items-start gap-3">
+                        <div className={`w-5 h-5 mt-0.5 shrink-0 rounded-full border-2 flex items-center justify-center transition-colors ${
+                          form.service === s.value
+                            ? 'bg-brand-yellow border-brand-dark'
+                            : 'bg-white border-gray-300'
+                        }`}>
+                          {form.service === s.value && (
+                            <svg className="w-3 h-3 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7" />
+                            </svg>
+                          )}
+                        </div>
+                        <div>
+                          <div className="font-bold text-brand-dark text-sm mb-1">{s.label}</div>
+                          <div className="text-gray-400 text-xs leading-snug">{s.desc}</div>
+                        </div>
+                      </div>
                     </button>
                   ))}
                 </div>
@@ -169,7 +185,7 @@ export function ApplyPageForm() {
                 type="button"
                 disabled={!form.service || !form.amount}
                 onClick={() => setStep(2)}
-                className="w-full py-4 rounded-full bg-brand-yellow text-brand-dark font-bold text-base hover:bg-brand-yellow-hover transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-full py-4 rounded-full bg-brand-yellow text-brand-dark font-bold text-base hover:bg-brand-yellow/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 Continue
               </button>
@@ -283,7 +299,7 @@ export function ApplyPageForm() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-4 rounded-full bg-brand-yellow text-brand-dark font-bold text-base hover:bg-brand-yellow-hover transition-colors"
+                  className="flex-1 py-4 rounded-full bg-brand-yellow text-brand-dark font-bold text-base hover:bg-brand-yellow/90 transition-colors"
                 >
                   Submit Application
                 </button>
