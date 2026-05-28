@@ -6,7 +6,7 @@ import { Briefcase, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 const tabs = [
   { id: 'personal-loan', label: 'Personal Loan' },
-  { id: 'investing', label: 'Investing' },
+  { id: 'investing', label: 'Investment' },
   { id: 'business-loan', label: 'Business Loan' },
 ];
 
