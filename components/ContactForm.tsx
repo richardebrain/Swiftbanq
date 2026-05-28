@@ -10,6 +10,7 @@ type FormState = {
   phone: string;
   organization: string;
   message: string;
+  description: string;
   inquiryType: string[];
 };
 
