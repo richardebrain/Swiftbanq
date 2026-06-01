@@ -1,48 +1,71 @@
 # Swiftbanq Credit Solutions
 
-Swiftbanq Credit Solutions is a licensed Non-Bank Financial Institution (NBFI) located in Lagos, Nigeria. Our goal is to close the financial gap for businesses, SMEs, professionals, and individuals by delivering fast, fair, and structured credit solutions.
+Swiftbanq Credit Solutions is a Lagos-based Non-Bank Financial Institution offering credit and investment services for SMEs, businesses, professionals, and individuals in Nigeria.
+
+## Website
+
+- Home: https://swiftbanq.com/
+- About: https://swiftbanq.com/about
+- Apply: https://swiftbanq.com/apply
+- Contact: https://swiftbanq.com/contact
+- Guides: https://swiftbanq.com/guides
+- Sitemap: https://swiftbanq.com/sitemap.xml
+- Robots: https://swiftbanq.com/robots.txt
 
 ## Core Services
 
-### 1. SME Financing
-We empower small and medium enterprises with working capital to fuel growth. Services include:
-- LPO Financing
-- Invoice Discounting
-- Bridge & Contract Finance
-- Project Finance & Syndication
+### SME Financing
 
-### 2. Asset & Equipment Financing
-Acquire the tools you need to grow without draining your cash flow. We finance:
-- Fleet & Vehicle Financing
-- Office & Household Equipment
-- Business Buildings
-- Industrial Machinery
-- Laptops and IT Infrastructure
+Working-capital solutions for small and medium enterprises, including:
 
-### 3. Digital Lending
-Accessible personal loans for salary earners. Quick disbursements, no hidden charges, and flexible repayment terms ranging from 3 to 12 months.
+- LPO financing
+- Invoice discounting
+- Bridge and contract finance
+- Project finance and syndication
 
-### 4. Treasury Services
-High-yield investment options ranging from 12% to 20% interest per annum. We offer:
-- Structured Borrowings
-- Highly Competitive Interest Rates
-- Flexible Tenures
-- Dedicated Portfolio Management
+### Asset and Equipment Financing
+
+Financing for productive assets, including:
+
+- Fleet and vehicle financing
+- Office and household equipment
+- Business buildings
+- Industrial machinery
+- Laptops and IT infrastructure
+
+### Digital Lending
+
+Personal loans for salary earners and professionals, with fast online applications, transparent charges, and flexible repayment terms.
+
+### Treasury Services
+
+Structured investment and treasury products with competitive returns, flexible tenures, and portfolio support.
 
 ## Company Information
-- **Location:** Lagos, Nigeria
-- **Address:** 6, Babatunde Jose Street, Off Ademola Adetokunbo V.I, Lagos State.
-- **CEO:** Olawale Osundele
-- **Contact Email:** enquiries@swiftbanq.com.ng
-- **Contact Phone:** +234 708 642 9380
 
-## Compliance & Values
-We operate under the regulatory framework of the Nigeria Money Lenders Law. Our core values are:
-- People First
-- Integrity
-- Excellence
-- Innovation
-- Customer Centric
-- Professionalism
+- Location: Lagos, Nigeria
+- Address: 6, Babatunde Jose Street, Off Ademola Adetokunbo V.I, Lagos State, Nigeria
+- CEO: Olawale Osundele
+- Email: enquiries@swiftbanq.com
+- Phone: +234 708 642 9380
 
-For more detailed policies, please refer to our Privacy Policy, Data Protection, and Complaints Policy on our website.
+## Leadership
+
+### Board
+
+- Bolaji Shenjobi - Chairman
+- Wole Ajomale - Executive Director
+- Olawale Osundele - Chief Executive Officer
+
+### Management Team
+
+- Olawale Osundele - Chief Executive Officer
+- Ayo Deji Adebayo - CFO
+- Wale Babealam - Head, Human Resources
+- Tayo Ogunjobi - GM, Operations & Risk Management
+
+## Compliance and Values
+
+Swiftbanq operates under applicable Nigerian lending and data protection requirements. The company emphasizes people-first service, integrity, excellence, innovation, customer focus, and professionalism.
+
+For detailed policies, see the website privacy policy, data protection policy, cookie policy, and complaints policy.

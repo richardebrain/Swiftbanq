@@ -5,6 +5,19 @@ import { GuidesList } from '@/components/GuidesList';
 export const metadata: Metadata = {
   title: 'Guides & Resources',
   description: 'Expert guides on securing SME financing, asset loans, and digital lending in Nigeria.',
+  alternates: {
+    canonical: 'https://swiftbanq.com/guides',
+  },
+  openGraph: {
+    title: 'Guides & Resources | Swiftbanq Credit Solutions',
+    description: 'Expert guides on securing SME financing, asset loans, and digital lending in Nigeria.',
+    url: 'https://swiftbanq.com/guides',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Swiftbanq Credit Solutions guides and resources' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default function GuidesPage() {

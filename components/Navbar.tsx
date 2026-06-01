@@ -43,7 +43,7 @@ export function Navbar() {
                 width={244}
                 height={54}
                 priority
-                className="h-7 w-auto md:h-8"
+                className="h-6 w-auto md:h-7"
               />
             </Link>
           </div>

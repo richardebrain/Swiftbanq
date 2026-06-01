@@ -1,30 +1,26 @@
-import { MetadataRoute } from 'next'
-import { guidesData } from '@/lib/guidesData'
+import { MetadataRoute } from 'next';
+import { guidesData } from '@/lib/guidesData';
+
+const baseUrl = 'https://swiftbanq.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://swiftbanq.com';
+  const coreLastMod = new Date('2026-06-01');
+  const guideLastMod = new Date('2026-06-01');
+  const legalLastMod = new Date('2026-06-01');
 
-  // Static dates — dynamic new Date() causes the sitemap to change on every
-  // build, signalling false freshness to crawlers and wasting crawl budget.
-  const coreLastMod    = new Date('2026-05-28');
-  const serviceLastMod = new Date('2026-05-28');
-  const legalLastMod   = new Date('2026-05-28');
-
-  // ── Guide posts (dynamic) ──────────────────────────────────────────────
   const guideEntries: MetadataRoute.Sitemap = guidesData.map((guide) => ({
     url: `${baseUrl}/guides/${guide.slug}`,
     lastModified: new Date(guide.date),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
   return [
-    // ── Core pages ──────────────────────────────────────────────────────────
     {
       url: baseUrl,
       lastModified: coreLastMod,
       changeFrequency: 'weekly',
-      priority: 1.0,
+      priority: 1,
     },
     {
       url: `${baseUrl}/about`,
@@ -44,19 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-
-    // ── Guides listing page ─────────────────────────────────────────────────
     {
       url: `${baseUrl}/guides`,
-      lastModified: coreLastMod,
+      lastModified: guideLastMod,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-
-    // ── Individual guide posts ──────────────────────────────────────────────
     ...guideEntries,
-
-    // ── Legal & compliance ───────────────────────────────────────────────────
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: legalLastMod,
@@ -81,5 +71,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-  ]
+  ];
 }

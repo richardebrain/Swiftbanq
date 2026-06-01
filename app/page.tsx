@@ -77,18 +77,22 @@ export default function Home() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
           <h1 className="text-[2rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.4] sm:leading-[1.25] md:leading-[1.15] lg:leading-[1.1] mb-12 max-w-6xl mx-auto">
-            Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-1 md:-mt-4 relative">
-              <div className="flex -space-x-2 md:-space-x-4">
-                <Image src="/images/face-1.jpg" alt="Satisfied Swiftbanq Credit Solutions customer" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
-                <Image src="/images/face-2.jpg" alt="Nigerian business owner using Swiftbanq SME Financing" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
-                <Image src="/images/face-3.jpg" alt="Professional benefiting from Swiftbanq Treasury Services" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
-              </div>
-            </span> and Invest <br className="hidden lg:block" />
-            Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4">
-               <div className="bg-white rounded-lg md:rounded-2xl shadow-sm border border-brand-yellow/30 p-1.5 sm:p-2 md:p-3 transform rotate-6 flex items-center justify-center">
-                 <TrendingUp className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 text-brand-dark" />
-               </div>
-            </span> with Us.
+            <span className="block">
+              Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-1 md:-mt-4 relative whitespace-nowrap">
+                <div className="flex -space-x-2 md:-space-x-4">
+                  <Image src="/images/face-1.jpg" alt="Satisfied Swiftbanq Credit Solutions customer" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
+                  <Image src="/images/face-2.jpg" alt="Nigerian business owner using Swiftbanq SME Financing" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
+                  <Image src="/images/face-3.jpg" alt="Professional benefiting from Swiftbanq Treasury Services" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
+                </div>
+              </span> and Invest
+            </span>
+            <span className="block">
+              Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4 whitespace-nowrap">
+                <div className="bg-white rounded-lg md:rounded-2xl shadow-sm border border-brand-yellow/30 p-1.5 sm:p-2 md:p-3 transform rotate-6 flex items-center justify-center">
+                  <TrendingUp className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 text-brand-dark" />
+                </div>
+              </span> with Us.
+            </span>
           </h1>
           
           <div className="flex justify-center mt-6 md:mt-10">

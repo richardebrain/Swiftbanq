@@ -129,17 +129,17 @@ export default function AboutPage() {
               <h3 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">Our Board of Directors</h3>
               <div className="flex flex-wrap gap-6 sm:gap-10">
                 {[
+                  { name: "Bolaji Shenjobi", role: "Chairman", img: "/images/team-bolaji.webp" },
+                  { name: "Wole Ajomale", role: "Executive Director", img: "/images/team-md.jpg" },
                   { name: "Olawale Osundele", role: "Chief Executive Officer", img: "/images/ceo.jpeg" },
-                  { name: "Wole Ajomale", role: "Managing Director", img: "/images/team-md.jpg" },
-                  { name: "Bolaji Shenjobi", role: "Executive Director", img: "/images/team-bolaji.webp" },
                 ].map((member, i) => (
-                  <div key={i} className="flex flex-col items-center text-center gap-3 w-44">
-                    <div className="w-44 h-44 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">
+                  <div key={i} className="flex flex-col items-center text-center gap-3 w-64">
+                    <div className="w-64 h-64 rounded-lg overflow-hidden ring-4 ring-brand-yellow/30">
                       <Image
                         src={member.img}
                         alt={member.name}
-                        width={176}
-                        height={176}
+                        width={256}
+                        height={256}
                         className="object-cover object-top w-full h-full"
                         unoptimized
                       />
@@ -158,19 +158,18 @@ export default function AboutPage() {
               <h3 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">Management Team</h3>
               <div className="flex flex-wrap gap-6 sm:gap-10">
                 {[
-                  { name: "Olufemi Onabiyi", role: "Head, Business Development", img: "/images/team-femi.jpg" },
-                  { name: "Tayo Ogunjobi", role: "General Manager, Operations & Risk Management", img: "/images/team-gm.jpg" },
-                  { name: "Ayodeji Adebayo", role: "Chief Financial Officer", img: "/images/team-ayodeji.jpg" },
-                  { name: "Olawale Babsalaam", role: "Head, Human Resources", img: "/images/team-olawale.jpg" },
-                  { name: "Bakrin Babalola", role: "Head, Digital Lending", img: "/images/team-bakrin.jpg" },
+                  { name: "Olawale Osundele", role: "Chief Executive Officer", img: "/images/ceo.jpeg" },
+                  { name: "Ayo Deji Adebayo", role: "CFO", img: "/images/team-ayodeji.jpg" },
+                  { name: "Wale Babealam", role: "Head, Human Resources", img: "/images/team-olawale.jpg" },
+                  { name: "Tayo Ogunjobi", role: "GM, Operations & Risk Management", img: "/images/team-gm.jpg" },
                 ].map((member, i) => (
-                  <div key={i} className="flex flex-col items-center text-center gap-3 w-44">
-                    <div className="w-44 h-44 rounded-full overflow-hidden ring-4 ring-brand-yellow/30 shadow-md">
+                  <div key={i} className="flex flex-col items-center text-center gap-3 w-64">
+                    <div className="w-64 h-64 rounded-lg overflow-hidden ring-4 ring-brand-yellow/30">
                       <Image
                         src={member.img}
                         alt={member.name}
-                        width={176}
-                        height={176}
+                        width={256}
+                        height={256}
                         className="object-cover object-top w-full h-full"
                         unoptimized
                       />

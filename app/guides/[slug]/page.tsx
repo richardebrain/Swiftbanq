@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { guidesData } from '@/lib/guidesData';
 
 export function generateStaticParams() {
@@ -9,13 +10,30 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
   const guide = guidesData.find((g) => g.slug === resolvedParams.slug);
   if (!guide) return { title: 'Guide Not Found' };
+  const url = `https://swiftbanq.com/guides/${guide.slug}`;
+
   return {
     title: guide.title,
     description: guide.excerpt,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: 'article',
+      title: `${guide.title} | Swiftbanq Credit Solutions`,
+      description: guide.excerpt,
+      url,
+      publishedTime: guide.date,
+      images: [{ url: guide.coverImage, alt: guide.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [guide.coverImage],
+    },
   };
 }
 

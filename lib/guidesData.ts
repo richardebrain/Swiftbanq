@@ -94,22 +94,4 @@ We offer instant disbursement personal loans with highly competitive rates. Our 
     readTime: '3 min read',
     category: 'Personal Finance'
   },
-  ...Array.from({ length: 11 }).map((_, i) => ({
-    slug: `dummy-guide-${i + 1}`,
-    title: `Financial Growth Strategy ${i + 1}: Expert Tips`,
-    excerpt: `Discover essential tips and strategies for scaling your business and optimizing your financial health in today's economy.`,
-    content: `
-## Overview
-This is a dummy guide to demonstrate pagination. It contains placeholder text regarding financial strategies, business growth, and asset management.
-
-### Key Takeaways
-- Always monitor your cash flow.
-- Invest in the right assets.
-- Leverage digital lending when necessary.
-    `,
-    coverImage: i % 2 === 0 ? '/swiftbanq-office-4.jpg' : '/image-3.jpg',
-    date: `2026-05-0${(i % 9) + 1}`,
-    readTime: `${(i % 5) + 3} min read`,
-    category: i % 2 === 0 ? 'Business Tips' : 'Finance'
-  }))
 ];

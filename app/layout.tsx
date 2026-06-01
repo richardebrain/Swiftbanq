@@ -63,7 +63,7 @@ export const metadata: Metadata = {
         url: 'https://swiftbanq.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Swiftbanq Credit Solutions — Digital Lending & Financing in Nigeria',
+        alt: 'Swiftbanq Credit Solutions - Digital Lending & Financing in Nigeria',
       },
     ],
   },
@@ -95,6 +95,7 @@ const schemaWebSite = {
   "name": "Swiftbanq Credit Solutions",
   "url": "https://swiftbanq.com",
   "description": "Digital lending, SME financing, asset financing, and treasury services for businesses and individuals in Nigeria.",
+  "inLanguage": "en-NG",
   "publisher": {
     "@id": "https://swiftbanq.com/#organization"
   }
@@ -107,6 +108,7 @@ const schemaOrganization = {
   "name": "Swiftbanq Credit Solutions",
   "legalName": "Swiftbanq Credit Solutions",
   "url": "https://swiftbanq.com",
+  "priceRange": "$$",
   "logo": {
     "@type": "ImageObject",
     "@id": "https://swiftbanq.com/#logo",
@@ -202,7 +204,7 @@ const schemaOrganization = {
   },
   "sameAs": [
     "https://www.linkedin.com/company/swiftbanq",
-    "https://twitter.com/swiftbanq"
+    "https://x.com/swiftbanq"
   ]
 };
 
