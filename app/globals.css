@@ -5,14 +5,14 @@
   --color-brand-yellow: #FDF42E;
   --color-brand-dark: #1a1a1a;
   --color-brand-gray: #f5f5f5;
-  --color-brand-cream: #F3F4F1;
+  --color-brand-cream: #FFFFFF;
   --font-sans: var(--font-inter);
   --font-heading: var(--font-outfit);
 }
 
 @layer base {
   body {
-    @apply font-sans bg-brand-cream text-zinc-900;
+    @apply font-sans bg-white text-zinc-900;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading text-brand-dark;

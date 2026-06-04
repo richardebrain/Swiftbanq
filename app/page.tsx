@@ -280,7 +280,7 @@ export default function Home() {
             {/* Right (visually): UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/image-45.jpg" alt="Swiftbanq Vehicle and Asset Financing options in Nigeria" fill className="object-cover object-center" />
+              <Image src="/images/asset-finance-car.jpg" alt="Swiftbanq Vehicle and Asset Financing options in Nigeria" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
