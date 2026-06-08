@@ -160,7 +160,6 @@ export default function AboutPage() {
                 {[
                   { name: "Olawale Osundele", role: "Chief Executive Officer", img: "/images/ceo.jpeg" },
                   { name: "Ayo Deji Adebayo", role: "CFO", img: "/images/team-ayodeji.jpg" },
-                  { name: "Wale Babealam", role: "Head, Human Resources", img: "/images/face-1.jpg" },
                   { name: "Tayo Ogunjobi", role: "GM, Operations & Risk Management", img: "/images/team-gm.jpg" },
                 ].map((member, i) => (
                   <div key={i} className="flex flex-col items-center text-center gap-3 w-64">
