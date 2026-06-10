@@ -131,7 +131,6 @@ export default function AboutPage() {
                 {[
                   { name: "Bolaji Shenjobi", role: "Chairman", img: "/images/team-bolaji.webp" },
                   { name: "Wole Ajomale", role: "Executive Director", img: "/images/team-md.jpg" },
-                  { name: "Olawale Osundele", role: "Chief Executive Officer", img: "/images/ceo.jpeg" },
                 ].map((member, i) => (
                   <div key={i} className="flex flex-col items-center text-center gap-3 w-64">
                     <div className="w-64 h-64 rounded-lg overflow-hidden ring-4 ring-brand-yellow/30">
