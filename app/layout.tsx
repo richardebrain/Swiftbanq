@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
-import { Inter, Outfit } from 'next/font/google';
+import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -10,9 +11,20 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const outfit = Outfit({
-  subsets: ['latin'],
-  variable: '--font-outfit',
+const gravity = localFont({
+  src: [
+    { path: '../public/fonts/Gravity-UltraLight.otf', weight: '200', style: 'normal' },
+    { path: '../public/fonts/Gravity-UltraLightItalic.otf', weight: '200', style: 'italic' },
+    { path: '../public/fonts/Gravity-Light.otf', weight: '300', style: 'normal' },
+    { path: '../public/fonts/Gravity-LightItalic.otf', weight: '300', style: 'italic' },
+    { path: '../public/fonts/Gravity-Book.otf', weight: '350', style: 'normal' },
+    { path: '../public/fonts/Gravity-BookItalic.otf', weight: '350', style: 'italic' },
+    { path: '../public/fonts/Gravity-Regular.otf', weight: '400', style: 'normal' },
+    { path: '../public/fonts/Gravity-Italic.otf', weight: '400', style: 'italic' },
+    { path: '../public/fonts/Gravity-Bold.otf', weight: '700', style: 'normal' },
+    { path: '../public/fonts/Gravity-BoldItalic.otf', weight: '700', style: 'italic' },
+  ],
+  variable: '--font-gravity',
 });
 
 export const metadata: Metadata = {
@@ -21,15 +33,14 @@ export const metadata: Metadata = {
     default: 'Swiftbanq | Fast SME Financing & Digital Lending in Nigeria',
     template: '%s | Swiftbanq Credit Solutions',
   },
-  description: 'Get fast, reliable SME financing, asset loans, and digital lending in Nigeria. Swiftbanq is a licensed NBFI offering quick credit and high-yield treasury services. Apply today.',
+  description: 'Get fast, reliable SME financing, asset loans, and digital lending in Nigeria. Swiftbanq is a licensed NBFI offering quick credit and high-yield investment. Apply today.',
   keywords: [
-    'Swiftbanq',
-    'credit solutions Nigeria',
+
     'SME financing Lagos',
     'business loans Nigeria',
     'asset financing Nigeria',
     'digital lending Nigeria',
-    'treasury services Nigeria',
+    'investment Nigeria',
     'personal loans Lagos',
     'NBFI Nigeria',
     'LPO financing Nigeria',
@@ -57,7 +68,7 @@ export const metadata: Metadata = {
     url: 'https://swiftbanq.com',
     siteName: 'Swiftbanq Credit Solutions',
     title: 'Swiftbanq Credit Solutions | Digital Lending & Financing in Nigeria',
-    description: 'A licensed Non-Bank Financial Institution in Lagos, Nigeria. Fast SME financing, asset loans, digital lending, and treasury services. Apply online today.',
+    description: 'A licensed Non-Bank Financial Institution in Lagos, Nigeria. Fast SME financing, asset loans, digital lending, and investment. Apply online today.',
     images: [
       {
         url: 'https://swiftbanq.com/og-image.jpg',
@@ -72,7 +83,7 @@ export const metadata: Metadata = {
     site: '@swiftbanq',
     creator: '@swiftbanq',
     title: 'Swiftbanq Credit Solutions | Digital Lending & Financing in Nigeria',
-    description: 'Licensed NBFI in Lagos. SME Financing, Asset Loans, Digital Lending & Treasury Services. Apply online.',
+    description: 'Licensed NBFI in Lagos. SME Financing, Asset Loans, Digital Lending & Investment. Apply online.',
     images: ['https://swiftbanq.com/og-image.jpg'],
   },
   robots: {
@@ -94,7 +105,7 @@ const schemaWebSite = {
   "@id": "https://swiftbanq.com/#website",
   "name": "Swiftbanq Credit Solutions",
   "url": "https://swiftbanq.com",
-  "description": "Digital lending, SME financing, asset financing, and treasury services for businesses and individuals in Nigeria.",
+  "description": "Digital lending, SME financing, asset financing, and investment for businesses and individuals in Nigeria.",
   "inLanguage": "en-NG",
   "publisher": {
     "@id": "https://swiftbanq.com/#organization"
@@ -119,7 +130,7 @@ const schemaOrganization = {
   "image": {
     "@id": "https://swiftbanq.com/#logo"
   },
-  "description": "A licensed Non-Bank Financial Institution (NBFI) in Lagos, Nigeria offering SME Financing, Asset Financing, Digital Lending, and Treasury Services.",
+  "description": "A licensed Non-Bank Financial Institution (NBFI) in Lagos, Nigeria offering SME Financing, Asset Financing, Digital Lending, and Investment.",
   "foundingLocation": {
     "@type": "Place",
     "name": "Lagos, Nigeria"
@@ -195,7 +206,7 @@ const schemaOrganization = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "FinancialProduct",
-          "name": "Treasury Services",
+          "name": "Investment",
           "description": "Structured borrowings, competitive interest rates, flexible tenures, and portfolio management for investors.",
           "url": "https://swiftbanq.com/#services"
         }
@@ -210,7 +221,7 @@ const schemaOrganization = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${inter.variable} ${gravity.variable} bg-white`}>
       <head>
         <script
           type="application/ld+json"
@@ -221,7 +232,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }}
         />
       </head>
-      <body suppressHydrationWarning className="min-h-screen flex flex-col bg-white">
+      <body suppressHydrationWarning className="min-h-screen flex flex-col bg-white border-x-2 border-black mx-5">
         <Navbar />
         <main id="main-content" className="flex-1">
           {children}
@@ -232,3 +243,4 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     </html>
   );
 }
+

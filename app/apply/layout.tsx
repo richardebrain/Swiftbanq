@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Apply Now | Swiftbanq Credit Solutions',
-    description: 'Start your loan or investment application with Swiftbanq. SME financing, asset loans, personal loans, and treasury services. Get a response within 24 hours.',
+    description: 'Start your loan or investment application with Swiftbanq. SME financing, asset loans, personal loans, and investment. Get a response within 24 hours.',
     url: 'https://swiftbanq.com/apply',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Apply for financing with Swiftbanq Credit Solutions' }],
   },

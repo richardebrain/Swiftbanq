@@ -12,10 +12,7 @@ interface ApplyNowButtonProps {
 export function ApplyNowButton({ variant = 'yellow', className, children }: ApplyNowButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const defaultClass =
-    variant === 'dark'
-      ? 'inline-flex items-center gap-2 px-8 py-3.5 bg-brand-dark text-white font-bold rounded-full hover:bg-brand-dark/80 transition-colors text-base'
-      : 'px-10 py-3 rounded-full bg-brand-yellow text-brand-dark font-bold hover:bg-brand-yellow/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg';
+  const defaultClass = 'px-10 py-4 rounded-full bg-black text-white font-bold hover:bg-black/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg group';
 
   return (
     <>
@@ -23,9 +20,7 @@ export function ApplyNowButton({ variant = 'yellow', className, children }: Appl
         {children ?? (
           <>
             Apply Now
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="bg-white text-black w-6 h-6 flex items-center justify-center rounded-full transition-colors text-xs border border-transparent group-hover:bg-white/80">→</span>
           </>
         )}
       </button>

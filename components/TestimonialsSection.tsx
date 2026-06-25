@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote:
-      "With their structured treasury services, my company's idle funds are now yielding highly competitive returns safely and securely.",
+      "With their structured investment, my company's idle funds are now yielding highly competitive returns safely and securely.",
     name: 'Fatima K.',
     role: 'Financial Director',
   },

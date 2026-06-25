@@ -4,7 +4,7 @@ const ALLOWED_INQUIRY_TYPES = [
   'SME Financing',
   'Asset Financing',
   'Digital Lending',
-  'Treasury Services',
+  'Investment',
   'Equipment Financing',
   'General Inquiry',
 ];

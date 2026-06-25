@@ -4,15 +4,22 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { ApplyModal } from '@/components/ApplyModal';
 
 export function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const [isOpen, setIsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
+  const linkClass = isHome ? "text-base font-medium text-brand-dark hover:text-brand-yellow transition-colors" : "text-base font-medium text-white hover:text-brand-yellow transition-colors";
+
+  const iconClass = isHome ? "text-brand-dark" : "text-white";
+
   return (
-    <header aria-label="Main navigation" className="bg-brand-cream w-full border-b border-transparent relative z-50">
+    <header aria-label="Main navigation" className={`${isHome ? 'absolute top-0 left-0 w-full z-50 bg-transparent border-b-2 border-black' : 'bg-black w-full border-b border-gray-800 relative z-50'}`}>
       <a
         href="#main-content"
         style={{
@@ -40,10 +47,10 @@ export function Navbar() {
               <Image
                 src="/SBQ_Logo.svg"
                 alt="Swiftbanq Credit Solutions"
-                width={244}
-                height={54}
+                width={160}
+                height={40}
                 priority
-                className="h-6 w-auto md:h-7"
+                className="brightness-0 h-6 w-auto md:h-7"
               />
             </Link>
           </div>
@@ -54,19 +61,19 @@ export function Navbar() {
             {/* Services Link */}
             <Link
               href="/#services"
-              className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
+              className={linkClass}
             >
               Services
             </Link>
 
-            <Link href="/about" className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors">About Us</Link>
+            <Link href="/about" className={linkClass}>About Us</Link>
 
-            <Link href="/guides" className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors">Guides</Link>
+            <Link href="/guides" className={linkClass}>Guides</Link>
 
             {/* Resources Dropdown */}
             <div className="relative group">
               <button
-                className="flex items-center text-base font-medium text-gray-700 hover:text-gray-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark rounded py-2"
+                className={`flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark rounded py-2 ${linkClass}`}
                 onMouseEnter={() => setIsResourcesOpen(true)}
                 onMouseLeave={() => setIsResourcesOpen(false)}
                 onClick={() => setIsResourcesOpen((v) => !v)}
@@ -92,13 +99,13 @@ export function Navbar() {
               </div>
             </div>
 
-            <Link href="/contact" className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors">Contact Us</Link>
+            <Link href="/contact" className={linkClass}>Contact Us</Link>
           </div>
 
           <div className="hidden md:flex items-center">
             <button
               onClick={() => setIsApplyModalOpen(true)}
-              className="px-6 py-3 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-brand-yellow/90 transition-colors text-sm flex items-center gap-2"
+              className="px-6 py-3 bg-brand-yellow text-black font-bold rounded-full hover:bg-brand-yellow/90 transition-colors text-sm flex items-center gap-2"
             >
               Apply Now
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
@@ -114,7 +121,7 @@ export function Navbar() {
               aria-controls="mobile-menu"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
-              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
+              {isOpen ? <X className={`h-6 w-6 ${iconClass}`} aria-hidden="true" /> : <Menu className={`h-6 w-6 ${iconClass}`} aria-hidden="true" />}
             </button>
           </div>
         </nav>
@@ -135,7 +142,7 @@ export function Navbar() {
               <Link onClick={() => setIsOpen(false)} href="/contact" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Contact Us</Link>
               <button
                 onClick={() => { setIsOpen(false); setIsApplyModalOpen(true); }}
-                className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-brand-dark bg-brand-yellow rounded-xl mt-6 w-full"
+                className="flex items-center justify-center gap-2 px-4 py-4 text-base font-bold text-black bg-brand-yellow hover:bg-brand-yellow/90 transition-colors rounded-full mt-6 w-full"
               >
                 Apply Now
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>

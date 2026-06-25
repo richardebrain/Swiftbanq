@@ -26,7 +26,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <ApplyNowButton />
             <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg">
-              Contact Support            </Link>
+              Talk To Support            </Link>
           </div>
         </div>
       </section>
@@ -63,7 +63,7 @@ export function Footer() {
                     <span className="font-medium text-[15px] cursor-default">Digital Lending</span>
                   </li>
                   <li>
-                    <span className="font-medium text-[15px] cursor-default">Treasury Services</span>
+                    <span className="font-medium text-[15px] cursor-default">Investment</span>
                   </li>
                 </ul>
               </div>
@@ -127,7 +127,7 @@ export function Footer() {
               * Loans and financing options are subject to approval, terms, and conditions. Interest rates and repayment structures may vary based on creditworthiness, market conditions, and regulatory guidelines.
             </p>
             <p>
-              Swiftbanq Credit Solutions is a duly licensed money lending institution operating under the regulatory framework of the Lagos State Money Lenders Law. We are not a deposit-taking commercial bank, but a financial partner empowering growth through accessible credit and structured treasury services.
+              Swiftbanq Credit Solutions is a duly licensed money lending institution operating under the regulatory framework of the Lagos State Money Lenders Law. We are not a deposit-taking commercial bank, but a financial partner empowering growth through accessible credit and structured investment.
             </p>
             <p>
               &dagger; Treasury investments and structured borrowing solutions are subject to risk. Past performance does not guarantee future results. Please carefully review all agreements and documentation prior to making financial decisions. If you have any questions regarding Swiftbanq&apos;s offerings, please contact us directly.

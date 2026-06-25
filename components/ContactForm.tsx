@@ -351,7 +351,7 @@ export function ContactForm() {
                         "SME Financing",
                         "Asset Financing",
                         "Digital Lending",
-                        "Treasury Services",
+                        "Investment",
                         "Equipment Financing",
                         "General Inquiry"
                       ].map((option) => (

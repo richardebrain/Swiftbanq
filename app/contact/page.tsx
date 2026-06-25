@@ -3,7 +3,7 @@ import { ContactForm } from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Swiftbanq Credit Solutions. Apply for SME financing, asset loans, digital lending, or treasury services. Our team in Lagos, Nigeria is ready to help.',
+  description: 'Get in touch with Swiftbanq Credit Solutions. Apply for SME financing, asset loans, digital lending, or investment. Our team in Lagos, Nigeria is ready to help.',
   alternates: {
     canonical: 'https://swiftbanq.com/contact',
   },

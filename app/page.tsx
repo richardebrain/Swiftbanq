@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Briefcase, Car, Smartphone, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Briefcase, Car, Smartphone, TrendingUp, Settings, Building, User, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import { FAQSection } from '@/components/FAQSection';
 import { HeroMockup } from '@/components/HeroMockup';
@@ -23,7 +23,7 @@ const schemaFAQ = {
       name: 'What is Swiftbanq?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Swiftbanq is a duly Licensed money lending institution operating under the regulatory framework of the Lagos State Money Lenders Law. We provide comprehensive financial solutions including SME Financing, Asset Financing, Digital Lending, and Treasury Services.',
+        text: 'Swiftbanq is a duly Licensed money lending institution operating under the regulatory framework of the Lagos State Money Lenders Law. We provide comprehensive financial solutions including SME Financing, Asset Financing, Digital Lending, and Investment.',
       },
     },
     {
@@ -62,74 +62,71 @@ export default function Home() {
       />
       <div className="w-full">
       {/* Hero Section */}
-      <section className="relative pt-16 md:pt-24 pb-0 overflow-hidden bg-transparent">
-        {/* Pattern - Left */}
-        <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60" style={{ left: '-440px' }}>
-          <Image src="/pattern 3.svg" alt="Swiftbanq Credit Solutions Design Pattern" fill className="object-cover object-left-top" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-brand-cream" />
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-brand-cream to-transparent" />
-        </div>
-        {/* Pattern - Right (mirrored) */}
-        <div className="absolute top-0 h-[800px] w-[550px] pointer-events-none select-none z-0 opacity-60 scale-x-[-1]" style={{ right: '-440px' }}>
-          <Image src="/pattern 3.svg" alt="Swiftbanq Digital Lending Background" fill className="object-cover object-left-top" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-r from-transparent to-brand-cream" />
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-brand-cream to-transparent" />
-        </div>
+      <section className="relative pt-24 md:pt-32 lg:pt-40 pb-0 overflow-hidden bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
           <h1 className="text-[2rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.4] sm:leading-[1.25] md:leading-[1.15] lg:leading-[1.1] mb-12 max-w-6xl mx-auto">
-            <span className="block">
-              Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-1 md:-mt-4 relative whitespace-nowrap">
-                <div className="flex -space-x-2 md:-space-x-4">
-                  <Image src="/images/face-1.jpg" alt="Satisfied Swiftbanq Credit Solutions customer" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
-                  <Image src="/images/face-2.jpg" alt="Nigerian business owner using Swiftbanq SME Financing" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
-                  <Image src="/images/face-3.jpg" alt="Professional benefiting from Swiftbanq Treasury Services" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
-                </div>
-              </span> and Invest
-            </span>
-            <span className="block">
-              Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4 whitespace-nowrap">
-                <div className="bg-white rounded-lg md:rounded-2xl shadow-sm border border-brand-yellow/30 p-1.5 sm:p-2 md:p-3 transform rotate-6 flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 text-brand-dark" />
-                </div>
-              </span> with Us.
-            </span>
+            Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-1 md:-mt-4 relative">
+              <div className="flex -space-x-2 md:-space-x-4">
+                <Image src="/images/face-1.jpg" alt="Face 1" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
+                <Image src="/images/face-2.jpg" alt="Face 2" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
+                <Image src="/images/face-3.jpg" alt="Face 3" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
+              </div>
+            </span> and Invest <br className="hidden lg:block" />
+            Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4">
+               <div className="bg-brand-yellow rounded-lg md:rounded-2xl shadow-sm border border-brand-yellow/30 p-1.5 sm:p-2 md:p-3 transform rotate-6 flex items-center justify-center">
+                 <TrendingUp className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 text-brand-dark" />
+               </div>
+            </span> with Us.
           </h1>
-          
+
           <div className="flex justify-center mt-6 md:mt-10">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <ApplyNowButton />
-              <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border border-gray-300 text-brand-dark font-medium hover:bg-white transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/50 backdrop-blur-sm">
-                Contact Support
+              <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border-2 border-black text-brand-dark font-bold hover:bg-white transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/50 backdrop-blur-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1">
+                <MessageCircle className="w-5 h-5" /> Talk To Support
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Floating Graphic Area */}
-        <div className="relative mt-16 max-w-full mx-auto h-[500px] md:h-[600px] flex justify-center z-10 w-full overflow-hidden">
-          
-          {/* Card 1: Extreme Left */}
-          <div className="absolute right-[calc(50%+18rem)] lg:right-[calc(50%+22rem)] top-10 lg:top-16 w-[300px] lg:w-[400px] h-[350px] lg:h-[450px] transform -rotate-[6deg] overflow-hidden z-0 border-none hidden md:block">
-            <Image src="/images/hero-card-1.jpg" alt="Family benefiting from Swiftbanq Digital Lending" fill className="object-cover" />
-          </div>
-
-          {/* Card 2: Inner Left */}
-          <div className="absolute right-[calc(50%+4rem)] lg:right-[calc(50%+2rem)] top-32 lg:top-40 w-[240px] lg:w-[280px] h-[280px] lg:h-[350px] transform rotate-[8deg] overflow-hidden z-10 hidden md:block border-none">
-            <Image src="/invoice discounting.jpg" alt="Business owner using Swiftbanq SME Financing" fill className="object-cover" />
-          </div>
-
-          {/* Card 3: Inner Right */}
-          <div className="absolute left-[calc(50%+2rem)] lg:left-[calc(50%+8rem)] top-16 lg:top-20 w-[280px] lg:w-[320px] h-[320px] lg:h-[400px] transform -rotate-[4deg] overflow-hidden z-0 hidden md:block border-none">
-            <Image src="/images/ceo.jpg" alt="Professional utilizing Swiftbanq Treasury Services" fill className="object-cover" />
-          </div>
-
-          {/* Card 4: Extreme Right */}
-          <div className="absolute left-[calc(50%+20rem)] lg:left-[calc(50%+26rem)] top-40 lg:top-48 w-[350px] lg:w-[450px] h-[300px] lg:h-[400px] transform rotate-[6deg] overflow-hidden z-10 hidden md:block border-none">
-            <Image src="/images/hero-card-4.jpg" alt="Woman accessing Swiftbanq Asset Financing" fill className="object-cover" />
-          </div>
-
-          {/* Center Mockup App Card — tabbed */}
-          <HeroMockup />
+        {/* Image Strip */}
+        <div className="grid grid-cols-2 md:grid-cols-4 w-full h-[200px] md:h-[300px] border-t-2 border-b-2 border-black mt-16 max-w-7xl mx-auto z-10 relative">
+             <div className="relative w-full h-full border-r-2 border-b-2 md:border-b-0 border-black group">
+               <Image src="/images/hero-card-1.jpg" alt="Freelancer" fill className="object-cover" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+               <div className="absolute bottom-4 left-4">
+                 <span className="bg-white text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-sm">
+                   <Briefcase className="w-3 h-3 md:w-4 md:h-4" /> Freelancer
+                 </span>
+               </div>
+             </div>
+             <div className="relative w-full h-full border-b-2 md:border-b-0 md:border-r-2 border-black group">
+               <Image src="/images/ceo.jpg" alt="Engineer" fill className="object-cover" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+               <div className="absolute bottom-4 left-4">
+                 <span className="bg-white text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-sm">
+                   <Settings className="w-3 h-3 md:w-4 md:h-4" /> Engineer
+                 </span>
+               </div>
+             </div>
+             <div className="relative w-full h-full border-r-2 border-black group">
+               <Image src="/invoice discounting.jpg" alt="Contractor" fill className="object-cover" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+               <div className="absolute bottom-4 left-4">
+                 <span className="bg-white text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-sm">
+                   <Building className="w-3 h-3 md:w-4 md:h-4" /> Contractor
+                 </span>
+               </div>
+             </div>
+             <div className="relative w-full h-full border-black group">
+               <Image src="/images/hero-card-4.jpg" alt="Employee" fill className="object-cover" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+               <div className="absolute bottom-4 left-4">
+                 <span className="bg-white text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-sm">
+                   <User className="w-3 h-3 md:w-4 md:h-4" /> Employee
+                 </span>
+               </div>
+             </div>
         </div>
       </section>
 
@@ -150,9 +147,9 @@ export default function Home() {
                 Not everyone gets the financial support they need. But <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">with us you will.</span>
               </p>
               
-              <p className="text-2xl md:text-4xl lg:text-[3rem] font-heading font-medium leading-[1.2] text-black mb-12 tracking-tight">
-                You&apos;re building a future that requires immediate, flexible capital. <span className="font-normal">That&apos;s why we created Swiftbanq – because ambitious visionaries require smart, fast, and accessible borrowing and investment solutions.</span>
-              </p>
+              <p className="text-lg md:text-xl font-medium text-gray-700 leading-relaxed mb-12">
+              You're building a future that requires immediate, flexible capital. <span className="font-normal">That's why we created Swiftbanq – because ambitious visionaries require smart, fast, and accessible borrowing and investment solutions.</span>
+            </p>
             </div>
           </div>
 
@@ -170,7 +167,7 @@ export default function Home() {
             <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
               <Image
                 src="/swiftbanq-office-3.jpg"
-                alt="Businesswoman managing Treasury Services at Swiftbanq Credit Solutions"
+                alt="Businesswoman managing Investment at Swiftbanq Credit Solutions"
                 width={1480}
                 height={800}
                 unoptimized
@@ -507,7 +504,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Service 5: Treasury Services */}
+      {/* Service 5: Investment */}
       <section className="py-6 md:py-8 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex flex-col-reverse lg:flex-row items-stretch gap-12 lg:gap-20">
@@ -516,7 +513,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/home-business-men.jpg" alt="Business professionals evaluating Swiftbanq Treasury Services" className="object-cover object-center absolute inset-0 w-full h-full" />
+              <img src="/images/home-business-men.jpg" alt="Business professionals evaluating Swiftbanq Investment" className="object-cover object-center absolute inset-0 w-full h-full" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -589,7 +586,7 @@ export default function Home() {
             {/* Right: Text */}
             <div className="w-full lg:w-1/2">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
-                Treasury services <span className="text-brand-dark font-light">with high returns</span>
+                Investment <span className="text-brand-dark font-light">with high returns</span>
               </h3>
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
                 Earn 12%–20% interest per annum when you invest with us at Swiftbanq.

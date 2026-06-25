@@ -8,7 +8,7 @@ const SERVICES = [
   { value: 'sme', label: 'SME Financing', desc: 'LPO, Invoice Discounting, Contract & Bridge Finance' },
   { value: 'asset', label: 'Asset Financing', desc: 'Vehicles, equipment, machinery & more' },
   { value: 'personal', label: 'Personal Loan', desc: 'For salary earners and professionals' },
-  { value: 'treasury', label: 'Treasury Services', desc: 'Invest and earn 12%–20% per annum' },
+  { value: 'treasury', label: 'Investment', desc: 'Invest and earn 12%–20% per annum' },
   { value: 'equipment', label: 'Equipment Financing', desc: 'Office equipment, laptops, machinery & more' },
 ];
 

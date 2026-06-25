@@ -2,12 +2,14 @@
 @import "tw-animate-css";
 
 @theme {
-  --color-brand-yellow: #FDF42E;
+  --color-black: #171616;
+  --color-white: #FFFDF6;
+  --color-brand-yellow: #E6F725;
   --color-brand-dark: #1a1a1a;
   --color-brand-gray: #f5f5f5;
   --color-brand-cream: #FFFFFF;
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-outfit);
+  --font-heading: var(--font-gravity);
 }
 
 @layer base {
