@@ -148,7 +148,7 @@ export default function Home() {
               </p>
               
               <p className="text-lg md:text-xl font-medium text-gray-700 leading-relaxed mb-12">
-              You're building a future that requires immediate, flexible capital. <span className="font-normal">That's why we created Swiftbanq – because ambitious visionaries require smart, fast, and accessible borrowing and investment solutions.</span>
+              You&apos;re building a future that requires immediate, flexible capital. <span className="font-normal">That&apos;s why we created Swiftbanq – because ambitious visionaries require smart, fast, and accessible borrowing and investment solutions.</span>
             </p>
             </div>
           </div>
