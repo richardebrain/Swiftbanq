@@ -62,71 +62,152 @@ export default function Home() {
       />
       <div className="w-full">
       {/* Hero Section */}
-      <section className="relative pt-24 md:pt-32 lg:pt-40 pb-0 overflow-hidden bg-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
-          <h1 className="text-[2rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.4] sm:leading-[1.25] md:leading-[1.15] lg:leading-[1.1] mb-12 max-w-6xl mx-auto">
-            Borrow <span className="inline-flex items-center align-middle mx-1 md:mx-3 -mt-1 md:-mt-4 relative">
-              <div className="flex -space-x-2 md:-space-x-4">
-                <Image src="/images/face-1.jpg" alt="Face 1" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover" />
-                <Image src="/images/face-2.jpg" alt="Face 2" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-10" />
-                <Image src="/images/face-3.jpg" alt="Face 3" width={80} height={80} className="rounded-full border-[3px] border-brand-cream w-9 h-9 sm:w-14 sm:h-14 md:w-20 md:h-20 object-cover relative z-20" />
-              </div>
-            </span> and Invest <br className="hidden lg:block" />
-            Wisely <span className="inline-flex items-center align-middle mx-1 sm:mx-2 md:mx-4 -mt-1 md:-mt-4">
-               <div className="bg-brand-yellow rounded-lg md:rounded-2xl shadow-sm border border-brand-yellow/30 p-1.5 sm:p-2 md:p-3 transform rotate-6 flex items-center justify-center">
-                 <TrendingUp className="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 text-brand-dark" />
-               </div>
-            </span> with Us.
+      <section className="relative min-h-[90vh] lg:min-h-[95vh] flex flex-col items-center justify-center pt-32 md:pt-40 lg:pt-48 pb-24 md:pb-32 lg:pb-40 overflow-hidden bg-brand-dark text-white px-4 lg:px-8">
+        
+        {/* Floating Cards Background */}
+        
+        {/* Card 1: Left */}
+        <div className="hidden md:block absolute left-[2%] lg:left-[3%] xl:left-[5%] top-1/2 -translate-y-1/2 w-32 h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 border-2 border-white/80 z-10 hover:scale-105 transition-transform duration-500 shadow-xl">
+           <div className="relative w-full h-full">
+             <Image src="/images/hero-card-1.jpg" alt="Freelancer" fill className="object-cover" />
+             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-20">
+               <span className="bg-white text-brand-dark px-3 py-1 rounded-full font-bold text-xs flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
+                 <Briefcase className="w-3 h-3 flex-shrink-0" /> Freelancer
+               </span>
+             </div>
+           </div>
+        </div>
+
+        {/* Card 2: Right */}
+        <div className="hidden md:block absolute right-[2%] lg:right-[3%] xl:right-[5%] top-1/2 -translate-y-1/2 w-32 h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 border-2 border-white/80 z-10 hover:scale-105 transition-transform duration-500 shadow-xl">
+           <div className="relative w-full h-full">
+             <Image src="/images/ceo.jpg" alt="Engineer" fill className="object-cover" />
+             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-20">
+               <span className="bg-white text-brand-dark px-3 py-1 rounded-full font-bold text-xs flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
+                 <Settings className="w-3 h-3 flex-shrink-0" /> Engineer
+               </span>
+             </div>
+           </div>
+        </div>
+
+        {/* Card 3: Bottom Left */}
+        <div className="hidden lg:block absolute left-[8%] xl:left-[12%] bottom-4 xl:bottom-8 w-36 h-36 xl:w-44 xl:h-44 border-2 border-white/80 z-10 hover:-translate-y-4 transition-transform duration-500 shadow-xl">
+           <div className="relative w-full h-full">
+             <Image src="/invoice discounting.jpg" alt="Contractor" fill className="object-cover" />
+             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-20">
+               <span className="bg-white text-brand-dark px-3 py-1 rounded-full font-bold text-xs flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
+                 <Building className="w-3 h-3 flex-shrink-0" /> Contractor
+               </span>
+             </div>
+           </div>
+        </div>
+
+        {/* Card 4: Bottom Right */}
+        <div className="hidden lg:block absolute right-[8%] xl:right-[12%] bottom-4 xl:bottom-8 w-36 h-36 xl:w-44 xl:h-44 border-2 border-white/80 z-10 hover:-translate-y-4 transition-transform duration-500 shadow-xl">
+           <div className="relative w-full h-full">
+             <Image src="/images/hero-card-4.jpg" alt="Employee" fill className="object-cover" />
+             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-20">
+               <span className="bg-white text-brand-dark px-3 py-1 rounded-full font-bold text-xs flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
+                 <User className="w-3 h-3 flex-shrink-0" /> Employee
+               </span>
+             </div>
+           </div>
+        </div>
+
+        {/* Main Center Content */}
+        <div className="w-full max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] mx-auto px-4 relative z-20 text-center flex flex-col items-center mt-[-40px]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-heading font-black text-white tracking-tighter leading-[1.1] sm:leading-[1] mb-8">
+            Borrow and Invest <br className="hidden md:block" /> Wisely with Us.
           </h1>
 
-          <div className="flex justify-center mt-6 md:mt-10">
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <ApplyNowButton />
-              <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-3 rounded-full border-2 border-black text-brand-dark font-bold hover:bg-white transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/50 backdrop-blur-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1">
-                <MessageCircle className="w-5 h-5" /> Talk To Support
-              </Link>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 w-full sm:w-auto relative z-30">
+            <ApplyNowButton className="px-10 py-4 rounded-full bg-brand-yellow text-brand-dark font-black hover:bg-brand-yellow/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg group">
+              Apply Now
+              <span className="bg-brand-dark text-brand-yellow w-6 h-6 flex items-center justify-center rounded-full transition-transform group-hover:translate-x-1 text-xs">→</span>
+            </ApplyNowButton>
+            <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-4 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/5 backdrop-blur-sm group">
+              <MessageCircle className="w-5 h-5" /> Talk To Support
+            </Link>
+          </div>
+
+          {/* Mobile Image Grid (visible only on small screens) */}
+          <div className="md:hidden grid grid-cols-2 gap-3 sm:gap-4 mt-12 w-full max-w-sm mx-auto relative z-20">
+            {/* Card 1 */}
+            <div className="relative aspect-square w-full border-2 border-white/80 shadow-lg">
+              <Image src="/images/hero-card-1.jpg" alt="Freelancer" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex justify-center w-full z-20">
+                <span className="bg-white text-brand-dark px-2 py-0.5 rounded-full font-bold text-[10px] flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
+                  <Briefcase className="w-2.5 h-2.5 flex-shrink-0" /> Freelancer
+                </span>
+              </div>
+            </div>
+            {/* Card 2 */}
+            <div className="relative aspect-square w-full border-2 border-white/80 shadow-lg">
+              <Image src="/images/ceo.jpg" alt="Engineer" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex justify-center w-full z-20">
+                <span className="bg-white text-brand-dark px-2 py-0.5 rounded-full font-bold text-[10px] flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
+                  <Settings className="w-2.5 h-2.5 flex-shrink-0" /> Engineer
+                </span>
+              </div>
+            </div>
+            {/* Card 3 */}
+            <div className="relative aspect-square w-full border-2 border-white/80 shadow-lg mt-2">
+              <Image src="/invoice discounting.jpg" alt="Contractor" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex justify-center w-full z-20">
+                <span className="bg-white text-brand-dark px-2 py-0.5 rounded-full font-bold text-[10px] flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
+                  <Building className="w-2.5 h-2.5 flex-shrink-0" /> Contractor
+                </span>
+              </div>
+            </div>
+            {/* Card 4 */}
+            <div className="relative aspect-square w-full border-2 border-white/80 shadow-lg mt-2">
+              <Image src="/images/hero-card-4.jpg" alt="Employee" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex justify-center w-full z-20">
+                <span className="bg-white text-brand-dark px-2 py-0.5 rounded-full font-bold text-[10px] flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
+                  <User className="w-2.5 h-2.5 flex-shrink-0" /> Employee
+                </span>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Image Strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 w-full h-[200px] md:h-[300px] border-t-2 border-b-2 border-black mt-16 max-w-7xl mx-auto z-10 relative">
-             <div className="relative w-full h-full border-r-2 border-b-2 md:border-b-0 border-black group">
-               <Image src="/images/hero-card-1.jpg" alt="Freelancer" fill className="object-cover" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-               <div className="absolute bottom-4 left-4">
-                 <span className="bg-white text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-sm">
-                   <Briefcase className="w-3 h-3 md:w-4 md:h-4" /> Freelancer
-                 </span>
-               </div>
-             </div>
-             <div className="relative w-full h-full border-b-2 md:border-b-0 md:border-r-2 border-black group">
-               <Image src="/images/ceo.jpg" alt="Engineer" fill className="object-cover" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-               <div className="absolute bottom-4 left-4">
-                 <span className="bg-white text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-sm">
-                   <Settings className="w-3 h-3 md:w-4 md:h-4" /> Engineer
-                 </span>
-               </div>
-             </div>
-             <div className="relative w-full h-full border-r-2 border-black group">
-               <Image src="/invoice discounting.jpg" alt="Contractor" fill className="object-cover" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-               <div className="absolute bottom-4 left-4">
-                 <span className="bg-white text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-sm">
-                   <Building className="w-3 h-3 md:w-4 md:h-4" /> Contractor
-                 </span>
-               </div>
-             </div>
-             <div className="relative w-full h-full border-black group">
-               <Image src="/images/hero-card-4.jpg" alt="Employee" fill className="object-cover" />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-               <div className="absolute bottom-4 left-4">
-                 <span className="bg-white text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs md:text-sm flex items-center gap-1.5 shadow-sm">
-                   <User className="w-3 h-3 md:w-4 md:h-4" /> Employee
-                 </span>
-               </div>
-             </div>
+      {/* Marquee Banner */}
+      <section className="bg-brand-yellow text-brand-dark py-3 sm:py-4 overflow-hidden border-b-2 border-black relative z-10">
+        <div className="flex w-max animate-marquee">
+          {/* Duplicate content to create seamless infinite scroll */}
+          {[1, 2].map((groupIndex) => (
+            <div key={groupIndex} className="flex items-center gap-6 sm:gap-10 px-3 sm:px-5 whitespace-nowrap">
+              <span className="font-heading font-bold text-sm sm:text-lg md:text-xl uppercase tracking-wider">SME Financing</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 sm:w-4 sm:h-4 text-brand-dark flex-shrink-0">
+                <path d="M6 0.5L6.3648 3.9311L7.88111 0.831691L7.05041 4.18064L9.53533 1.78676L7.60932 4.64962L10.7631 3.25L7.97412 5.28148L11.4164 5.04494L8.10081 6L11.4164 6.95506L7.97412 6.71852L10.7631 8.75L7.60932 7.35038L9.53533 10.2132L7.05041 7.81936L7.88111 11.1683L6.3648 8.0689L6 11.5L5.6352 8.0689L4.11889 11.1683L4.94959 7.81936L2.46467 10.2132L4.39068 7.35038L1.23686 8.75L4.02588 6.71852L0.583557 6.95506L3.89919 6L0.583557 5.04494L4.02588 5.28148L1.23686 3.25L4.39068 4.64962L2.46467 1.78676L4.94959 4.18064L4.11889 0.831691L5.6352 3.9311L6 0.5Z" fill="currentColor"></path>
+              </svg>
+              <span className="font-heading font-bold text-sm sm:text-lg md:text-xl uppercase tracking-wider">Invoice Discounting</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 sm:w-4 sm:h-4 text-brand-dark flex-shrink-0">
+                <path d="M6 0.5L6.3648 3.9311L7.88111 0.831691L7.05041 4.18064L9.53533 1.78676L7.60932 4.64962L10.7631 3.25L7.97412 5.28148L11.4164 5.04494L8.10081 6L11.4164 6.95506L7.97412 6.71852L10.7631 8.75L7.60932 7.35038L9.53533 10.2132L7.05041 7.81936L7.88111 11.1683L6.3648 8.0689L6 11.5L5.6352 8.0689L4.11889 11.1683L4.94959 7.81936L2.46467 10.2132L4.39068 7.35038L1.23686 8.75L4.02588 6.71852L0.583557 6.95506L3.89919 6L0.583557 5.04494L4.02588 5.28148L1.23686 3.25L4.39068 4.64962L2.46467 1.78676L4.94959 4.18064L4.11889 0.831691L5.6352 3.9311L6 0.5Z" fill="currentColor"></path>
+              </svg>
+              <span className="font-heading font-bold text-sm sm:text-lg md:text-xl uppercase tracking-wider">Working Capital</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 sm:w-4 sm:h-4 text-brand-dark flex-shrink-0">
+                <path d="M6 0.5L6.3648 3.9311L7.88111 0.831691L7.05041 4.18064L9.53533 1.78676L7.60932 4.64962L10.7631 3.25L7.97412 5.28148L11.4164 5.04494L8.10081 6L11.4164 6.95506L7.97412 6.71852L10.7631 8.75L7.60932 7.35038L9.53533 10.2132L7.05041 7.81936L7.88111 11.1683L6.3648 8.0689L6 11.5L5.6352 8.0689L4.11889 11.1683L4.94959 7.81936L2.46467 10.2132L4.39068 7.35038L1.23686 8.75L4.02588 6.71852L0.583557 6.95506L3.89919 6L0.583557 5.04494L4.02588 5.28148L1.23686 3.25L4.39068 4.64962L2.46467 1.78676L4.94959 4.18064L4.11889 0.831691L5.6352 3.9311L6 0.5Z" fill="currentColor"></path>
+              </svg>
+              <span className="font-heading font-bold text-sm sm:text-lg md:text-xl uppercase tracking-wider">LPO Financing</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 sm:w-4 sm:h-4 text-brand-dark flex-shrink-0">
+                <path d="M6 0.5L6.3648 3.9311L7.88111 0.831691L7.05041 4.18064L9.53533 1.78676L7.60932 4.64962L10.7631 3.25L7.97412 5.28148L11.4164 5.04494L8.10081 6L11.4164 6.95506L7.97412 6.71852L10.7631 8.75L7.60932 7.35038L9.53533 10.2132L7.05041 7.81936L7.88111 11.1683L6.3648 8.0689L6 11.5L5.6352 8.0689L4.11889 11.1683L4.94959 7.81936L2.46467 10.2132L4.39068 7.35038L1.23686 8.75L4.02588 6.71852L0.583557 6.95506L3.89919 6L0.583557 5.04494L4.02588 5.28148L1.23686 3.25L4.39068 4.64962L2.46467 1.78676L4.94959 4.18064L4.11889 0.831691L5.6352 3.9311L6 0.5Z" fill="currentColor"></path>
+              </svg>
+              <span className="font-heading font-bold text-sm sm:text-lg md:text-xl uppercase tracking-wider">Inventory Financing</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 sm:w-4 sm:h-4 text-brand-dark flex-shrink-0">
+                <path d="M6 0.5L6.3648 3.9311L7.88111 0.831691L7.05041 4.18064L9.53533 1.78676L7.60932 4.64962L10.7631 3.25L7.97412 5.28148L11.4164 5.04494L8.10081 6L11.4164 6.95506L7.97412 6.71852L10.7631 8.75L7.60932 7.35038L9.53533 10.2132L7.05041 7.81936L7.88111 11.1683L6.3648 8.0689L6 11.5L5.6352 8.0689L4.11889 11.1683L4.94959 7.81936L2.46467 10.2132L4.39068 7.35038L1.23686 8.75L4.02588 6.71852L0.583557 6.95506L3.89919 6L0.583557 5.04494L4.02588 5.28148L1.23686 3.25L4.39068 4.64962L2.46467 1.78676L4.94959 4.18064L4.11889 0.831691L5.6352 3.9311L6 0.5Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -144,37 +225,17 @@ export default function Home() {
             {/* Right side content */}
             <div className="w-full lg:w-3/4">
               <p className="text-3xl md:text-5xl lg:text-[3.5rem] font-heading font-medium leading-[1.2] text-black mb-12 tracking-tight">
-                Not everyone gets the financial support they need. But <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">with us you will.</span>
+                Not everyone gets the financial support they need in Nigeria. But <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">with us you will.</span>
               </p>
               
               <p className="text-lg md:text-xl font-medium text-gray-700 leading-relaxed mb-12">
-              You&apos;re building a future that requires immediate, flexible capital. <span className="font-normal">That&apos;s why we created Swiftbanq – because ambitious visionaries require smart, fast, and accessible borrowing and investment solutions.</span>
+              We understand the unique challenges Nigerian SMEs and entrepreneurs face. <span className="font-normal">That&apos;s why we created Swiftbanq – to provide tailored, fast, and accessible financing that empowers local businesses to grow, scale, and thrive in the Nigerian economy.</span>
             </p>
             </div>
           </div>
 
-          {/* Full-width images row */}
-          <div className="w-full mt-8 flex flex-col sm:flex-row gap-4">
-            <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/swiftbanq-office-2.jpg"
-                alt="Business meeting discussing Swiftbanq SME Financing solutions"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex-1 rounded-2xl overflow-hidden h-[300px] md:h-[380px]">
-              <Image
-                src="/swiftbanq-office-3.jpg"
-                alt="Businesswoman managing Investment at Swiftbanq Credit Solutions"
-                width={1480}
-                height={800}
-                unoptimized
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover"
-              />
-            </div>
+          {/* Fixed background image */}
+          <div className="w-full mt-12 md:mt-16 h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden" style={{ backgroundImage: 'url(/swiftbanq-office-2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
           </div>
         </div>
       </section>

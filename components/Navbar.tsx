@@ -14,43 +14,49 @@ export function Navbar() {
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
-  const linkClass = isHome ? "text-base font-medium text-brand-dark hover:text-brand-yellow transition-colors" : "text-base font-medium text-white hover:text-brand-yellow transition-colors";
-
-  const iconClass = isHome ? "text-brand-dark" : "text-white";
+  // Always use white text/icons if the hero is dark
+  const linkClass = "text-white hover:text-gray-300";
+  const iconClass = "text-white";
 
   return (
-    <header aria-label="Main navigation" className={`${isHome ? 'absolute top-0 left-0 w-full z-50 bg-transparent border-b-2 border-black' : 'bg-black w-full border-b border-gray-800 relative z-50'}`}>
+    <header aria-label="Main navigation" className={`${isHome ? 'absolute top-0 left-0 w-full z-50 bg-transparent' : 'bg-black w-full border-b border-gray-800 relative z-50'}`}>
       <a
         href="#main-content"
         style={{
           position: 'absolute',
-          top: '-9999px',
-          left: '1rem',
-          zIndex: 100,
-          background: 'white',
-          color: '#1a1a1a',
-          fontWeight: 700,
-          padding: '0.5rem 1rem',
-          borderRadius: '0.5rem',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-          textDecoration: 'none',
+          left: '-9999px',
+          top: 'auto',
+          width: '1px',
+          height: '1px',
+          overflow: 'hidden'
         }}
-        onFocus={e => { e.currentTarget.style.top = '1rem'; }}
-        onBlur={e => { e.currentTarget.style.top = '-9999px'; }}
+        onFocus={(e) => {
+          e.currentTarget.style.position = 'static';
+          e.currentTarget.style.width = 'auto';
+          e.currentTarget.style.height = 'auto';
+        }}
+        onBlur={(e) => {
+          e.currentTarget.style.position = 'absolute';
+          e.currentTarget.style.left = '-9999px';
+          e.currentTarget.style.width = '1px';
+          e.currentTarget.style.height = '1px';
+        }}
+        className="bg-brand-yellow text-brand-dark px-4 py-2 z-50 rounded-md m-2"
       >
         Skip to main content
       </a>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-16" aria-label="Primary">
-          <div className="flex items-center">
-            <Link href="/" aria-label="Swiftbanq Credit Solutions — home">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 md:h-24">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="block relative focus:outline-none focus:ring-2 focus:ring-brand-yellow rounded-lg" aria-label="Swiftbanq Home">
               <Image
                 src="/SBQ_Logo.svg"
                 alt="Swiftbanq Credit Solutions"
                 width={160}
                 height={40}
                 priority
-                className="brightness-0 h-6 w-auto md:h-7"
+                className="brightness-0 invert h-6 w-auto md:h-7 lg:h-8"
               />
             </Link>
           </div>
@@ -124,7 +130,7 @@ export function Navbar() {
               {isOpen ? <X className={`h-6 w-6 ${iconClass}`} aria-hidden="true" /> : <Menu className={`h-6 w-6 ${iconClass}`} aria-hidden="true" />}
             </button>
           </div>
-        </nav>
+        </div>
       </div>
 
       {/* Mobile Menu */}
