@@ -51,19 +51,19 @@ export function Footer() {
                 <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Products</h3>
                 <ul className="space-y-5">
                   <li>
-                    <span className="font-medium text-[15px] cursor-default">SME Financing</span>
+                    <Link href="/products/sme-loans" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">SME Financing</Link>
                   </li>
                   <li>
-                    <span className="font-medium text-[15px] cursor-default">Asset Financing</span>
+                    <Link href="/products/asset-financing" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Asset Financing</Link>
                   </li>
                   <li>
-                    <span className="font-medium text-[15px] cursor-default">Equipment Financing</span>
+                    <Link href="/products/asset-financing" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Equipment Financing</Link>
                   </li>
                   <li>
-                    <span className="font-medium text-[15px] cursor-default">Digital Lending</span>
+                    <Link href="/products/sme-loans" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Digital Lending</Link>
                   </li>
                   <li>
-                    <span className="font-medium text-[15px] cursor-default">Investment</span>
+                    <Link href="/products/investments" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Investment</Link>
                   </li>
                 </ul>
               </div>
@@ -72,7 +72,7 @@ export function Footer() {
                 <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Company</h3>
                 <ul className="space-y-5">
                   <li>
-                    <Link href="/guides" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Guides & Resources</Link>
+                    <Link href="/blog" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Our Blog</Link>
                   </li>
                   <li>
                     <Link href="/about" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">About Us</Link>

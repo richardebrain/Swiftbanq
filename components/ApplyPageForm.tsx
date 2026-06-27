@@ -82,9 +82,7 @@ export function ApplyPageForm() {
 
         {/* Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-black text-sm font-medium tracking-wide text-black uppercase mb-5">
-            Apply Now
-          </div>
+          
           <h1 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-4">
             Start your application
           </h1>

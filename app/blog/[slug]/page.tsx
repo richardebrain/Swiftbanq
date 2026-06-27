@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const resolvedParams = await params;
   const guide = guidesData.find((g) => g.slug === resolvedParams.slug);
   if (!guide) return { title: 'Guide Not Found' };
-  const url = `https://swiftbanq.com/guides/${guide.slug}`;
+  const url = `https://swiftbanq.com/blog/${guide.slug}`;
 
   return {
     title: guide.title,
@@ -74,9 +74,9 @@ export default async function GuidePostPage({ params }: { params: Promise<{ slug
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Link */}
-        <Link href="/guides" className="inline-flex items-center text-sm font-bold text-brand-dark hover:text-brand-yellow transition-colors mb-10">
+        <Link href="/blog" className="inline-flex items-center text-sm font-bold text-brand-dark hover:text-brand-yellow transition-colors mb-10">
           <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" /></svg>
-          Back to all guides
+          Back to all blog posts
         </Link>
 
         {/* Header */}
@@ -132,10 +132,10 @@ export default async function GuidePostPage({ params }: { params: Promise<{ slug
           if (related.length === 0) return null;
           return (
             <div className="mt-20">
-              <h2 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">Related Guides</h2>
+              <h2 className="text-3xl font-heading font-medium text-brand-dark mb-10 tracking-tight">Related Posts</h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {related.map((r) => (
-                  <Link key={r.slug} href={`/guides/${r.slug}`} className="group block h-full">
+                  <Link key={r.slug} href={`/blog/${r.slug}`} className="group block h-full">
                     <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                       <div className="relative h-44 w-full overflow-hidden">
                         <Image
@@ -155,7 +155,7 @@ export default async function GuidePostPage({ params }: { params: Promise<{ slug
                         </h3>
                         <p className="text-gray-500 text-sm line-clamp-2 flex-1">{r.excerpt}</p>
                         <div className="mt-4 flex items-center font-bold text-brand-dark group-hover:text-brand-yellow transition-colors text-sm">
-                          Read guide
+                          Read post
                           <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                         </div>
                       </div>

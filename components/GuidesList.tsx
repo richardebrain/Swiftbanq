@@ -19,7 +19,7 @@ export function GuidesList() {
     <>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {visibleGuides.map((guide) => (
-          <Link key={guide.slug} href={`/guides/${guide.slug}`} className="group block h-full">
+          <Link key={guide.slug} href={`/blog/${guide.slug}`} className="group block h-full">
             <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
               <div className="relative h-60 w-full overflow-hidden">
                 <Image 

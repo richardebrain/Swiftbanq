@@ -73,7 +73,7 @@ export default function Home() {
              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-20">
                <span className="bg-white text-brand-dark px-3 py-1 rounded-full font-bold text-xs flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
-                 <Briefcase className="w-3 h-3 flex-shrink-0" /> Freelancer
+                 <Briefcase className="w-3 h-3 flex-shrink-0 text-brand-yellow" /> Freelancer
                </span>
              </div>
            </div>
@@ -86,7 +86,7 @@ export default function Home() {
              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-20">
                <span className="bg-white text-brand-dark px-3 py-1 rounded-full font-bold text-xs flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
-                 <Settings className="w-3 h-3 flex-shrink-0" /> Engineer
+                 <Settings className="w-3 h-3 flex-shrink-0 text-brand-yellow" /> Engineer
                </span>
              </div>
            </div>
@@ -99,7 +99,7 @@ export default function Home() {
              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-20">
                <span className="bg-white text-brand-dark px-3 py-1 rounded-full font-bold text-xs flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
-                 <Building className="w-3 h-3 flex-shrink-0" /> Contractor
+                 <Building className="w-3 h-3 flex-shrink-0 text-brand-yellow" /> Contractor
                </span>
              </div>
            </div>
@@ -112,7 +112,7 @@ export default function Home() {
              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex justify-center z-20">
                <span className="bg-white text-brand-dark px-3 py-1 rounded-full font-bold text-xs flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
-                 <User className="w-3 h-3 flex-shrink-0" /> Employee
+                 <User className="w-3 h-3 flex-shrink-0 text-brand-yellow" /> Employee
                </span>
              </div>
            </div>
@@ -121,18 +121,23 @@ export default function Home() {
         {/* Main Center Content */}
         <div className="w-full max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] mx-auto px-4 relative z-20 text-center flex flex-col items-center mt-[-40px]">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-heading font-black text-white tracking-tighter leading-[1.1] sm:leading-[1] mb-8">
-            Borrow and Invest <br className="hidden md:block" /> Wisely with Us.
+            Borrow, or Invest <br className="hidden md:block" /> Wisely with Us.
           </h1>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 w-full sm:w-auto relative z-30">
-            <ApplyNowButton className="px-10 py-4 rounded-full bg-brand-yellow text-brand-dark font-black hover:bg-brand-yellow/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg group">
+            <ApplyNowButton className="px-6 py-2.5 rounded-full bg-brand-yellow text-brand-dark font-black hover:bg-brand-yellow/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-sm sm:text-base group">
               Apply Now
-              <span className="bg-brand-dark text-brand-yellow w-6 h-6 flex items-center justify-center rounded-full transition-transform group-hover:translate-x-1 text-xs">→</span>
+              <span className="bg-brand-dark text-brand-yellow w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center rounded-full transition-transform group-hover:translate-x-1 text-[10px]">→</span>
             </ApplyNowButton>
-            <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-10 py-4 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-lg bg-white/5 backdrop-blur-sm group">
-              <MessageCircle className="w-5 h-5" /> Talk To Support
+            <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-sm sm:text-base bg-white/5 backdrop-blur-sm group">
+              <MessageCircle className="w-4 h-4" /> Talk To Support
             </Link>
           </div>
+          
+          <p className="mt-4 text-gray-300 text-xs sm:text-sm flex items-center justify-center gap-1.5 opacity-80 relative z-30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield-check text-green-400 w-4 h-4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            Licensed and regulated by the CBN
+          </p>
 
           {/* Mobile Image Grid (visible only on small screens) */}
           <div className="md:hidden grid grid-cols-2 gap-3 sm:gap-4 mt-12 w-full max-w-sm mx-auto relative z-20">
@@ -142,7 +147,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex justify-center w-full z-20">
                 <span className="bg-white text-brand-dark px-2 py-0.5 rounded-full font-bold text-[10px] flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
-                  <Briefcase className="w-2.5 h-2.5 flex-shrink-0" /> Freelancer
+                  <Briefcase className="w-2.5 h-2.5 flex-shrink-0 text-brand-yellow" /> Freelancer
                 </span>
               </div>
             </div>
@@ -152,7 +157,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex justify-center w-full z-20">
                 <span className="bg-white text-brand-dark px-2 py-0.5 rounded-full font-bold text-[10px] flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
-                  <Settings className="w-2.5 h-2.5 flex-shrink-0" /> Engineer
+                  <Settings className="w-2.5 h-2.5 flex-shrink-0 text-brand-yellow" /> Engineer
                 </span>
               </div>
             </div>
@@ -162,7 +167,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex justify-center w-full z-20">
                 <span className="bg-white text-brand-dark px-2 py-0.5 rounded-full font-bold text-[10px] flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
-                  <Building className="w-2.5 h-2.5 flex-shrink-0" /> Contractor
+                  <Building className="w-2.5 h-2.5 flex-shrink-0 text-brand-yellow" /> Contractor
                 </span>
               </div>
             </div>
@@ -172,7 +177,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex justify-center w-full z-20">
                 <span className="bg-white text-brand-dark px-2 py-0.5 rounded-full font-bold text-[10px] flex items-center justify-center gap-1 shadow-md whitespace-nowrap">
-                  <User className="w-2.5 h-2.5 flex-shrink-0" /> Employee
+                  <User className="w-2.5 h-2.5 flex-shrink-0 text-brand-yellow" /> Employee
                 </span>
               </div>
             </div>
@@ -228,14 +233,14 @@ export default function Home() {
                 Not everyone gets the financial support they need in Nigeria. But <span className="font-bold bg-brand-yellow px-2 md:px-4 py-1 rounded-xl text-brand-dark inline-block transform -rotate-2 my-2 shadow-sm">with us you will.</span>
               </p>
               
-              <p className="text-lg md:text-xl font-medium text-gray-700 leading-relaxed mb-12">
+              <p className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed mb-12">
               We understand the unique challenges Nigerian SMEs and entrepreneurs face. <span className="font-normal">That&apos;s why we created Swiftbanq – to provide tailored, fast, and accessible financing that empowers local businesses to grow, scale, and thrive in the Nigerian economy.</span>
             </p>
             </div>
           </div>
 
           {/* Fixed background image */}
-          <div className="w-full mt-12 md:mt-16 h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden" style={{ backgroundImage: 'url(/swiftbanq-office-2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+          <div className="w-full mt-12 md:mt-16 h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden" style={{ backgroundImage: 'url(https://www.piggyvest.com/_next/static/images/headerBGhome-9c6bf21c25fa09992d4dffc8395557b0.avif)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
           </div>
         </div>
       </section>
@@ -243,15 +248,14 @@ export default function Home() {
       {/* Services Header */}
       <section id="services" className="pt-12 pb-4 md:pt-16 md:pb-6 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="flex justify-center mb-6">
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-black text-sm font-medium tracking-wide text-black uppercase">
-                Our Services
-              </div>
-            </div>
-            <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-heading font-medium text-brand-dark tracking-tight leading-[1.2] mb-0 max-w-3xl mx-auto">
-              Services that give you peace of mind.
+          <div className="text-center max-w-5xl mx-auto">
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark tracking-tight leading-[1.2] mb-4 max-w-full mx-auto">
+              Introducing SwiftBanq Loans
             </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Flexible financing solutions designed to help your business grow and thrive.
+            </p>
 
           </div>
         </div>
@@ -285,12 +289,13 @@ export default function Home() {
                   {/* Tags */}
                   <div className="grid grid-cols-2 gap-2">
                     {[
-                      { label: "LPO Finance", icon: "📋" },
-                      { label: "Invoice Discounting", icon: "🧾" },
-                      { label: "Contract Finance", active: true },
-                      { label: "Syndication", icon: "🤝" },
+                      { label: "Personal Loans", active: true },
+                      { label: "School Fees Loans", icon: "🎓" },
+                      { label: "Salary Advance", icon: "💸" },
+                      { label: "Working Capital", icon: "💼" },
+                      { label: "Payroll Support", icon: "👥" },
                     ].map((tag) => (
-                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-brand-cream border-gray-800 text-brand-dark" : "bg-brand-cream border-gray-200 text-gray-500"}`}>
+                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
                         {tag.active && <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
                         {!tag.active && tag.icon && <span>{tag.icon}</span>}
                         {tag.label}
@@ -305,10 +310,10 @@ export default function Home() {
             {/* Right: Text */}
             <div className="w-full lg:w-1/2">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
-                SME financing <span className="text-brand-dark font-light">with fast approvals</span>
+                Personal / SME loans tailored to your needs
               </h3>
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
-                Don&apos;t let cash flow hold your business back, get the funds you need to run your business transactions from us.
+                Tailored loans for personal needs and small business growth. Get the funds you need quickly and easily.
               </p>
               <div className="flex items-center gap-6 mb-10">
                 <div className="flex items-center gap-2 text-gray-600 font-medium">
@@ -322,7 +327,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/products/sme-loans" className="text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 
@@ -358,12 +363,12 @@ export default function Home() {
                   {/* Tags */}
                   <div className="grid grid-cols-2 gap-2">
                     {[
-                      { label: "Vehicle Financing", active: true },
-                      { label: "Office Equipment", icon: "🖥️" },
-                      { label: "Business Building", icon: "🏠" },
-                      { label: "Laptop", icon: "💻" },
+                      { label: "LPO Finance", active: true },
+                      { label: "Supply Contracts", icon: "📦" },
+                      { label: "Govt Contracts", icon: "🏛️" },
+                      { label: "Oil & Gas Contracts", icon: "⛽" },
                     ].map((tag) => (
-                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-brand-cream border-gray-800 text-brand-dark" : "bg-brand-cream border-gray-200 text-gray-500"}`}>
+                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
                         {tag.active && <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
                         {!tag.active && tag.icon && <span>{tag.icon}</span>}
                         {tag.label}
@@ -378,10 +383,10 @@ export default function Home() {
             {/* Left: Text */}
             <div className="w-full lg:w-1/2">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
-                Asset financing <span className="text-brand-dark font-light">own more &</span> pay less upfront
+                LPO & Contract financing to fulfill orders fast
               </h3>
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
-                Acquire the asset and equipment you need for your business, and repay installmentally.
+                Secure the funding needed to fulfill your contracts and supply orders without delay.
               </p>
               <div className="flex items-center gap-6 mb-10">
                 <div className="flex items-center gap-2 text-gray-600 font-medium">
@@ -395,7 +400,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/products/lpo-financing" className="text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 
@@ -429,12 +434,11 @@ export default function Home() {
                   {/* Tags */}
                   <div className="grid grid-cols-2 gap-2">
                     {[
-                      { label: "Industrial Machinery", active: true },
-                      { label: "Power Generators", icon: "⚡" },
-                      { label: "IT Infrastructure", icon: "💻" },
-                      { label: "Medical Devices", icon: "🩺" },
+                      { label: "Leases", active: true },
+                      { label: "Vehicle Acquisition", icon: "🚗" },
+                      { label: "Equipment Acquisition", icon: "⚙️" },
                     ].map((tag) => (
-                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-brand-cream border-gray-800 text-brand-dark" : "bg-brand-cream border-gray-200 text-gray-500"}`}>
+                      <span key={tag.label} className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"}`}>
                         {tag.active && <svg className="w-3.5 h-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>}
                         {!tag.active && tag.icon && <span>{tag.icon}</span>}
                         {tag.label}
@@ -449,10 +453,10 @@ export default function Home() {
             {/* Right: Text */}
             <div className="w-full lg:w-1/2">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
-                Equipment financing <span className="text-brand-dark font-light">to scale your business</span>
+                Asset financing to scale your business
               </h3>
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
-                Get the machinery, tools, and technology your business needs to grow, without draining your working capital.
+                Acquire the assets, vehicles, and equipment your business needs to scale and operate efficiently.
               </p>
               <div className="flex items-center gap-6 mb-10">
                 <div className="flex items-center gap-2 text-gray-600 font-medium">
@@ -466,7 +470,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
+                <Link href="/products/asset-financing" className="text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
               </div>
             </div>
 
@@ -508,15 +512,13 @@ export default function Home() {
                   {/* Purpose tags */}
                   <div className="grid grid-cols-2 gap-2">
                     {[
-                      { label: "Home improvement", icon: "🏠" },
-                      { label: "Medical/Dental", icon: "🏥" },
-                      { label: "School fees", active: true },
-                      { label: "Other", icon: "➕" },
+                      { label: "Invoice Discounting", active: true },
+                      { label: "Receivables Discounting", icon: "🧾" },
                     ].map((tag) => (
                       <span
                         key={tag.label}
                         className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border transition-colors ${
-                          tag.active ? "bg-brand-cream border-gray-800 text-brand-dark" : "bg-brand-cream border-gray-200 text-gray-500"
+                          tag.active ? "bg-white border-gray-800 text-brand-dark" : "bg-white border-gray-200 text-gray-500"
                         }`}
                       >
                         {tag.active && (
@@ -535,11 +537,11 @@ export default function Home() {
             {/* Left: Text content */}
             <div className="w-full lg:w-1/2">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
-                Personal loans <span className="text-brand-dark font-light">up to ₦5M &</span> low rates
+                Invoice & Receivables discounting
               </h3>
 
               <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
-                Instant cash for salary earners and professionals that needs money for different needs time to time.
+                Turn your unpaid invoices into immediate cash to maintain healthy working capital.
               </p>
 
               <div className="flex items-center gap-6 mb-10">
@@ -555,7 +557,7 @@ export default function Home() {
 
               <div className="flex items-center gap-4">
                 <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">
+                <Link href="/products/invoice-discounting" className="text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">
                   Learn More
                 </Link>
               </div>
@@ -565,110 +567,66 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Service 5: Investment */}
-      <section className="py-6 md:py-8 bg-transparent overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex flex-col-reverse lg:flex-row items-stretch gap-12 lg:gap-20">
-
-            {/* Left: UI Card mockup */}
-            <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
-              {/* Section background image */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/home-business-men.jpg" alt="Business professionals evaluating Swiftbanq Investment" className="object-cover object-center absolute inset-0 w-full h-full" />
-              {/* Mock card overlaying the image */}
-              <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
-                <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
-
-                  {/* Profile card */}
-                  <div className="bg-white/80 rounded-2xl px-5 py-4 flex items-center gap-4 mb-5 -mt-12">
-
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className="font-bold text-brand-dark text-base">Victor D.</span>
-                        <span className="text-gray-400 font-medium text-base">·</span>
-                        <span className="font-bold text-brand-dark text-base">₦10,000,000</span>
-                        <span className="ml-auto w-6 h-6 rounded-full bg-brand-yellow flex items-center justify-center shrink-0">
-                          <svg className="w-3.5 h-3.5 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                      </div>
-                      <div className="text-gray-400 text-sm font-medium">Treasury investment</div>
-                    </div>
-                  </div>
-
-                  {/* Auto Invest toggle is hidden */}
-
-                  {/* Growth chart */}
-                  <div className="flex items-center gap-3">
-                    {/* Time period tabs */}
-                    <div className="flex flex-col gap-1 shrink-0">
-                      {['3mo', '6mo', '12mo'].map((t) => (
-                        <span key={t} className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors cursor-pointer ${t === '3mo' ? 'bg-brand-cream text-brand-dark border-brand-dark' : 'bg-brand-cream border-gray-200 text-gray-500'}`}>{t}</span>
-                      ))}
-                    </div>
-                    <div className="relative h-20 flex-1">
-                      <svg viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                        <defs>
-                          <linearGradient id="treasuryChartFill" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#FEF418" stopOpacity="0.4"/>
-                            <stop offset="100%" stopColor="#FEF418" stopOpacity="0"/>
-                          </linearGradient>
-                        </defs>
-                        
-                        {/* Grid Lines */}
-                        <line x1="0" y1="20" x2="320" y2="20" stroke="#1a1a1a" strokeOpacity="0.08" strokeDasharray="3 3" />
-                        <line x1="0" y1="50" x2="320" y2="50" stroke="#1a1a1a" strokeOpacity="0.08" strokeDasharray="3 3" />
-                        <line x1="0" y1="80" x2="320" y2="80" stroke="#1a1a1a" strokeOpacity="0.08" strokeDasharray="3 3" />
-                        
-                        {/* Grid Labels Removed */ }
-
-                        {/* Chart Path Area Fill */}
-                        <path d="M0 90 Q 60 70, 110 75 T 220 40 T 300 20 L300 100 L0 100 Z" fill="url(#treasuryChartFill)"/>
-                        
-                        {/* Chart Path Stroke */}
-                        <path d="M0 90 Q 60 70, 110 75 T 220 40 T 300 20" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                        
-                        {/* Peak Indicator Dot */}
-                        <circle cx="300" cy="20" r="5" fill="#1a1a1a"/>
-                        <circle cx="300" cy="20" r="3.5" fill="#FEF418"/>
-                        
-                        {/* Tooltip Badge at Peak */}
-                        <g transform="translate(240, 5)">
-                          <rect width="48" height="16" rx="8" fill="#1a1a1a"/>
-                          <text x="24" y="11" fill="#FEF418" fontSize="8" fontWeight="bold" textAnchor="middle">+20%</text>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+      {/* Service 5: Investment (Piggyvest Investify Style) */}
+      <section className="py-20 md:py-32 bg-[#1a1a1a] text-white overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          <div className="flex flex-col mb-16 max-w-3xl">
+            <div className="flex items-center gap-2 text-brand-yellow font-bold uppercase tracking-wider mb-6">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 8L21 9L16.5 14L18 20L12 17L6 20L7.5 14L3 9L9 8L12 2Z"/></svg>
+              Swiftbanq Investments
             </div>
-
-            {/* Right: Text */}
-            <div className="w-full lg:w-1/2">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-brand-dark tracking-tight leading-[1.1] mb-6">
-                Investment <span className="text-brand-dark font-light">with high returns</span>
-              </h3>
-              <p className="text-xl text-gray-600 mb-8 leading-tight font-medium">
-                Earn 12%–20% interest per annum when you invest with us at Swiftbanq.
-              </p>
-              <div className="flex items-center gap-6 mb-10">
-                <div className="flex items-center gap-2 text-gray-600 font-medium">
-                  <svg className="w-4 h-4 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
-                  Competitive interest
-                </div>
-                <div className="flex items-center gap-2 text-gray-600 font-medium">
-                  <svg className="w-4 h-4 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
-                  Dedicated manager
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <ApplyNowButton variant="dark" />
-                <Link href="/contact" className="hidden text-brand-dark font-bold hover:text-brand-yellow transition-colors text-base underline underline-offset-4">Learn More</Link>
-              </div>
-            </div>
-
+            <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-heading font-medium text-white tracking-tight leading-[1.1] mb-6">
+              Start investing with as <br className="hidden md:block" />little as ₦100,000
+            </h2>
+            <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
+              Swiftbanq offers pre-vetted, low-to-medium-risk investment opportunities with returns of up to 20% per annum.
+            </p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1 */}
+            <div className="bg-[#2a2a2a] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between group hover:bg-[#333] transition-colors duration-300">
+              <div className="mb-12 h-32 relative">
+                {/* Visual placeholder for cards */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-2xl rotate-12 group-hover:rotate-6 transition-transform duration-300"></div>
+                <div className="absolute top-4 right-4 w-24 h-24 bg-brand-yellow/20 rounded-2xl -rotate-6 group-hover:rotate-0 transition-transform duration-300"></div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-white">Flexible investment options</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">Choose from a variety of plans designed to fit your financial goals, whether you prefer short-term gains or long-term growth.</p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-[#2a2a2a] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between group hover:bg-[#333] transition-colors duration-300">
+              <div className="mb-12 h-32 flex items-center justify-center relative">
+                <div className="w-20 h-20 bg-brand-yellow rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-10 h-10 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-white">Competitive returns</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">Benefit from high-yield investment opportunities that maximise your returns, helping you reach your financial targets faster.</p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-[#2a2a2a] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between group hover:bg-[#333] transition-colors duration-300">
+              <div className="mb-12 h-32 relative flex items-center">
+                <div className="flex -space-x-4 ml-4 group-hover:space-x-0 transition-all duration-300">
+                  <div className="w-16 h-16 rounded-full bg-[#4a4a4a] border-4 border-[#2a2a2a] z-30"></div>
+                  <div className="w-16 h-16 rounded-full bg-[#3a3a3a] border-4 border-[#2a2a2a] z-20"></div>
+                  <div className="w-16 h-16 rounded-full bg-brand-yellow border-4 border-[#2a2a2a] z-10"></div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-white">Expertly curated investments</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">Rest easy knowing that our team of experts carefully selects and manages each investment opportunity to ensure optimal performance.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 

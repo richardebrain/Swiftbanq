@@ -24,14 +24,17 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="w-full bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        {/* Page Heading */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-heading font-medium text-brand-dark tracking-tight mb-6">About Us</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+      {/* Hero Section */}
+      <section className="bg-brand-dark text-white pt-32 md:pt-40 lg:pt-48 pb-20 md:pb-24 px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-heading font-medium text-white tracking-tight mb-6">About Us</h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             A licensed, forward-thinking financial institution committed to delivering swift, secure, and structured credit solutions across Nigeria.
           </p>
         </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
         {/* Hero Image */}
         <div className="relative h-[400px] md:h-[520px] w-full rounded-3xl overflow-hidden mb-24">

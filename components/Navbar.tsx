@@ -6,20 +6,26 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { ApplyModal } from '@/components/ApplyModal';
+import { services } from '@/lib/services';
 
 export function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === '/';
+  const isProductPage = pathname?.startsWith('/products/');
+  const isAboutPage = pathname === '/about';
+  const isAbsoluteHeader = isHome || isProductPage || isAboutPage;
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
-  // Always use white text/icons if the hero is dark
-  const linkClass = "text-white hover:text-gray-300";
-  const iconClass = "text-white";
+  // The new piggyvest background is dark, so text must be white
+  const isLightHero = false;
+  const linkClass = isLightHero ? "text-brand-dark hover:text-gray-600" : "text-white hover:text-gray-300";
+  const iconClass = isLightHero ? "text-brand-dark" : "text-white";
 
   return (
-    <header aria-label="Main navigation" className={`${isHome ? 'absolute top-0 left-0 w-full z-50 bg-transparent' : 'bg-black w-full border-b border-gray-800 relative z-50'}`}>
+    <header aria-label="Main navigation" className={`${isAbsoluteHeader ? 'absolute top-0 left-0 w-full z-50 bg-transparent' : 'bg-brand-dark w-full border-b border-gray-800 relative z-50'}`}>
       <a
         href="#main-content"
         style={{
@@ -56,7 +62,7 @@ export function Navbar() {
                 width={160}
                 height={40}
                 priority
-                className="brightness-0 invert h-6 w-auto md:h-7 lg:h-8"
+                className={`${isLightHero ? 'h-6 w-auto md:h-7 lg:h-8' : 'brightness-0 invert h-6 w-auto md:h-7 lg:h-8'}`}
               />
             </Link>
           </div>
@@ -64,17 +70,41 @@ export function Navbar() {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-10">
 
-            {/* Services Link */}
-            <Link
-              href="/#services"
-              className={linkClass}
-            >
-              Services
-            </Link>
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button
+                className={`flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark rounded py-2 ${linkClass}`}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+                onClick={() => setIsServicesOpen((v) => !v)}
+                aria-expanded={isServicesOpen}
+                aria-haspopup="true"
+                aria-controls="services-menu"
+              >
+                Our Products <ChevronDown className="ml-1 w-4 h-4" aria-hidden="true" />
+              </button>
+
+              <div
+                id="services-menu"
+                className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 rounded-2xl shadow-lg bg-brand-cream ring-1 ring-black ring-opacity-5 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <ul className="py-2" role="menu" aria-orientation="vertical">
+                  {services.map((service) => (
+                    <li key={service.id} role="none">
+                      <Link href={`/products/${service.slug}`} className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-brand-dark/5 hover:text-brand-dark capitalize" role="menuitem">
+                        {service.id.replace('-', ' ')}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
             <Link href="/about" className={linkClass}>About Us</Link>
 
-            <Link href="/guides" className={linkClass}>Guides</Link>
+            <Link href="/blog" className={linkClass}>Our Blog</Link>
 
             {/* Resources Dropdown */}
             <div className="relative group">
@@ -138,9 +168,16 @@ export function Navbar() {
         <div id="mobile-menu" className="md:hidden bg-brand-cream px-4 pb-6 py-2 overflow-y-auto w-full absolute top-full left-0 shadow-lg border-t border-brand-dark/5">
           <nav aria-label="Mobile navigation">
             <div className="space-y-1 pt-2">
-              <Link onClick={() => setIsOpen(false)} href="/#services" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Services</Link>
+              <div className="px-4 py-2 font-bold text-gray-900 text-lg">Our Products</div>
+              <div className="flex flex-col pl-4 border-l-2 border-brand-yellow/30 ml-4 mb-2 space-y-1">
+                {services.map((service) => (
+                  <Link key={service.id} onClick={() => setIsOpen(false)} href={`/products/${service.slug}`} className="block py-2 text-base font-medium text-gray-600 hover:text-brand-dark capitalize">
+                    {service.id.replace('-', ' ')}
+                  </Link>
+                ))}
+              </div>
               <Link onClick={() => setIsOpen(false)} href="/about" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">About Us</Link>
-              <Link onClick={() => setIsOpen(false)} href="/guides" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Guides</Link>
+              <Link onClick={() => setIsOpen(false)} href="/blog" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Our Blog</Link>
               <Link onClick={() => setIsOpen(false)} href="/privacy-policy" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Privacy Policy</Link>
               <Link onClick={() => setIsOpen(false)} href="/cookie-policy" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Cookie Policy</Link>
               <Link onClick={() => setIsOpen(false)} href="/data-protection" className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-[#103623] hover:bg-white/50 rounded-xl">Data Protection</Link>
