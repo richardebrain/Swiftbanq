@@ -6,7 +6,11 @@ export type ServiceData = {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: string;
+  heroMockLabel?: string;
+  heroMockTags?: { label: string; icon?: string; active?: boolean }[];
   title: string;
+  howItWorksTitle?: string;
+  subServicesTitle?: string;
   benefits: {
     icon: React.ElementType;
     title: string;
@@ -36,15 +40,26 @@ export const services: ServiceData[] = [
     id: 'sme-loans',
     slug: 'sme-loans',
     subServices: [
-      { title: 'LPO Financing', description: 'Capital to execute your Local Purchase Orders smoothly.' },
-      { title: 'Invoice Discounting', description: 'Get immediate access to cash tied up in unpaid invoices.' },
-      { title: 'Bridge & Contract Finance', description: 'Short-term funding to bridge gaps during project execution.' },
-      { title: 'Project Finance & Syndication', description: 'Structured funding for large-scale business projects.' }
+      { title: 'Personal Loans', description: 'Quick access to personal funds for emergencies, education, and lifestyle needs.' },
+      { title: 'School Fees Loans', description: 'Never miss a school term — get funds to cover tuition and education expenses fast.' },
+      { title: 'Salary Advance', description: 'Access a portion of your next paycheck before payday to handle urgent needs.' },
+      { title: 'Working Capital', description: 'Keep your business running smoothly with flexible short-term working capital.' },
+      { title: 'Payroll Support', description: 'Ensure you never miss payroll — we fund your staff salaries when cash flow is tight.' },
     ],
     heroTitle: 'Get Fast Personal & SME Loans',
     heroSubtitle: 'With Swiftbanq, you can access immediate flexible capital — so you can meet personal needs or keep your business moving quickly while you wait.',
-    heroImage: '/images/hero-card-1.jpg',
+    heroImage: '/swiftbanq-office-4.jpg',
+    heroMockLabel: 'Repayment',
+    heroMockTags: [
+      { label: 'Personal Loans', active: true },
+      { label: 'School Fees Loans', icon: '🎓' },
+      { label: 'Salary Advance', icon: '💸' },
+      { label: 'Working Capital', icon: '💼' },
+      { label: 'Payroll Support', icon: '👥' },
+    ],
     title: 'Swiftbanq Personal/SME Loans, unlock flexible capital — fast.',
+    howItWorksTitle: 'Our Personal & SME Loan Process',
+    subServicesTitle: 'Explore what we offer under Personal & SME Loans',
     benefits: [
       {
         icon: TrendingUp,
@@ -109,13 +124,24 @@ export const services: ServiceData[] = [
     id: 'lpo-financing',
     slug: 'lpo-financing',
     subServices: [
-      { title: 'Supplier Payment', description: 'Direct payments to your suppliers to keep the supply chain moving.' },
-      { title: 'Contract Execution', description: 'Capital to cover logistics and operational costs of contracts.' }
+      { title: 'LPO Finance', description: 'Direct capital to execute Local Purchase Orders from verified corporate and government buyers.' },
+      { title: 'Supply Contracts', description: 'Funding to fulfill supply agreements and keep your supply chain moving without delays.' },
+      { title: 'Govt Contracts', description: 'Finance government procurement contracts with confidence — we handle the funding.' },
+      { title: 'Oil & Gas Contracts', description: 'Specialized financing for upstream and downstream Oil & Gas supply contracts.' },
     ],
     heroTitle: 'Execute Contracts with LPO Financing',
     heroSubtitle: 'Never lose a supply contract because of cash flow. We provide the capital you need to execute Local Purchase Orders smoothly.',
-    heroImage: '/images/ceo.jpg',
-    title: 'Swiftbanq LPO Financing, unlock cash to fulfill your contracts — fast.',
+    heroImage: 'https://img.magnific.com/free-photo/warehouse-manager-reading-report-tablet-about-successful-delivery-distribution-warehouse-logistics-center_342744-1554.jpg?t=st=1782722892~exp=1782726492~hmac=f7128d59f1973d532399c6b569d71bb5096d49bcbacb84dbd071f6bfec836e51&w=2000',
+    heroMockLabel: 'Repayment',
+    heroMockTags: [
+      { label: 'LPO Finance', active: true },
+      { label: 'Supply Contracts', icon: '📦' },
+      { label: 'Govt Contracts', icon: '🏛️' },
+      { label: 'Oil & Gas Contracts', icon: '⛽' },
+    ],
+    title: 'Our LPO Financing Process',
+    howItWorksTitle: 'Our LPO Financing Process',
+    subServicesTitle: 'Explore what we offer under LPO Financing',
     benefits: [
       {
         icon: TrendingUp,
@@ -180,16 +206,24 @@ export const services: ServiceData[] = [
     id: 'asset-financing',
     slug: 'asset-financing',
     subServices: [
-      { title: 'Fleet & Vehicle Financing', description: 'Acquire delivery vans, trucks, or official vehicles.' },
-      { title: 'Office & Household Equipment', description: 'Equip your workspace with the tools you need.' },
-      { title: 'Industrial Machinery', description: 'Upgrade your manufacturing and industrial capabilities.' },
-      { title: 'Laptops & IT Infrastructure', description: 'Finance your company\'s tech and IT needs.' }
+      { title: 'Leases', description: 'Finance assets through structured lease agreements with flexible buyout options at end of term.' },
+      { title: 'Vehicle Acquisition', description: 'Acquire cars, delivery vans, or trucks for personal or business use with easy monthly payments.' },
+      { title: 'Equipment Acquisition', description: 'Procure office equipment, industrial machinery, and IT infrastructure without upfront capital.' },
+      { title: 'Building Acquisition', description: 'Finance the acquisition of commercial or business premises to establish or expand your operations.' },
     ],
     heroTitle: 'Acquire Assets without the Heavy Burden',
     heroSubtitle: 'From vehicles to specialized equipment, get what your business needs today and pay comfortably over time.',
-    heroImage: '/images/face-2.jpg',
+    heroImage: '/images/asset-finance-car.jpg',
+    heroMockLabel: 'Business Term',
+    heroMockTags: [
+      { label: 'Leases', active: true },
+      { label: 'Vehicle Acquisition', icon: '🚗' },
+      { label: 'Equipment Acquisition', icon: '⚙️' },
+      { label: 'Industrial Machinery', icon: '🏭' },
+    ],
     title: 'Swiftbanq Asset Financing, unlock the equipment you need — fast.',
-    benefits: [
+    howItWorksTitle: 'Our Asset Financing Process',
+    subServicesTitle: 'Explore what we offer under Asset Financing',    benefits: [
       {
         icon: TrendingUp,
         title: 'Competitive interest rates',
@@ -253,13 +287,22 @@ export const services: ServiceData[] = [
     id: 'invoice-discounting',
     slug: 'invoice-discounting',
     subServices: [
-      { title: 'Corporate Invoices', description: 'Discount invoices from reputable FMCGs and corporations.' },
-      { title: 'Government Parastatals', description: 'Unlock cash from completed government contracts.' }
+      { title: 'Invoice Discounting', description: 'Get up to 70% of your verified invoice value upfront while your client\'s payment is still pending.' },
+      { title: 'Receivables Discounting', description: 'Convert your outstanding receivables into immediate working capital to keep operations running.' },
     ],
     heroTitle: 'Get Discounts on Unpaid Invoices',
     heroSubtitle: 'With Swiftbanq Invoice Discounting, you can get immediate access to up to 70% of your unpaid invoices — so you can keep your operations moving quickly while you wait.',
-    heroImage: '/images/face-1.jpg',
+    heroImage: 'https://img.magnific.com/free-photo/young-black-race-man-with-blueprint-stading-near-glass-building_1157-50906.jpg?t=st=1782723001~exp=1782726601~hmac=6f790a9dfc7ffa0322910a10e475bec41adea815d27a9dc8c8dd35ab3ad07892&w=2000',
+    heroMockLabel: 'Short term',
+    heroMockTags: [
+      { label: 'Invoice Discounting', active: true },
+      { label: 'Receivables Discounting', icon: '🧾' },
+      { label: 'Corporate Invoices', icon: '🏢' },
+      { label: 'Govt Parastatals', icon: '🏛️' },
+    ],
     title: 'Swiftbanq invoice discounting, unlock cash tied up in unpaid invoices — fast.',
+    howItWorksTitle: 'Our Invoice Discounting Process',
+    subServicesTitle: 'Explore what we offer under Invoice Discounting',
     benefits: [
       {
         icon: TrendingUp,
@@ -332,6 +375,8 @@ export const services: ServiceData[] = [
     heroSubtitle: 'Swiftbanq offers pre-vetted, low-to-medium-risk investment opportunities with competitive returns to help you grow your wealth.',
     heroImage: '/images/home-business-men.jpg',
     title: 'Swiftbanq Investments, secure your financial future today.',
+    howItWorksTitle: 'Our Investment Process',
+    subServicesTitle: 'Explore what we offer under Investments',
     benefits: [
       {
         icon: TrendingUp,

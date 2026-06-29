@@ -6,7 +6,6 @@ import { ServiceBenefits } from '@/components/ServiceBenefits';
 import { ServiceHowItWorks } from '@/components/ServiceHowItWorks';
 import { ServiceTestimonials } from '@/components/ServiceTestimonials';
 import { ServiceFAQ } from '@/components/ServiceFAQ';
-import { ServiceBottomCTA } from '@/components/ServiceBottomCTA';
 
 import { ApplyNowButton } from '@/components/ApplyNowButton';
 
@@ -40,16 +39,19 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         title={service.heroTitle}
         subtitle={service.heroSubtitle}
         image={service.heroImage}
+        mockLabel={service.heroMockLabel}
+        mockTags={service.heroMockTags}
       />
       
       {service.subServices && service.subServices.length > 0 && (
-        <ServiceSubServices subServices={service.subServices} />
+        <ServiceSubServices subServices={service.subServices} title={service.subServicesTitle} />
       )}
 
       <ServiceHowItWorks 
         image={service.heroImage}
         steps={service.howItWorks}
         title={service.title}
+        howItWorksTitle={service.howItWorksTitle}
       />
 
       <ServiceBenefits 
@@ -64,8 +66,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <ServiceFAQ 
         faqs={service.faqs}
       />
-
-      <ServiceBottomCTA />
 
     </main>
   );

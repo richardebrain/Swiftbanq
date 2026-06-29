@@ -52,7 +52,7 @@ export function Navbar() {
         Skip to main content
       </a>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="block relative focus:outline-none focus:ring-2 focus:ring-brand-yellow rounded-lg" aria-label="Swiftbanq Home">

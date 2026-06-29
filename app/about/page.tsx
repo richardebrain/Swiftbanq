@@ -36,15 +36,7 @@ export default function AboutPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
-        {/* Hero Image */}
-        <div className="relative h-[400px] md:h-[520px] w-full rounded-3xl overflow-hidden mb-24">
-          <Image
-            src="/swiftbanq-office.jpg"
-            alt="Swiftbanq Credit Solutions Office Headquarters in Lagos"
-            fill
-            className="object-cover"
-          />
-        </div>
+
         {/* Mission Statement + Values */}
         <div className="mb-24 space-y-20">
 
@@ -94,7 +86,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  To empower individuals and businesses across Nigeria with fast, fair, and accessible credit solutions — bridging the financial gap through innovation, integrity, and a deep commitment to our clients&apos; growth.
+                  To offer a range of advisory services to a diverse base of clients in a precise and professional manner that is capable of adding value to and unlocking the potential inherent in the client&apos;s businesses.
                 </p>
               </div>
 
@@ -106,9 +98,9 @@ export default function AboutPage() {
                 <div className="w-14 h-14 rounded-xl bg-brand-yellow flex items-center justify-center mb-6">
                   <Target className="w-7 h-7 text-brand-dark" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Our Goal</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  To provide reliable lending solutions that foster financial empowerment, leveraging technology, skilled human capital, and unwavering regulatory compliance.
+                  To become the preferred choice for clients seeking advisory services based on their experience, expertise, and service.
                 </p>
               </div>
             </div>
@@ -118,7 +110,7 @@ export default function AboutPage() {
         </div>
 
         {/* Values — full width */}
-        <div className="mb-24">
+        <div className="mt-16 md:mt-20 mb-16 md:mb-20">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl font-heading font-medium text-brand-dark tracking-tight mb-6">We live by our values.</h2>
             <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
@@ -146,7 +138,7 @@ export default function AboutPage() {
         </div>
 
         {/* Join the journey section */}
-        <div className="mt-24 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="mt-32 md:mt-40 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative h-[420px] w-full rounded-3xl overflow-hidden">
             <Image
               src="/team.jpg"

@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 interface Step {
   title: string;
   description: string;
@@ -9,52 +7,63 @@ interface ServiceHowItWorksProps {
   image?: string;
   steps: Step[];
   title?: string;
+  howItWorksTitle?: string;
 }
 
-export function ServiceHowItWorks({ steps, title }: ServiceHowItWorksProps) {
+export function ServiceHowItWorks({ steps, title, howItWorksTitle }: ServiceHowItWorksProps) {
   return (
-    <section className="bg-transparent py-24">
+    <section className="bg-transparent py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
-          
-          {/* Left Column - Sticky Heading */}
-          <div className="w-full lg:w-1/3 lg:sticky top-32 flex flex-col items-start">
-            <h2 className="text-5xl md:text-6xl font-heading font-black text-brand-dark tracking-tight leading-[1.05] mb-8">
-              {title || "Cash you can access fast"}
-            </h2>
-            <p className="text-gray-600 text-lg mb-8">
-              No hidden charges, no complex deductions. Everything is clearly communicated upfront.
-            </p>
-            <Link 
-              href="#apply" 
-              className="bg-brand-yellow text-brand-dark px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition-transform"
-            >
-              Get Started
-            </Link>
-          </div>
 
-          {/* Right Column - Stacked Cards */}
-          <div className="w-full lg:w-2/3 flex flex-col gap-6">
+        {/* Header */}
+        <div className="mb-16">
+          <h2 className="text-5xl md:text-6xl font-heading font-black text-brand-dark tracking-tight leading-[1.05] mb-4">
+            {howItWorksTitle || title || 'Our Process'}
+          </h2>
+          <p className="text-gray-600 text-lg max-w-xl">
+            No hidden charges, no complex deductions. Everything is clearly communicated upfront.
+          </p>
+        </div>
+
+        {/* Timeline grid */}
+        <div className="relative">
+
+          {/* Horizontal line — lg (4-col) only, runs through circle centers */}
+          <div className="hidden lg:block absolute top-10 left-10 right-10 h-0.5 bg-brand-yellow z-0" />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-0">
             {steps.map((step, idx) => (
-              <div key={idx} className="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-between gap-6 transition-transform hover:-translate-y-1">
-                <div className="flex-1">
-                  <div className="bg-brand-dark text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4">
+              <div key={idx} className="relative flex lg:flex-col">
+
+                {/* Vertical connector line — mobile & sm only, between steps */}
+                {idx < steps.length - 1 && (
+                  <div className="lg:hidden absolute left-10 top-20 bottom-0 w-0.5 bg-brand-yellow z-0" />
+                )}
+
+                {/* Circle */}
+                <div className="relative z-10 w-20 h-20 rounded-full bg-brand-yellow flex items-center justify-center flex-shrink-0 ring-4 ring-brand-cream mb-0 lg:mb-6 mr-6 lg:mr-0">
+                  <span className="text-brand-dark font-black text-2xl">{idx + 1}</span>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pb-10 lg:pb-0">
+                  <div className="text-xs font-bold uppercase tracking-widest text-brand-dark mb-2 mt-1 lg:mt-0">
                     Step {idx + 1}
                   </div>
-                  <h3 className="text-2xl font-bold text-brand-dark mb-2">{step.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl font-black text-brand-dark mb-3 leading-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">
                     {step.description}
                   </p>
                 </div>
-                {/* Decorative Icon Box */}
-                <div className="hidden md:flex w-24 h-24 bg-brand-cream rounded-2xl items-center justify-center flex-shrink-0">
-                  <span className="text-4xl text-brand-dark opacity-50">✨</span>
-                </div>
+
               </div>
             ))}
           </div>
 
         </div>
+
       </div>
     </section>
   );

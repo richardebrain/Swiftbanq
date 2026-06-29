@@ -125,12 +125,12 @@ export default function Home() {
           </h1>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 w-full sm:w-auto relative z-30">
-            <ApplyNowButton className="px-6 py-2.5 rounded-full bg-brand-yellow text-brand-dark font-black hover:bg-brand-yellow/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-sm sm:text-base group">
+            <ApplyNowButton className="px-8 py-4 rounded-full bg-brand-yellow text-brand-dark font-black hover:bg-brand-yellow/90 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-base sm:text-lg group">
               Apply Now
-              <span className="bg-brand-dark text-brand-yellow w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center rounded-full transition-transform group-hover:translate-x-1 text-[10px]">→</span>
+              <span className="bg-brand-dark text-brand-yellow w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full transition-transform group-hover:translate-x-1 text-xs">→</span>
             </ApplyNowButton>
-            <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-sm sm:text-base bg-white/5 backdrop-blur-sm group">
-              <MessageCircle className="w-4 h-4" /> Talk To Support
+            <Link href="https://wa.me/2347086429380?text=Hi%20Swiftbanq!%20I%27d%20like%20to%20speak%20with%20your%20sales%20team%20about%20your%20financial%20services.%20Could%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-base sm:text-lg bg-white/5 backdrop-blur-sm group">
+              <MessageCircle className="w-5 h-5" /> Talk To Support
             </Link>
           </div>
           
@@ -240,7 +240,7 @@ export default function Home() {
           </div>
 
           {/* Fixed background image */}
-          <div className="w-full mt-12 md:mt-16 h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden" style={{ backgroundImage: 'url(https://www.piggyvest.com/_next/static/images/headerBGhome-9c6bf21c25fa09992d4dffc8395557b0.avif)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+          <div className="w-full mt-12 md:mt-16 h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden" style={{ backgroundImage: 'url(/9d39ee6d-9615-4289-9f68-1944b4d9b771.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
           </div>
         </div>
       </section>
@@ -254,7 +254,7 @@ export default function Home() {
               Introducing SwiftBanq Loans
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Flexible financing solutions designed to help your business grow and thrive.
+              Flexible financing solutions designed to help you or your business needs.
             </p>
 
           </div>
@@ -343,7 +343,7 @@ export default function Home() {
             {/* Right (visually): UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/images/asset-finance-car.jpg" alt="Swiftbanq Vehicle and Asset Financing options in Nigeria" fill className="object-cover object-center" />
+              <Image src="https://img.magnific.com/free-photo/warehouse-manager-reading-report-tablet-about-successful-delivery-distribution-warehouse-logistics-center_342744-1554.jpg?t=st=1782722892~exp=1782726492~hmac=f7128d59f1973d532399c6b569d71bb5096d49bcbacb84dbd071f6bfec836e51&w=2000" alt="Swiftbanq Vehicle and Asset Financing options in Nigeria" fill className="object-cover object-center" unoptimized />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -416,7 +416,7 @@ export default function Home() {
             {/* Left: UI Card mockup */}
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
-              <Image src="/image-3.jpg" alt="Industrial Equipment financing by Swiftbanq Credit Solutions" fill className="object-cover object-center" />
+              <Image src="/images/asset-finance-car.jpg" alt="Industrial Equipment financing by Swiftbanq Credit Solutions" fill className="object-cover object-center" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">
@@ -487,7 +487,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 flex flex-col items-end justify-end relative rounded-[2.5rem] overflow-hidden min-h-[420px]">
               {/* Section background image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/home-family.jpg" alt="Family home secured with Swiftbanq Digital Lending" className="object-cover object-center absolute inset-0 w-full h-full" />
+              <img src="https://img.magnific.com/free-photo/young-black-race-man-with-blueprint-stading-near-glass-building_1157-50906.jpg?t=st=1782723001~exp=1782726601~hmac=6f790a9dfc7ffa0322910a10e475bec41adea815d27a9dc8c8dd35ab3ad07892&w=2000" alt="Family home secured with Swiftbanq Digital Lending" className="object-cover object-center absolute inset-0 w-full h-full" />
               {/* Mock card overlaying the image */}
               <div className="relative z-[2] w-full max-w-[420px] pt-16 px-3 pb-6">
                 <div className="rounded-[2.5rem] pt-4 px-3 pb-5 flex flex-col bg-brand-yellow">

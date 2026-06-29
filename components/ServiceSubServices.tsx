@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 
 interface SubService {
@@ -8,59 +7,68 @@ interface SubService {
 
 interface ServiceSubServicesProps {
   subServices: SubService[];
+  title?: string;
 }
 
 const imageMapping: Record<string, string> = {
-  'LPO Financing': '/images/sme-card.jpg',
-  'Invoice Discounting': '/images/hero-card-1.jpg',
-  'Bridge & Contract Finance': '/images/hero-card-3.jpg',
-  'Project Finance & Syndication': '/images/hero-card-4.jpg',
-  'Fleet & Vehicle Financing': '/images/asset-finance-car.jpg',
-  'Office & Household Equipment': '/images/asset-card.jpg',
-  'Industrial Machinery': '/images/asset-industrial.jpg',
-  'Laptops & IT Infrastructure': '/images/asset-card.jpg',
-  'Corporate Invoices': '/images/sme-card.jpg',
-  'Government Parastatals': '/images/ceo.jpg',
-  'Supplier Payment': '/images/hero-card-1.jpg',
-  'Contract Execution': '/images/hero-card-3.jpg',
+  // SME Loans
+  'Personal Loans': '/images/home-family.jpg',
+  'School Fees Loans': '/images/hero-card-4.jpg',
+  'Salary Advance': '/images/home-meeting.jpg',
+  'Working Capital': '/images/sme-card.jpg',
+  'Payroll Support': '/images/home-business-men.jpg',
+  // LPO Financing
+  'LPO Finance': 'https://img.magnific.com/free-photo/warehouse-manager-reading-report-tablet-about-successful-delivery-distribution-warehouse-logistics-center_342744-1554.jpg?t=st=1782722892~exp=1782726492~hmac=f7128d59f1973d532399c6b569d71bb5096d49bcbacb84dbd071f6bfec836e51&w=2000',
+  'Supply Contracts': 'https://img.magnific.com/free-photo/warehouse-manager-checking-orders-list-coordinating-parcels-packing-process-african-american-woman-supervisor-with-laptop-controlling-freight-cardboard-boxes-sealing-dispatching_482257-66197.jpg?t=st=1782726485~exp=1782730085~hmac=46daae34deef6dda3399f8e495c3b07b8907eadd108d640f0bedf963c9bdaa28&w=2000',
+  'Govt Contracts': '/images/hero-card-4.jpg',
+  'Oil & Gas Contracts': 'https://img.magnific.com/free-photo/portrait-smiling-technician-industrial-plant-working-diagnose-equipment_482257-126201.jpg?t=st=1782726652~exp=1782730252~hmac=691d44b882ffe4905173e76b07b8ad744f8df49977e96c03073450e49eb3fd58&w=2000',
+  // Asset Financing
+  'Leases': '/images/asset-card.jpg',
+  'Vehicle Acquisition': '/images/asset-finance-car.jpg',
+  'Equipment Acquisition': '/images/asset-industrial.jpg',
+  'Building Acquisition': 'https://img.magnific.com/free-photo/multi-racial-builders-standing-outdoors-back-view-wearing-uniform-talking-about-new-glass-building-working-poject-city-infrastructure_1157-50888.jpg?t=st=1782727095~exp=1782730695~hmac=cc6e0f4a1f11c5f2027bc7e9ca5a637a8f7b34a6d6d7c73c5f01b5905249da40&w=2000',
+  // Invoice Discounting
+  'Invoice Discounting': '/images/sme-card.jpg',
+  'Receivables Discounting': '/images/hero-card-1.jpg',
+  // Investments
   'Fixed Deposits': '/images/treasury-card.jpg',
   'Target Savings': '/images/home-family.jpg',
-  'Corporate Treasury': '/images/home-business-men.jpg'
+  'Corporate Treasury': '/images/home-business-men.jpg',
 };
 
-export function ServiceSubServices({ subServices }: ServiceSubServicesProps) {
+export function ServiceSubServices({ subServices, title }: ServiceSubServicesProps) {
   if (!subServices || subServices.length === 0) return null;
 
   return (
-    <section className="bg-brand-cream py-24 border-t border-gray-200/60">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="bg-brand-dark rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-12 lg:p-20 text-center">
+        <div className="text-xs font-bold uppercase tracking-widest text-white/40 mb-6">
           OUR SERVICES
         </div>
-        <h2 className="text-5xl md:text-6xl font-heading font-black text-brand-dark tracking-tight leading-[1.05] mb-16">
-          Explore what we <span className="italic font-serif">offer</span><br />
-          under this product
+        <h2 className="text-5xl md:text-6xl font-heading font-black text-white tracking-tight leading-[1.05] mb-16">
+          {title ?? <>Explore what we <span className="italic font-serif">offer</span><br />under this product</>}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-left">
           {subServices.map((service, idx) => (
-            <div 
-              key={idx} 
-              className={`${idx % 2 === 0 ? 'bg-brand-dark text-white' : 'bg-white text-brand-dark'} rounded-3xl p-8 md:p-12 flex flex-col items-start transition-transform hover:-translate-y-1 border ${idx % 2 === 0 ? 'border-brand-dark' : 'border-gray-100'}`}
+            <div
+              key={idx}
+              className="rounded-3xl p-8 md:p-12 flex flex-col items-start transition-transform hover:-translate-y-1 border border-white/10"
             >
-              <h3 className={`text-3xl md:text-4xl font-black mb-4 leading-tight ${idx % 2 === 0 ? 'text-white' : 'text-brand-dark'}`}>
+              <h3 className="text-3xl md:text-4xl font-black mb-4 leading-tight text-white">
                 {service.title}
               </h3>
-              <p className={`${idx % 2 === 0 ? 'text-gray-400' : 'text-gray-500'} font-medium mb-10 text-lg md:text-xl`}>
+              <p className="text-white/60 font-medium mb-10 text-lg md:text-xl">
                 {service.description}
               </p>
-              
-              <div className="mt-auto w-full h-48 md:h-64 relative rounded-2xl overflow-hidden mt-4 bg-gray-100">
-                <Image 
-                  src={imageMapping[service.title] || '/images/hero-card-1.jpg'} 
-                  alt={service.title} 
-                  fill 
-                  className="object-cover"
+
+              <div className="mt-auto w-full h-48 md:h-64 relative rounded-2xl overflow-hidden mt-4 bg-white/10">
+                <Image
+                  src={imageMapping[service.title] || '/images/hero-card-1.jpg'}
+                  alt={service.title}
+                  fill
+                  unoptimized
+                  className="object-cover opacity-80"
                 />
               </div>
             </div>

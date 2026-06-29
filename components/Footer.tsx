@@ -32,15 +32,15 @@ export function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-dark text-white pt-24 pb-12" aria-label="Site footer">
+      <footer className="bg-brand-dark text-brand-cream pt-24 pb-12" aria-label="Site footer">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between mb-24 gap-16">
             {/* Brand */}
             <div className="w-full lg:w-1/3">
               <Link href="/" className="flex items-center mb-4" aria-label="Swiftbanq Credit Solutions — home">
-                <Image src="/SBQ_Logo.svg" alt="Swiftbanq Credit Solutions" width={160} height={40} className="brightness-0 invert" />
+                <Image src="/SBQ_Logo.svg" alt="Swiftbanq Credit Solutions" width={160} height={40} className="brightness-0 invert opacity-90" />
               </Link>
-              <p className="text-gray-400 text-sm font-medium leading-relaxed mb-6">
+              <p className="text-brand-cream/80 text-sm font-medium leading-relaxed mb-6">
                 Empowering financial growth through smart, accessible credit solutions for businesses and individuals across Nigeria.
               </p>
             </div>
@@ -48,7 +48,7 @@ export function Footer() {
             {/* Links Grid */}
             <nav aria-label="Footer navigation" className="w-full lg:w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
               <div>
-                <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Products</h3>
+                <h3 className="text-brand-cream/60 font-medium mb-8 text-sm uppercase tracking-wider">Products</h3>
                 <ul className="space-y-5">
                   <li>
                     <Link href="/products/sme-loans" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">SME Financing</Link>
@@ -69,7 +69,7 @@ export function Footer() {
               </div>
 
               <div>
-                <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Company</h3>
+                <h3 className="text-brand-cream/60 font-medium mb-8 text-sm uppercase tracking-wider">Company</h3>
                 <ul className="space-y-5">
                   <li>
                     <Link href="/blog" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">Our Blog</Link>
@@ -96,7 +96,7 @@ export function Footer() {
               </div>
 
               <div>
-                <h3 className="text-gray-400 font-medium mb-8 text-sm uppercase tracking-wider">Get in Touch</h3>
+                <h3 className="text-brand-cream/60 font-medium mb-8 text-sm uppercase tracking-wider">Get in Touch</h3>
                 <ul className="space-y-5">
                   <li>
                     <a href="tel:+2347086429380" className="font-medium hover:text-brand-yellow transition-colors text-[15px]">07086429380</a>
@@ -105,7 +105,7 @@ export function Footer() {
                     <a href="mailto:enquiries@swiftbanq.com" className="font-medium hover:text-brand-yellow transition-colors text-[15px] break-all">enquiries@swiftbanq.com</a>
                   </li>
                   <li>
-                    <address className="font-medium text-[15px] text-white leading-relaxed not-italic">
+                    <address className="font-medium text-[15px] text-brand-cream leading-relaxed not-italic">
                       6, Babatunde Jose Street,<br />
                       Off Ademola Adetokunbo V.I,<br />
                       Lagos, Nigeria.
@@ -116,13 +116,13 @@ export function Footer() {
             </nav>
           </div>
 
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-10 gap-6 border-t border-white/10">
-            <p className="text-gray-400 text-sm font-medium">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-10 gap-6 border-t border-brand-cream/10">
+            <p className="text-brand-cream/80 text-sm font-medium">
               Copyright &copy; {new Date().getFullYear()} Swiftbanq Credit Solutions. All rights reserved.
             </p>
           </div>
 
-          <div className="pt-10 text-xs text-gray-500 space-y-4 leading-[1.8] font-medium max-w-6xl">
+          <div className="pt-10 text-xs text-brand-cream/50 space-y-4 leading-[1.8] font-medium max-w-6xl">
             <p>
               * Loans and financing options are subject to approval, terms, and conditions. Interest rates and repayment structures may vary based on creditworthiness, market conditions, and regulatory guidelines.
             </p>

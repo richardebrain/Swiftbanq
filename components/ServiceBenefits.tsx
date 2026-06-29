@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 interface Benefit {
   icon: React.ElementType;
@@ -12,41 +11,63 @@ interface ServiceBenefitsProps {
   benefits: Benefit[];
 }
 
-export function ServiceBenefits({ title, benefits }: ServiceBenefitsProps) {
-  const cardColors = ['bg-[#e8f3ff]', 'bg-[#f4e8ff]', 'bg-[#e8fff4]'];
+// Decorative visuals per card index, matching the homepage investment section style
+function CardVisual({ idx, icon: Icon }: { idx: number; icon: React.ElementType }) {
+  if (idx === 0) {
+    return (
+      <div className="mb-12 h-32 relative">
+        <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-2xl rotate-12 group-hover:rotate-6 transition-transform duration-300" />
+        <div className="absolute top-4 right-4 w-24 h-24 bg-brand-yellow/20 rounded-2xl -rotate-6 group-hover:rotate-0 transition-transform duration-300" />
+      </div>
+    );
+  }
+  if (idx === 1) {
+    return (
+      <div className="mb-12 h-32 flex items-center justify-center relative">
+        <div className="w-20 h-20 bg-brand-yellow rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+          <Icon className="w-10 h-10 text-brand-dark" />
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="mb-12 h-32 relative flex items-center">
+      <div className="flex -space-x-4 ml-4 group-hover:space-x-0 transition-all duration-300">
+        <div className="w-16 h-16 rounded-full bg-white/10 border-4 border-[#1a1a2e] z-30" />
+        <div className="w-16 h-16 rounded-full bg-white/5 border-4 border-[#1a1a2e] z-20" />
+        <div className="w-16 h-16 rounded-full bg-brand-yellow border-4 border-[#1a1a2e] z-10" />
+      </div>
+    </div>
+  );
+}
 
+export function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="bg-brand-dark rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-12 lg:p-20">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16">
           <h2 className="text-5xl md:text-6xl font-heading font-black text-white tracking-tight max-w-xl leading-[1.05]">
-            Why choose {title.toLowerCase()}?
+            Why people keep choosing us
           </h2>
-          <Link 
-            href="#apply" 
-            className="bg-brand-yellow text-brand-dark px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition-transform whitespace-nowrap"
-          >
-            Get Started
-          </Link>
+          <p className="text-gray-400 text-lg max-w-sm leading-relaxed">
+            No hidden charges, no complex deductions. Everything clearly communicated upfront.
+          </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {benefits.map((benefit, idx) => (
-            <div key={idx} className={`${cardColors[idx % 3]} rounded-3xl p-8 flex flex-col h-full transition-transform hover:-translate-y-2`}>
-              
-              {/* Graphic Placeholder */}
-              <div className="w-full h-40 bg-white/60 rounded-2xl mb-8 flex items-center justify-center overflow-hidden">
-                 <benefit.icon className="w-16 h-16 text-brand-dark/40" />
+            <div
+              key={idx}
+              className="bg-[#2a2a2a] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between group hover:bg-[#333] transition-colors duration-300"
+            >
+              <CardVisual idx={idx} icon={benefit.icon} />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-white">{benefit.title}</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">{benefit.description}</p>
               </div>
-
-              {/* Text */}
-              <h3 className="text-2xl font-bold text-brand-dark mb-4 tracking-tight leading-tight">{benefit.title}</h3>
-              <p className="text-gray-700 leading-relaxed font-medium">
-                {benefit.description}
-              </p>
             </div>
           ))}
         </div>
