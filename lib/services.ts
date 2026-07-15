@@ -126,7 +126,7 @@ export const services: ServiceData[] = [
     subServices: [
       { title: 'LPO Finance', description: 'Direct capital to execute Local Purchase Orders from verified corporate and government institutions.' },
       { title: 'Supply Contracts', description: 'Funding to fulfill supply agreements and keep your supply chain moving without delays.' },
-      { title: 'Govt Contracts', description: 'Finance government procurement contracts with confidence — we handle the funding.' },
+      { title: 'Govt Contracts', description: 'Finance government contracts with confidence — we handle the funding.' },
       { title: 'Oil & Gas Contracts', description: 'Specialized financing for upstream and downstream Oil & Gas contracts.' },
     ],
     heroTitle: 'Execute Contracts with LPO Financing',
@@ -209,7 +209,6 @@ export const services: ServiceData[] = [
       { title: 'Leases', description: 'Finance assets through structured lease agreements with flexible buyout options at end of term.' },
       { title: 'Vehicle Acquisition', description: 'Acquire cars, delivery vans, or trucks for personal or business use with easy monthly payments.' },
       { title: 'Equipment Acquisition', description: 'Procure office equipment, industrial machinery, and IT infrastructure without upfront capital.' },
-      { title: 'Building Acquisition', description: 'Finance the acquisition of commercial or business premises to establish or expand your operations.' },
     ],
     heroTitle: 'Acquire Assets without the Heavy Burden',
     heroSubtitle: 'From vehicles to specialized equipment, get what your business needs today and pay comfortably over time.',
