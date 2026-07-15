@@ -124,10 +124,10 @@ export const services: ServiceData[] = [
     id: 'lpo-financing',
     slug: 'lpo-financing',
     subServices: [
-      { title: 'LPO Finance', description: 'Direct capital to execute Local Purchase Orders from verified corporate and government buyers.' },
+      { title: 'LPO Finance', description: 'Direct capital to execute Local Purchase Orders from verified corporate and government institutions.' },
       { title: 'Supply Contracts', description: 'Funding to fulfill supply agreements and keep your supply chain moving without delays.' },
       { title: 'Govt Contracts', description: 'Finance government procurement contracts with confidence — we handle the funding.' },
-      { title: 'Oil & Gas Contracts', description: 'Specialized financing for upstream and downstream Oil & Gas supply contracts.' },
+      { title: 'Oil & Gas Contracts', description: 'Specialized financing for upstream and downstream Oil & Gas contracts.' },
     ],
     heroTitle: 'Execute Contracts with LPO Financing',
     heroSubtitle: 'Never lose a supply contract because of cash flow. We provide the capital you need to execute Local Purchase Orders smoothly.',
